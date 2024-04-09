@@ -491,71 +491,50 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_E4QeD6": {
-      "type": "multicolumn",
+    "custom_usp_6YwExV": {
+      "type": "custom-USP",
       "blocks": {
-        "column_8wG7pa": {
+        "column_peJK9W": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/BOX.webp",
-            "title": "<strong>FREE SHIPPING<\/strong>",
-            "text": "<p>We are happy to offer international shipping for a flat rate of $40.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image_url": "https:\/\/vision-jewelery.myshopify.com\/cdn\/shop\/files\/free-shipping1.png?v=1678298984",
+            "title": "FREE SHIPPING",
+            "description": "We are happy to offer international shipping for a flat rate of $40."
           }
         },
-        "column_DQfgeC": {
+        "column_qBwzVF": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GIFT.png",
-            "title": "<strong>GIFT PACKAGE<\/strong>",
-            "text": "<p>Pair text with an image to focus on your chosen product.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image_url": "",
+            "title": "Title",
+            "description": "Text about Photo"
           }
         },
-        "column_rBt3Fx": {
+        "column_FEfeCd": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/RETURN.png",
-            "title": "<strong>EASY RETURNS<\/strong>",
-            "text": "<p>Pair text with an image to focus on your chosen product.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image_url": "",
+            "title": "Title",
+            "description": "Text about Photo"
           }
         },
-        "column_ATjCVR": {
+        "column_iiy3Ww": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/WARENTY.webp",
-            "title": "<strong>ONE YEAR WARRANTY<\/strong>",
-            "text": "<p>Pair text with an image to focus on your chosen product.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image_url": "",
+            "title": "Title",
+            "description": "Text about Photo"
           }
         }
       },
       "block_order": [
-        "column_8wG7pa",
-        "column_DQfgeC",
-        "column_rBt3Fx",
-        "column_ATjCVR"
+        "column_peJK9W",
+        "column_qBwzVF",
+        "column_FEfeCd",
+        "column_iiy3Ww"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-fd700e72-dfc2-46ac-afa0-075f4dbf9e62",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading": "My Custom Heading"
       }
     },
     "multicolumn_zPaEVF": {
@@ -681,7 +660,7 @@
     "slideshow_bkTMYx",
     "featured_blog_QmRVj6",
     "multicolumn_4efNVw",
-    "multicolumn_E4QeD6",
+    "custom_usp_6YwExV",
     "multicolumn_zPaEVF",
     "multicolumn_nFUqwE"
   ]
