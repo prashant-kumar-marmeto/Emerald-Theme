@@ -175,34 +175,9 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_mRyBrk": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_4PrGrj": {
-          "type": "heading",
-          "settings": {
-            "heading": "Timeless, classic and elegant",
-            "heading_size": "h1"
-          }
-        },
-        "text_beNaQb": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Luxury jewelry is a high-end category of jewelry that is often made of precious metals and gems, and is known for its exceptional craftsmanship and quality. This type of jewelry is often associated with elegance and status.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_4PrGrj",
-        "text_beNaQb"
-      ],
+    "custom_richtext_animation_8rEFdB": {
+      "type": "custom-richtext-animation",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "featured_collection_LPPGhW": {
@@ -652,7 +627,7 @@
     "multicolumn_kCcpnP",
     "collection_list_8kLEAx",
     "collection_list_TT9dyU",
-    "rich_text_mRyBrk",
+    "custom_richtext_animation_8rEFdB",
     "featured_collection_LPPGhW",
     "image_banner_TQgH37",
     "featured_blog_nKYTB4",
