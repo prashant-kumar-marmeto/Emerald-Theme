@@ -513,9 +513,9 @@
         "column_FEfeCd": {
           "type": "column",
           "settings": {
-            "image_url": "",
-            "title": "Title",
-            "description": "Text about Photo"
+            "image_url": "https:\/\/vision-jewelery.myshopify.com\/cdn\/shop\/files\/returns.png?v=1678299046",
+            "title": "EASY RETURNS",
+            "description": "Pair text with an image to focus on your chosen product."
           }
         },
         "column_iiy3Ww": {
