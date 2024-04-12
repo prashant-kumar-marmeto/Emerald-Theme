@@ -1,0 +1,16 @@
+{
+  "name": "emerald-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "shopify theme dev -s b03-prashant.myshopify.com",
+    "dev-sync": "shopify theme dev --theme-editor-sync -s b03-prashant.myshopify.com",
+    "pull": "shopify theme pull -s b03-prashant.myshopify.com",
+    "pull-json": "shopify theme pull -d -o *.json -s b03-prashant.myshopify.com",
+    "share": "shopify theme share -s b03-prashant.myshopify.com"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

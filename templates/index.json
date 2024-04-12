@@ -472,7 +472,6 @@
         "column_peJK9W": {
           "type": "column",
           "settings": {
-            "image_url": "https:\/\/vision-jewelery.myshopify.com\/cdn\/shop\/files\/free-shipping1.png?v=1678298984",
             "title": "FREE SHIPPING",
             "description": "We are happy to offer international shipping for a flat rate of $40."
           }
@@ -480,7 +479,6 @@
         "column_qBwzVF": {
           "type": "column",
           "settings": {
-            "image_url": "https:\/\/vision-jewelery.myshopify.com\/cdn\/shop\/files\/gift2.png?v=1678299016",
             "title": "GIFT PACKAGE",
             "description": "Pair text with an image to focus on your chosen product."
           }
@@ -488,7 +486,6 @@
         "column_FEfeCd": {
           "type": "column",
           "settings": {
-            "image_url": "https:\/\/vision-jewelery.myshopify.com\/cdn\/shop\/files\/returns.png?v=1678299046",
             "title": "EASY RETURNS",
             "description": "Pair text with an image to focus on your chosen product."
           }
@@ -496,7 +493,6 @@
         "column_iiy3Ww": {
           "type": "column",
           "settings": {
-            "image_url": "https:\/\/vision-jewelery.myshopify.com\/cdn\/shop\/files\/certificate.png?v=1678299327",
             "title": "ONE YEAR WARRANTY",
             "description": "Pair text with an image to focus on your chosen product."
           }
@@ -619,6 +615,55 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "custom_hero_section_aHHxkx": {
+      "type": "custom-hero-section",
+      "blocks": {
+        "slide_xFhMhH": {
+          "type": "slide",
+          "settings": {
+            "rich_text": "<p>Write your rich text here<\/p>",
+            "button_text": "Shop",
+            "button_url": "",
+            "destop_content_position": "center-center",
+            "destop_content_alignment": "center"
+          }
+        },
+        "slide_XaC3k8": {
+          "type": "slide",
+          "settings": {
+            "rich_text": "<p>Write your rich text here<\/p>",
+            "button_text": "Shop",
+            "button_url": "",
+            "destop_content_position": "center-center",
+            "destop_content_alignment": "center"
+          }
+        },
+        "slide_eaqThA": {
+          "type": "slide",
+          "settings": {
+            "rich_text": "<p>Write your rich text here<\/p>",
+            "button_text": "Shop",
+            "button_url": "",
+            "destop_content_position": "center-center",
+            "destop_content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_xFhMhH",
+        "slide_XaC3k8",
+        "slide_eaqThA"
+      ],
+      "settings": {
+        "auto_play": false,
+        "show_arrows": false,
+        "show_pagination": false,
+        "auto_play_duration": 2000,
+        "slide_animation": "slide",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
@@ -637,6 +682,7 @@
     "multicolumn_4efNVw",
     "custom_usp_6YwExV",
     "multicolumn_zPaEVF",
-    "multicolumn_nFUqwE"
+    "multicolumn_nFUqwE",
+    "custom_hero_section_aHHxkx"
   ]
 }
