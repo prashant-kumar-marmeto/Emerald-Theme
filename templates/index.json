@@ -227,23 +227,6 @@
         "show_text_below": true
       }
     },
-    "featured_blog_nKYTB4": {
-      "type": "featured-blog",
-      "settings": {
-        "heading": "Customer Review",
-        "heading_size": "h1",
-        "blog": "customer-reviews",
-        "post_limit": 4,
-        "columns_desktop": 4,
-        "color_scheme": "",
-        "show_image": true,
-        "show_date": false,
-        "show_author": true,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 20
-      }
-    },
     "custom_customer_review_fPJYa8": {
       "type": "custom-customer-review",
       "settings": {
@@ -647,7 +630,6 @@
     "custom_richtext_animation_8rEFdB",
     "featured_collection_LPPGhW",
     "image_banner_TQgH37",
-    "featured_blog_nKYTB4",
     "custom_customer_review_fPJYa8",
     "image_with_text_Uw76F7",
     "slideshow_bkTMYx",
