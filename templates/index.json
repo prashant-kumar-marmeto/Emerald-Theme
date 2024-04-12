@@ -232,7 +232,7 @@
       "settings": {
         "heading": "Customer Review",
         "heading_size": "h1",
-        "blog": "",
+        "blog": "customer-reviews",
         "post_limit": 4,
         "columns_desktop": 4,
         "color_scheme": "",
