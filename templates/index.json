@@ -548,6 +548,7 @@
         "column_FEfeCd": {
           "type": "column",
           "settings": {
+            "image_picker": "shopify:\/\/shop_images\/RETURN.png",
             "title": "EASY RETURNS",
             "description": "Pair text with an image to focus on your chosen product."
           }
@@ -555,6 +556,7 @@
         "column_iiy3Ww": {
           "type": "column",
           "settings": {
+            "image_picker": "shopify:\/\/shop_images\/WARENTY.webp",
             "title": "ONE YEAR WARRANTY",
             "description": "Pair text with an image to focus on your chosen product."
           }
