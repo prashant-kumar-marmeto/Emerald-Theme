@@ -650,6 +650,7 @@
         "column_aLzVX7": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/logo2x_336x120_crop_center_99dafbab-fdd5-4d3b-b344-de4ff98ab341.png",
             "title": "The Perfect Present for Your Partner",
             "text": "",
             "link_label": "",
@@ -679,12 +680,6 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "custom_usp_NqHeXc": {
-      "type": "custom-USP",
-      "settings": {
-        "heading": "My Custom Heading"
-      }
     }
   },
   "order": [
@@ -704,7 +699,6 @@
     "multicolumn_4efNVw",
     "custom_usp_6YwExV",
     "multicolumn_zPaEVF",
-    "multicolumn_nFUqwE",
-    "custom_usp_NqHeXc"
+    "multicolumn_nFUqwE"
   ]
 }
