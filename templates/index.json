@@ -1,5 +1,65 @@
 {
   "sections": {
+    "custom_hero_section_aHHxkx": {
+      "type": "custom-hero-section",
+      "blocks": {
+        "slide_MAYJan": {
+          "type": "slide",
+          "settings": {
+            "rich_text": "<p>Write your rich text here<\/p>",
+            "button_text": "Shop",
+            "button_url": "",
+            "destop_content_position": "center-center",
+            "destop_content_alignment": "center"
+          }
+        },
+        "slide_xFhMhH": {
+          "type": "slide",
+          "settings": {
+            "rich_text": "<p>Write your rich text here<\/p>",
+            "button_text": "Shop",
+            "button_url": "",
+            "destop_content_position": "center-center",
+            "destop_content_alignment": "center"
+          }
+        },
+        "slide_XaC3k8": {
+          "type": "slide",
+          "settings": {
+            "rich_text": "<p>Write your rich text here<\/p>",
+            "button_text": "Shop",
+            "button_url": "",
+            "destop_content_position": "center-center",
+            "destop_content_alignment": "center"
+          }
+        },
+        "slide_eaqThA": {
+          "type": "slide",
+          "settings": {
+            "rich_text": "<p>Write your rich text here<\/p>",
+            "button_text": "Shop",
+            "button_url": "",
+            "destop_content_position": "center-center",
+            "destop_content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_MAYJan",
+        "slide_xFhMhH",
+        "slide_XaC3k8",
+        "slide_eaqThA"
+      ],
+      "settings": {
+        "auto_play": false,
+        "show_arrows": false,
+        "show_pagination": false,
+        "auto_play_duration": 2000,
+        "slide_animation": "slide",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "video_hYm8tY": {
       "type": "video",
       "settings": {
@@ -509,7 +569,7 @@
         "column_iiy3Ww"
       ],
       "settings": {
-        "heading": "My Custom Heading"
+        "heading": ""
       }
     },
     "multicolumn_zPaEVF": {
@@ -590,6 +650,7 @@
         "column_aLzVX7": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/logo2x_336x120_crop_center_99dafbab-fdd5-4d3b-b344-de4ff98ab341.png",
             "title": "The Perfect Present for Your Partner",
             "text": "",
             "link_label": "",
@@ -619,6 +680,7 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+<<<<<<< HEAD
     },
     "custom_customer_section_R3QngN": {
       "type": "custom-customer-section",
@@ -679,9 +741,12 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+=======
+>>>>>>> f71250f75c3750de4af0d5721cbe8329eb756d3b
     }
   },
   "order": [
+    "custom_hero_section_aHHxkx",
     "video_hYm8tY",
     "featured_collection",
     "multicolumn_kCcpnP",
@@ -697,7 +762,11 @@
     "multicolumn_4efNVw",
     "custom_usp_6YwExV",
     "multicolumn_zPaEVF",
+<<<<<<< HEAD
     "multicolumn_nFUqwE",
     "custom_customer_section_R3QngN"
+=======
+    "multicolumn_nFUqwE"
+>>>>>>> f71250f75c3750de4af0d5721cbe8329eb756d3b
   ]
 }
