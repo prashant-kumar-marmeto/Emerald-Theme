@@ -227,6 +227,77 @@
         "show_text_below": true
       }
     },
+    "custom_customer_section_R3QngN": {
+      "type": "custom-customer-section",
+      "blocks": {
+        "slide_rjUqdP": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/p1_600x500_crop_center_c9d12458-9172-4e61-ab84-da1e5b5cef45.png",
+            "rating_range_review": 4.5,
+            "comment": "Beautiful Ring!",
+            "text_area": "Gorgeous, dainty, sparkly band that works as a solo everyday ring.",
+            "author_name": "JULIE THOMAS",
+            "content_position_desktop": "center"
+          }
+        },
+        "slide_TMVnhy": {
+          "type": "slide",
+          "settings": {
+            "rating_range_review": 4.5,
+            "comment": "Amazing",
+            "text_area": "",
+            "author_name": "",
+            "content_position_desktop": "center"
+          }
+        },
+        "slide_qRHjgf": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/ring_1.png",
+            "rating_range_review": 4.5,
+            "comment": "Amazing",
+            "text_area": "",
+            "author_name": "",
+            "content_position_desktop": "center"
+          }
+        },
+        "slide_ig9zaJ": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/ring_3.png",
+            "rating_range_review": 4.5,
+            "comment": "Amazing",
+            "text_area": "",
+            "author_name": "",
+            "content_position_desktop": "center"
+          }
+        },
+        "slide_ebRew6": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/ring_4.png",
+            "rating_range_review": 4.5,
+            "comment": "Amazing",
+            "text_area": "",
+            "author_name": "",
+            "content_position_desktop": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_rjUqdP",
+        "slide_TMVnhy",
+        "slide_qRHjgf",
+        "slide_ig9zaJ",
+        "slide_ebRew6"
+      ],
+      "settings": {
+        "heading_customer_review": "Customer Review",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "custom_customer_review_fPJYa8": {
       "type": "custom-customer-review",
       "settings": {
@@ -386,66 +457,6 @@
         "show_view_all": true,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "custom_customer_section_R3QngN": {
-      "type": "custom-customer-section",
-      "blocks": {
-        "slide_rjUqdP": {
-          "type": "slide",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/p1_600x500_crop_center_c9d12458-9172-4e61-ab84-da1e5b5cef45.png",
-            "rating_range_review": 4.5,
-            "comment": "Amazing",
-            "text_area": "",
-            "author_name": "",
-            "content_position_desktop": "center"
-          }
-        },
-        "slide_qRHjgf": {
-          "type": "slide",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/ring_1.png",
-            "rating_range_review": 4.5,
-            "comment": "Amazing",
-            "text_area": "",
-            "author_name": "",
-            "content_position_desktop": "center"
-          }
-        },
-        "slide_ig9zaJ": {
-          "type": "slide",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/ring_3.png",
-            "rating_range_review": 4.5,
-            "comment": "Amazing",
-            "text_area": "",
-            "author_name": "",
-            "content_position_desktop": "center"
-          }
-        },
-        "slide_ebRew6": {
-          "type": "slide",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/ring_4.png",
-            "rating_range_review": 4.5,
-            "comment": "Amazing",
-            "text_area": "",
-            "author_name": "",
-            "content_position_desktop": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_rjUqdP",
-        "slide_qRHjgf",
-        "slide_ig9zaJ",
-        "slide_ebRew6"
-      ],
-      "settings": {
-        "heading_customer_review": "Customer Review",
-        "padding_top": 40,
-        "padding_bottom": 40
       }
     },
     "multicolumn_4efNVw": {
@@ -690,11 +701,11 @@
     "custom_richtext_animation_8rEFdB",
     "featured_collection_LPPGhW",
     "image_banner_TQgH37",
+    "custom_customer_section_R3QngN",
     "custom_customer_review_fPJYa8",
     "image_with_text_Uw76F7",
     "slideshow_bkTMYx",
     "featured_blog_QmRVj6",
-    "custom_customer_section_R3QngN",
     "multicolumn_4efNVw",
     "custom_usp_6YwExV",
     "multicolumn_zPaEVF",
