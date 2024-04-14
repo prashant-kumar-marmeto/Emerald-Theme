@@ -1,6 +1,7 @@
 div, h1, h2, p, li {
     margin: 0;
     padding: 0;
+    color: #263d2d;
 }
 .heading {
     font-size: 39px;
@@ -16,9 +17,9 @@ div, h1, h2, p, li {
 }
 .custom-customer-review--container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -26,34 +27,33 @@ div, h1, h2, p, li {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    max-width: 300px;
     height: auto;
 }
-.customer-reviews--quick-view {
+.customer-reviews--quick-views {
     position: absolute;
     bottom: 14px;
     right: 14px;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 50%;
     width: 34px;
     height: 34px;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
     cursor: pointer;
     box-shadow: 0 4px 6px #00000014;
 }
-.customer-reviews--quick-view {
+.customer-reviews--quick-views {
     display: none;
-    transition: display 0.3s ease; /* Smooth transition effect */
+    transition: display 0.3s ease;
 }
-.customer-reviews--quick-view {
-    display: none; /* Initially hide the quick view container */
+.customer-reviews--quick-views {
+    display: none; 
 }
 
-.customer-reviews:hover .customer-reviews--quick-view {
-    display: flex; /* Display the quick view container when hovering over the reviews container */
+.customer-reviews:hover .customer-reviews--quick-views {
+    display: flex; 
 }
 
 .customer-reviews--quick-view .loading-overlay {
@@ -91,9 +91,9 @@ div, h1, h2, p, li {
     align-items: flex-start;
 }
 .customer-reviews--products {
-    height: 248px;
+    max-height: 248px;
     position: relative;
-    width: 298px;
+    max-width: 298px;
     
 } 
 .product-image {
