@@ -111,7 +111,8 @@ div, h1, h2, p, li, span {
     font-size: 15px;
     margin: 0 0 20px;
     line-height: 1.5;
-    word-spacing: .001em;
+    word-spacing: .001rem;
+    letter-spacing: 0rem;
 }
 .customer-reviews--author {
     margin: 0;
