@@ -241,16 +241,6 @@
             "content_position_desktop": "center"
           }
         },
-        "slide_TMVnhy": {
-          "type": "slide",
-          "settings": {
-            "rating_range_review": 4.5,
-            "comment": "Amazing",
-            "text_area": "",
-            "author_name": "",
-            "content_position_desktop": "center"
-          }
-        },
         "slide_qRHjgf": {
           "type": "slide",
           "settings": {
@@ -287,7 +277,6 @@
       },
       "block_order": [
         "slide_rjUqdP",
-        "slide_TMVnhy",
         "slide_qRHjgf",
         "slide_ig9zaJ",
         "slide_ebRew6"
