@@ -110,6 +110,8 @@ div, h1, h2, p, li, span {
 .customer-review--description{
     font-size: 15px;
     margin: 0 0 20px;
+    line-height: 1.5;
+    word-spacing: .001em;
 }
 .customer-reviews--author {
     margin: 0;
