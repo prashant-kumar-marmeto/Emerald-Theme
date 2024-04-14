@@ -39,20 +39,22 @@
                         {% if block.settings.slide_image != blank  %}
                             <img src="{{ block.settings.slide_image | image_url }}" alt="select image" class='product-image' height="248" width="298" />
                         {% endif %}
-                        <div class='customer-reviews--quick-views'>
-                            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.5 1.5H3.75L4.8875 7.875H12.8625L14.1375 2.25H5.6625" stroke="#8d5d48" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <circle cx="10.875" cy="9" r="1.125" stroke="#8d5d48" stroke-width="1.5"/>
-                                <circle cx="4.125" cy="9" r="1.125" stroke="#8d5d48" stroke-width="1.5"/>
-                                <path d="M6.375 7.875C6.375 8.3375 6.0375 8.7 5.625 8.7C5.2125 8.7 4.875 8.3375 4.875 7.875C4.875 7.4125 5.2125 7.05 5.625 7.05C6.0375 7.05 6.375 7.4125 6.375 7.875Z" fill="#8d5d48"/>
-                                <path d="M11.25 7.875C11.25 8.3375 10.9125 8.7 10.5 8.7C10.0875 8.7 9.75 8.3375 9.75 7.875C9.75 7.4125 10.0875 7.05 10.5 7.05C10.9125 7.05 11.25 7.4125 11.25 7.875Z" fill="#8d5d48"/>
-                            </svg>       
-                            <div class="loading-overlay">
-                                <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                                    <circle class="spinner-path" fill="none" stroke-width="6" cx="33" cy="33" r="30" stroke="#3b5342"></circle>
-                                </svg>
-                              </div>             
-                        </div>
+                        <a href="{{ block.settings.product_url }}">
+                            <div class='customer-reviews--quick-views'>
+                                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.5 1.5H3.75L4.8875 7.875H12.8625L14.1375 2.25H5.6625" stroke="#8d5d48" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="10.875" cy="9" r="1.125" stroke="#8d5d48" stroke-width="1.5"/>
+                                    <circle cx="4.125" cy="9" r="1.125" stroke="#8d5d48" stroke-width="1.5"/>
+                                    <path d="M6.375 7.875C6.375 8.3375 6.0375 8.7 5.625 8.7C5.2125 8.7 4.875 8.3375 4.875 7.875C4.875 7.4125 5.2125 7.05 5.625 7.05C6.0375 7.05 6.375 7.4125 6.375 7.875Z" fill="#8d5d48"/>
+                                    <path d="M11.25 7.875C11.25 8.3375 10.9125 8.7 10.5 8.7C10.0875 8.7 9.75 8.3375 9.75 7.875C9.75 7.4125 10.0875 7.05 10.5 7.05C10.9125 7.05 11.25 7.4125 11.25 7.875Z" fill="#8d5d48"/>
+                                </svg>       
+                                <div class="loading-overlay">
+                                    <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="spinner-path" fill="none" stroke-width="6" cx="33" cy="33" r="30" stroke="#3b5342"></circle>
+                                    </svg>
+                                  </div>             
+                            </div>
+                        </a>
                     </div>
                     <div class="customer-reviews--content">
                         <div class="star-rating">
@@ -123,6 +125,11 @@
                         "type": "image_picker",
                         "id": "slide_image",
                         "label": "Select image"
+                    },
+                    {
+                        "type": "url",
+                        "id": "product_url",
+                        "label": "Product Link"
                     },
                     {
                         "type": "header",

@@ -97,6 +97,9 @@ div, h1, h2, p, li, span {
     max-width: 298px;
     
 } 
+.customer-reviews--products a {
+  text-decoration: none;
+}
 .product-image {
     border-radius: 5px;
     -webkit-border-radius: 5px;
