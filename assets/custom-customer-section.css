@@ -1,0 +1,300 @@
+div, h1, h2, p, li {
+    margin: 0;
+    padding: 0;
+}
+.heading {
+    font-size: 39px;
+    color: #263d2d;
+    font-weight: 700;
+
+}
+.custom-customer-reviews{
+    height: 508px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.custom-customer-review--container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.customer-reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.customer-reviews--quick-view {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    cursor: pointer;
+    box-shadow: 0 4px 6px #00000014;
+}
+.customer-reviews--quick-view {
+    display: none;
+    transition: display 0.3s ease; /* Smooth transition effect */
+}
+.customer-reviews--quick-view {
+    display: none; /* Initially hide the quick view container */
+}
+
+.customer-reviews:hover .customer-reviews--quick-view {
+    display: flex; /* Display the quick view container when hovering over the reviews container */
+}
+
+.customer-reviews--quick-view .loading-overlay {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-overlay {
+    display: none;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    line-height: 0;
+    transform: translate3d(-50%, -50%, 0);
+}
+.customer-reviews--review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0 15px 10px;
+}
+.customer-reviews--content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.customer-reviews--products {
+    height: 248px;
+    position: relative;
+    width: 298px;
+    
+} 
+.product-image {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.customer-review--comment {
+    font-size: 20px;
+    margin: 0 0 8px;
+}
+.customer-review--description{
+    font-size: 15px;
+    margin: 0 0 20px;
+}
+.customer-reviews--author {
+    margin: 0;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*! Flickity v2.3.0
+https://flickity.metafizzy.co
+---------------------------------------------- */
+.flickity-enabled {
+  position: relative; }
+
+.flickity-enabled:focus {
+  outline: none; }
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  min-width: 100%; }
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  will-change: transform; }
+
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab; }
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing; }
+
+
+.flickity-enabled.is-fade .flickity-slider > * {
+  pointer-events: none;
+  z-index: 0; }
+
+.flickity-enabled.is-fade .flickity-slider > .is-selected {
+  pointer-events: auto;
+  z-index: 1; }
+
+.flickity-enabled.is-fade .flickity-slider .carousel__slide {
+  will-change: opacity, z-index; }
+
+.flickity-enabled.is-fade.main-slideshow.transition--zoom .slideshow__slide {
+  will-change: z-index; }
+  .flickity-enabled.is-fade.main-slideshow.transition--zoom .slideshow__slide-bg, .flickity-enabled.is-fade.main-slideshow.transition--zoom .slideshow__slide-video-bg {
+    transform: scale(1.1); }
+
+
+.static-dots .flickity-page-dots {
+  position: static; }
+
+.flickity-page-dots {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+  line-height: 0;
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  z-index: 20; }
+  .flickity-page-dots .dot {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    opacity: 0.2;
+    border-radius: 4px;
+    margin: 0 6px;
+    background: var(--color-body, #2c2d2e);
+    cursor: pointer;
+    position: relative;
+    transform: scale(1, 1); }
+    .flickity-page-dots .dot.is-selected {
+      opacity: 1; }
+    @media (hover: hover) {
+      .flickity-page-dots .dot:hover {
+        opacity: 1; } }
+    .flickity-page-dots .dot.is-selected {
+      width: 32px; }
+  .flickity-page-dots.dot-style--logos {
+    display: inline-flex;
+    align-items: center;
+    overflow: scroll;
+    scrollbar-width: none; }
+    .flickity-page-dots.dot-style--logos::-webkit-scrollbar {
+      display: none; }
+    .flickity-page-dots.dot-style--logos .dot {
+      width: auto;
+      height: 100px;
+      background: none;
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center; }
+      .flickity-page-dots.dot-style--logos .dot img {
+        object-fit: contain;
+        max-height: 100%;
+        width: auto; }
+
+.flickity-nav {
+  background: var(--color-drawer-bg, #fff);
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  width: 42px;
+  height: 42px;
+  margin-top: -21px;
+  z-index: 30;
+  opacity: 0;
+  cursor: pointer; }
+  .flickity-nav svg {
+    pointer-events: none; }
+  @media only screen and (min-width: 768px) {
+    .flickity-enabled .flickity-nav {
+      display: flex; } }
+  .flickity-nav.flickity-prev {
+    left: -21px; }
+  .flickity-nav.flickity-next {
+    right: -21px; }
+  .flickity-nav:focus-visible {
+    opacity: 1; }
+  .flickity-nav:hover svg {
+    transform: scale(1.2); }
+
+.flickity-enabled:hover .flickity-nav {
+  opacity: 1; }
+
+.flickity-progress {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--color-border, #dadce0);
+  border-radius: 0.5px;
+  position: relative;
+  margin-top: 20px; }
+  .flickity-progress--bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    background: var(--color-body, #2c2d2e);
+    width: 0%;
+    border-radius: 0.5px; }
+
+
+

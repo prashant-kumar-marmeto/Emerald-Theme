@@ -1,0 +1,205 @@
+{{ 'custom-customer-section.css' | asset_url | stylesheet_tag }}
+
+
+{% style %}
+    .star-rating:before {
+    content: "\2605\2605\2605\2605\2605";
+    background: linear-gradient(90deg, #ffaa47 calc(4.5/5 * 100%), #e1e1e1 calc(4.5/5 * 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+    .customer-reviews--review .star-rating {
+        font-size: 1.5rem;
+        margin-bottom: .9375rem;
+    }
+    {% endstyle %}
+
+<div class="custom-customer-reviews page-width">
+    <h2 class="heading">{{ section.settings.heading_customer_review }}</h2>
+    <div class="custom-customer-review--container">
+        <div class="flickity-nav flickity-prev" tabindex="0" style="transform: translateY(-90.75px);">
+            <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.5 6L1.5 6" stroke="var(--color-body)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M6 10.5L1.5 6L6 1.5" stroke="var(--color-body)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </div>
+        <div class="flickity-nav flickity-next" tabindex="0" style="transform: translateY(-90.75px);">
+            <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6H12.5" stroke="var(--color-body)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M8 1.5L12.5 6L8 10.5" stroke="var(--color-body)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </div>
+        {% for block in section.blocks %}
+            <div class="customer-reviews">
+                <div class="customer-reviews--review">
+                    <div class="customer-reviews--products">
+                        {% if block.settings.slide_image != blank  %}
+                            <img src="{{ block.settings.slide_image | image_url }}" alt="select image" class='product-image' height="248" width="298" />
+                        {% endif %}
+                        <div class='customer-reviews--quick-view'>
+                            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5 1.5H3.75L4.8875 7.875H12.8625L14.1375 2.25H5.6625" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="10.875" cy="9" r="1.125" stroke="#000000" stroke-width="1.5"/>
+                                <circle cx="4.125" cy="9" r="1.125" stroke="#000000" stroke-width="1.5"/>
+                                <path d="M6.375 7.875C6.375 8.3375 6.0375 8.7 5.625 8.7C5.2125 8.7 4.875 8.3375 4.875 7.875C4.875 7.4125 5.2125 7.05 5.625 7.05C6.0375 7.05 6.375 7.4125 6.375 7.875Z" fill="#000000"/>
+                                <path d="M11.25 7.875C11.25 8.3375 10.9125 8.7 10.5 8.7C10.0875 8.7 9.75 8.3375 9.75 7.875C9.75 7.4125 10.0875 7.05 10.5 7.05C10.9125 7.05 11.25 7.4125 11.25 7.875Z" fill="#000000"/>
+                            </svg>       
+                            <div class="loading-overlay">
+                                <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="spinner-path" fill="none" stroke-width="6" cx="33" cy="33" r="30" stroke="#3b5342"></circle>
+                                </svg>
+                              </div>             
+                        </div>
+                    </div>
+                    <div class="customer-reviews--content">
+                        <div class="star-rating" >
+                        </div>
+                        <h2 class="customer-review--comment">{{ block.settings.comment }}</h2>
+                        <p class="customer-review--description">“{{ block.settings.text_area }}”</p>
+                        <div class="customer-reviews--author">
+                            <span>{{ block.settings.author_name }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}    
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Customer Review",
+        "tag": "section",
+        "class": "section",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Section Heading"
+            },
+            {
+                "type": "text",
+                "id": "heading_customer_review",
+                "label": "Customer Review",
+                "default": "Customer Review"
+            },
+            {
+                "type": "header",
+                "content": "Section padding"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "px",
+                "label": "Padding top",
+                "default": 40
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "px",
+                "label": "Padding botttom",
+                "default": 40
+            }
+        ],
+        "blocks": [
+            {
+                "type": "slide",
+                "name": "Slide",
+                "settings": [
+                    {
+                        "type": "header",
+                        "content": "Media Option"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "slide_image",
+                        "label": "Select image"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Rating"
+                    },
+                    {
+                        "type": "range",
+                        "id": "rating_range_review",
+                        "min": 0,
+                        "max": 5,
+                        "step": 0.5,
+                        "label": "Customer Rating",
+                        "default": 4.5
+                    },
+                    {
+                        "type": "header",
+                        "content": "Comment"
+                    },
+                    {
+                        "type": "text",
+                        "id": "comment",
+                        "label": "Comment",
+                        "default": "Amazing"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "text_area",
+                        "label": "Text Area",
+                        "placeholder": "Write you thoughts"
+                    },
+                    {
+                        "type": "text",
+                        "id": "author_name",
+                        "label": "Autheo Name",
+                        "placeholder": "Author name"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Content Position"
+                    },
+                    {
+                        "type": "select",
+                        "id": "content_position_desktop",
+                        "label": "Desktop Content Position",
+                        "options": [
+                            {
+                                "value": "left",
+                                "label": "Left"
+                            },
+                            {
+                                "value": "center",
+                                "label": "Center"
+                            },
+                            {
+                                "value": "right",
+                                "label": "Right"
+                            }
+                        ],
+                        "default": "center"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Customer Review",
+                "blocks": [
+                    {
+                        "type": "slide"
+                    },
+                    {
+                        "type": "slide"
+                    },
+                    {
+                        "type": "slide"
+                    }
+                ]
+            }
+        ]
+        
+    }
+{% endschema %}
