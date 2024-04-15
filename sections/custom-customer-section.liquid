@@ -1,21 +1,6 @@
 {{ 'custom-customer-section.css' | asset_url | stylesheet_tag }}
 
 
-{% style %}
-    .star-rating:before {
-    content: "\2605\2605\2605\2605\2605";
-    /* background: linear-gradient(90deg, #ffaa47 calc(4.5/5 * 100%), #e1e1e1 calc(4.5/5 * 100%)); */
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    }
-    .customer-reviews--review .star-rating {
-        font-size: 1.5rem;
-        margin-bottom: .9375rem;
-        margin-top: 2rem;
-    }
-{% endstyle %}
-
 <div class="custom-customer-reviews page-width">
     <h2 class="heading">{{ section.settings.heading_customer_review }}</h2>
     <div class="custom-customer-review--container">
