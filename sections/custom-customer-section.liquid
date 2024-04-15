@@ -57,6 +57,11 @@
                         </a>
                     </div>
                     <div class="customer-reviews--content">
+                      {% style %}
+                        .star-rating:before {
+                          background: linear-gradient(90deg, #ffaa47 calc({{ block.settings.rating_range_review }}/5 * 100%), #e1e1e1 calc({{ block.settings.rating_range_review }}/5 * 100%));
+                        }
+                      {% endstyle %}
                         <div class="star-rating">
                         </div>
                         <h2 class="customer-review--comment">{{ block.settings.comment }}</h2>
