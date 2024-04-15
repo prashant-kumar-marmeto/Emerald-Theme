@@ -14,9 +14,20 @@
         margin-bottom: .9375rem;
         margin-top: 2rem;
     }
+    .padding-{{ section.id }} {
+        padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | divided_by: 2  }}px;
+    }
+    @media screen and (min-width: 749px) {
+        .padding-{{ section.id }} {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom  }}px;
+    }
+    }
+
     {% endstyle %}
 
-<div class="custom-customer-reviews page-width">
+<div class="custom-customer-reviews page-width padding-{{ section.id }}">
     <h2 class="heading">{{ section.settings.heading_customer_review }}</h2>
     <div class="custom-customer-review--container">
         <div class="flickity-nav flickity-prev" tabindex="0" style="transform: translateY(-90.75px);">
