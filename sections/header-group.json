@@ -59,7 +59,7 @@
         "logo_position": "top-center",
         "menu": "main-menu",
         "menu_type_desktop": "mega",
-        "sticky_header_type": "on-scroll-up",
+        "sticky_header_type": "none",
         "show_line_separator": false,
         "color_scheme": "scheme-aaeac43a-52e7-4ae5-a8f9-f2a0864bb0c4",
         "menu_color_scheme": "scheme-1",

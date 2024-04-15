@@ -1,7 +1,6 @@
 div, h1, h2, p, li, span {
     margin: 0;
     padding: 0;
-    color: #263d2d;
 }
 .heading {
     font-size: 39px;
@@ -11,7 +10,7 @@ div, h1, h2, p, li, span {
 
 }
 .custom-customer-reviews{
-    height: 508px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -101,6 +100,8 @@ div, h1, h2, p, li, span {
   text-decoration: none;
 }
 .product-image {
+  height: 200px;
+  width: 250px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;

@@ -59,8 +59,7 @@
       text-align: center;
     }
     .custom-container__slide{
-        height: 130px;
-        min-width: 300px;
+        height: auto;
         max-width: 300px;
         display: flex;
         flex-direction: column;
@@ -102,7 +101,7 @@
 </style>
 
 
-<div class="custom-container">
+<div class="custom-container page-width">
     
     {% for block in section.blocks %}
     <div class="custom-container__slide">
