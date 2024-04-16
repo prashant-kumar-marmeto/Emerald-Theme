@@ -35,14 +35,16 @@
                         {% endif %}
                         <div class="custom-slideshow--content">
                             <p class="custom-slideshow--caption">{{ block.settings.caption_text }}</p>
-                                
+                            <div class="animate-popup">
                                 <h1 class="custom-slideshow--split__text split-text slideshow__slide-heading h1">
-                                        {{ block.settings.rich_text }}
+                                    {{ block.settings.rich_text }}
                                 </h1>
                                 <a class="custom-slideshow--link__wrapper line-child" href="{{ block.settings.button_url }}">
                                     <button class="custom-slideshow--button">{{ block.settings.button_text }}</button>
                                 </a>
-                        </div>    
+                            </div>    
+                        </div>
+                            
                     </li>
                 {% endfor %}
               </ul>
@@ -52,9 +54,29 @@
 
 <script>
     document.addEventListener( 'DOMContentLoaded', function () {
-      new Splide( '#image-carousel' ).mount();
-    
-    } );
+        var splide = new Splide('#image-carousel', {
+            keyboard: 'global',
+            type: "fade"
+        });
+        
+        splide.on('move', function () {
+            var activeSlide = splide.Components.Elements.slides[splide.index];
+            var headings = activeSlide.querySelectorAll('.animate-popup');
+            
+            headings.forEach(function(element) {
+              // Remove the class to trigger the animation
+              element.classList.remove('animate-popup');
+              
+              // Force reflow to restart the animation
+              void element.offsetWidth;
+              
+              // Add the class back to trigger the animation
+              element.classList.add('animate-popup');
+            });
+          });
+        
+        splide.mount();
+        });
 </script>
 
 {% schema %}
