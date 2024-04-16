@@ -15,7 +15,6 @@
       margin-top: 2rem;
     }
     .padding-{{ section.id }} {
-<<<<<<< HEAD
         padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
         padding-bottom: {{ section.settings.padding_bottom | divided_by: 2  }}px;
     }
@@ -23,21 +22,13 @@
         .padding-{{ section.id }} {
             padding-top: {{ section.settings.padding_top }}px;
             padding-bottom: {{ section.settings.padding_bottom }}px;
-=======
-        padding-top: {{ section.settings.padding_top | divided_by: 2 }};
-        padding-bottom: {{ section.settings.padding_bottom | divided_by: 2  }};
-    }
-    @media screen and (min-width: 749px) {
-        .padding-{{ section.id }} {
-            padding-top: {{ section.settings.padding_top }};
-            padding-bottom: {{ section.settings.padding_bottom }};
->>>>>>> 5f5624040ff4d32634cdc32e4d8b0ba3ac7229ad
         }
     }
     {% endstyle %}
 
-<div class="custom-customer-reviews page-width padding-{{ section.id }}">
-    <h2 class="heading">{{ section.settings.heading_customer_review }}</h2>
+<div class="custom-customer-reviews padding-{{ section.id }}">
+    <div class="page-width">
+        <h2 class="heading">{{ section.settings.heading_customer_review }}</h2>
     <div class="custom-customer-review--container">
         <div class="flickity-nav flickity-prev" tabindex="0" style="transform: translateY(-90.75px);">
             <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,6 +80,8 @@
             </div>
         {% endfor %}    
     </div>
+    </div>
+    
 </div>
 
 {% schema %}
