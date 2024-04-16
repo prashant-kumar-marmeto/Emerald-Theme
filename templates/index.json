@@ -8,9 +8,9 @@
           "settings": {
             "video_url": "shopify:\/\/files\/videos\/5915fba7e49e419886a3689ac1cdd535.HD-1080p-4.8Mbps-12891231.mp4",
             "desktop_image": "shopify:\/\/shop_images\/slide-01.png",
-            "caption_text": "",
-            "rich_text": "<p>Write your rich text here<\/p>",
-            "button_text": "Shop",
+            "caption_text": "add a tagline",
+            "rich_text": "<p>discover your perfect accessory for your style<\/p>",
+            "button_text": "Shop now",
             "button_url": "",
             "destop_content_position": "center-center",
             "destop_content_alignment": "center"
@@ -20,10 +20,10 @@
           "type": "slide",
           "settings": {
             "desktop_image": "shopify:\/\/shop_images\/slide-01.png",
-            "caption_text": "",
-            "rich_text": "<p>Write your rich text here<\/p>",
-            "button_text": "Shop",
-            "button_url": "",
+            "caption_text": "new collection",
+            "rich_text": "<p>EVERY PIECE IS A UNIQUE, ONE OF A KIND MASTERPIECE<\/p>",
+            "button_text": "Shop the collection",
+            "button_url": "#",
             "destop_content_position": "center-center",
             "destop_content_alignment": "center"
           }

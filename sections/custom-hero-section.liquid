@@ -32,15 +32,17 @@
                                 <source src="{{ block.settings.video_url | asset_url }}" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                        {% endif %}    
-                        
+                        {% endif %}
                         <div class="custom-slideshow--content">
                             <p class="custom-slideshow--caption">{{ block.settings.caption_text }}</p>
-                            <h2 class="custom-slideshow--split__text">{{ block.settings.rich_text }}</h2>
-                            <a class="custom-slideshow--link__wrapper" href="{{ block.settings.button_url }}">
-                                <button class="custom-slideshow--button">{{ block.settings.button_text }}</button>
-                            </a>
-                        </div>
+                                
+                                <h1 class="custom-slideshow--split__text split-text slideshow__slide-heading h1">
+                                        {{ block.settings.rich_text }}
+                                </h1>
+                                <a class="custom-slideshow--link__wrapper line-child" href="{{ block.settings.button_url }}">
+                                    <button class="custom-slideshow--button">{{ block.settings.button_text }}</button>
+                                </a>
+                        </div>    
                     </li>
                 {% endfor %}
               </ul>
@@ -268,9 +270,6 @@
         {
             "name": "Custom Hero Section",
             "blocks": [
-                {
-                    "type": "slide"
-                },
                 {
                     "type": "slide"
                 },
