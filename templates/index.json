@@ -1,12 +1,55 @@
 {
   "sections": {
+    "custom_slideshow_QdxFCy": {
+      "type": "custom-slideshow",
+      "blocks": {
+        "slide_eaaDng": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide-01.png",
+            "pre_heading": "Trendy Classics",
+            "heading": "<p>Discover Signature Look: Fashion Forward and Fabulous!<\/p>",
+            "button_label": "Shop Now",
+            "button_url": "",
+            "desktop_content_position": "middle-center",
+            "desktop_text_allignment": "left",
+            "color_scheme": "background-1"
+          }
+        },
+        "slide_93E9i9": {
+          "type": "slide",
+          "settings": {
+            "pre_heading": "Trendy Classics",
+            "heading": "<p>Discover Signature Look: Fashion Forward and Fabulous!<\/p>",
+            "button_label": "Shop Now",
+            "button_url": "",
+            "desktop_content_position": "middle-center",
+            "desktop_text_allignment": "left",
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "slide_eaaDng",
+        "slide_93E9i9"
+      ],
+      "settings": {
+        "auto_play": true,
+        "show_pagination": true,
+        "show_arrows": true,
+        "auto_play_duration": 1000,
+        "slide_type": "slide",
+        "padding_top": 72,
+        "padding_bottom": 70
+      }
+    },
     "custom_hero_section_VMLhkw": {
       "type": "custom-hero-section",
       "blocks": {
         "slide_T3XUdp": {
           "type": "slide",
           "settings": {
-            "video_url": "shopify:\/\/files\/videos\/5915fba7e49e419886a3689ac1cdd535.HD-1080p-4.8Mbps-12891231.mp4",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/34093711da354fcdbe82285ba4a29a42.mp4",
             "desktop_image": "shopify:\/\/shop_images\/slide-01.png",
             "caption_text": "add a tagline",
             "rich_text": "<p>discover your perfect accessory for your style<\/p>",
@@ -19,6 +62,7 @@
         "slide_bDAVCG": {
           "type": "slide",
           "settings": {
+            "video_url": "",
             "desktop_image": "shopify:\/\/shop_images\/slide-01.png",
             "caption_text": "new collection",
             "rich_text": "<p>EVERY PIECE IS A UNIQUE, ONE OF A KIND MASTERPIECE<\/p>",
@@ -34,7 +78,7 @@
         "slide_bDAVCG"
       ],
       "settings": {
-        "auto_play": false,
+        "auto_play": true,
         "show_arrows": false,
         "show_pagination": false,
         "auto_play_duration": 2000,
@@ -710,18 +754,10 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "custom_liquid_ReU3nF": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{% if customer.has_account %}\n   {{ \"customer \" }}\n{% endif %}",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
+    "custom_slideshow_QdxFCy",
     "custom_hero_section_VMLhkw",
     "featured_collection",
     "multicolumn_kCcpnP",
@@ -738,7 +774,6 @@
     "multicolumn_4efNVw",
     "custom_usp_6YwExV",
     "multicolumn_zPaEVF",
-    "multicolumn_nFUqwE",
-    "custom_liquid_ReU3nF"
+    "multicolumn_nFUqwE"
   ]
 }

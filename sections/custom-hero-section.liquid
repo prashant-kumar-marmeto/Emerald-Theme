@@ -12,11 +12,6 @@
             padding-bottom: {{ section.settings.padding_bottom }}px; 
     }
 }
-
-.splide__arrows .splide__arrow {
-    display: none;
-}
-
 {% endstyle %}
 
 <div class="custom-slideshow custom-slideshow-wrapper custom-slideshow--{{ section.id }}">
@@ -27,12 +22,12 @@
                     <li class="custom-slideshow--splide__slide splide__slide">
                         {% if block.settings.video_url != blank %}
                             <video class="custom-slideshow--video" autoplay loop muted>
-                                <source src="{{ block.settings.video_url | video_tag }}">
+                                <source src="{{ block.settings.video_url }}" type="video/mp4">
                             </video>
                         {% elsif block.settings.video_url == blank and block.settings.desktop_image != blank %}    
                             <img class="custom-slideshow--image" src="{{ block.settings.desktop_image | image_url }}" alt="courasel image" height=600 width=1000>
                         {% elsif block.settings.video_url != blank and block.settings.desktop_image != blank %}    
-                            <video muted>
+                            <video class="custom-slideshow--video" autoplay loop muted>
                                 <source src="{{ block.settings.video_url | asset_url }}" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -176,7 +171,7 @@
                     "content": "Media Option"
                 },
                 {
-                    "type": "video",
+                    "type": "url",
                     "id": "video_url",
                     "label": "Select viedo"
                 },
