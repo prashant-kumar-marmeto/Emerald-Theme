@@ -58,10 +58,22 @@
         "heading_text": "Testimonials",
         "description_text": "<p>DescriptionLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
       }
+    },
+    "custom_subscribe_yAkM4f": {
+      "type": "custom-subscribe",
+      "settings": {
+        "subscribe_background": "#edff84",
+        "heading_text": "Subscribe to our Newsletter",
+        "button_text": "Subscribe",
+        "button_url": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
     "main",
-    "custome_testimonials_YMHKGH"
+    "custome_testimonials_YMHKGH",
+    "custom_subscribe_yAkM4f"
   ]
 }
