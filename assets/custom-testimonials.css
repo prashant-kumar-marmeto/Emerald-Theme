@@ -129,19 +129,9 @@
   }
   
   /* Remove margin from the last slide to prevent extra space */
-  .splide__slide:last-child {
+.splide__slide:last-child {
     margin-right: 0;
   }
-/* pagination dots */
-.kjahfk{
-    width: 40px;
-    height: 4px;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
-}
 .custom-testimonials--slide-caruosel .splide__pagination li {
     margin-left: 20px;
     margin-right: 20px;
