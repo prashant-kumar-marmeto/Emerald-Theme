@@ -52,8 +52,15 @@
 .custom-component--slider-container .custom-testimonials--slide-caruosel {
     width: 80vw;
 }
+
+
+/* Remove left margin from the first slide */
+.custom-testimonials--splide__list .custom-testimonials--content-splide__slide {
+  margin-left: 0;
+}
 }
 {% endstyle %}
+
 
 {% comment %} {% if customer %} {% endcomment %}
     <div class='custom-testimonials page-width  custom-testiomonials--{{ section.id }}'>
