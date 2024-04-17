@@ -35,7 +35,7 @@
         "slide_bDAVCG"
       ],
       "settings": {
-        "auto_play": true,
+        "auto_play": false,
         "show_arrows": false,
         "show_pagination": false,
         "auto_play_duration": 2000,
