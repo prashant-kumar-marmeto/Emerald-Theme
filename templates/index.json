@@ -1,48 +1,5 @@
 {
   "sections": {
-    "custom_slideshow_QdxFCy": {
-      "type": "custom-slideshow",
-      "blocks": {
-        "slide_eaaDng": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/slide-01.png",
-            "pre_heading": "Trendy Classics",
-            "heading": "<p>Discover Signature Look: Fashion Forward and Fabulous!<\/p>",
-            "button_label": "Shop Now",
-            "button_url": "",
-            "desktop_content_position": "middle-center",
-            "desktop_text_allignment": "left",
-            "color_scheme": "background-1"
-          }
-        },
-        "slide_93E9i9": {
-          "type": "slide",
-          "settings": {
-            "pre_heading": "Trendy Classics",
-            "heading": "<p>Discover Signature Look: Fashion Forward and Fabulous!<\/p>",
-            "button_label": "Shop Now",
-            "button_url": "",
-            "desktop_content_position": "middle-center",
-            "desktop_text_allignment": "left",
-            "color_scheme": "background-1"
-          }
-        }
-      },
-      "block_order": [
-        "slide_eaaDng",
-        "slide_93E9i9"
-      ],
-      "settings": {
-        "auto_play": true,
-        "show_pagination": true,
-        "show_arrows": true,
-        "auto_play_duration": 1000,
-        "slide_type": "slide",
-        "padding_top": 72,
-        "padding_bottom": 70
-      }
-    },
     "custom_hero_section_VMLhkw": {
       "type": "custom-hero-section",
       "blocks": {
@@ -84,7 +41,7 @@
         "auto_play_duration": 2000,
         "slide_animation": "slide",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 40
       }
     },
     "custom_richtext_animation_8rEFdB": {
@@ -201,138 +158,12 @@
       "settings": {
         "heading": "My Custom Heading"
       }
-    },
-    "multicolumn_zPaEVF": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_bz6h4E": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Emreld_Image.webp",
-            "title": "MADE FOR YOU",
-            "text": "<h2>Timeless Style<\/h2>",
-            "link_label": "Shop now",
-            "link": "#"
-          }
-        },
-        "column_gjNjtG": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Emreld_new.webp",
-            "title": "LATEST TRENDS",
-            "text": "<h2>Unique & Affordable<\/h2>",
-            "link_label": "Shop now",
-            "link": "#"
-          }
-        }
-      },
-      "block_order": [
-        "column_bz6h4E",
-        "column_gjNjtG"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-5",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn_nFUqwE": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_wTnjmE": {
-          "type": "column",
-          "settings": {
-            "title": "Company",
-            "text": "<p><a href=\"#\" title=\"#\">Wholesale<\/a><\/p><p><a href=\"#\" title=\"#\">Become a retailer<\/a><\/p><p><a href=\"#\" title=\"#\">Corporate orders<\/a><\/p><p><a href=\"#\" title=\"#\">Affiliates<\/a><\/p><p><a href=\"#\" title=\"#\">F.A.Q.<\/a><\/p><p><a href=\"#\" title=\"#\">Contact<\/a><\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_kqK6WJ": {
-          "type": "column",
-          "settings": {
-            "title": "Resource",
-            "text": "<p>About<\/p><p>Blog<\/p><p>Careers<\/p><p>Find a store<\/p><p>Press<\/p><p>Support<\/p><p>Privacy<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_yAFzmJ": {
-          "type": "column",
-          "settings": {
-            "title": "Support",
-            "text": "<p>Delivery<\/p><p>Shipping & returns<\/p><p>My account<\/p><p>Customer service<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_aLzVX7": {
-          "type": "column",
-          "settings": {
-            "title": "The Perfect Present for Your Partner",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_wTnjmE",
-        "column_kqK6WJ",
-        "column_yAFzmJ",
-        "column_aLzVX7"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-5",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_ReU3nF": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{% if customer.has_account %}\n   {{ \"customer \" }}\n{% endif %}",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
-    "custom_slideshow_QdxFCy",
     "custom_hero_section_VMLhkw",
     "custom_richtext_animation_8rEFdB",
     "custom_customer_section_R3QngN",
-    "custom_customer_review_fPJYa8",
-    "image_with_text_Uw76F7",
-    "slideshow_bkTMYx",
-    "featured_blog_QmRVj6",
-    "multicolumn_4efNVw",
-    "custom_usp_6YwExV",
-    "multicolumn_zPaEVF",
-    "multicolumn_nFUqwE",
-    "custom_liquid_ReU3nF"
+    "custom_usp_6YwExV"
   ]
 }

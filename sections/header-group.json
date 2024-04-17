@@ -2,59 +2,9 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement_rjB39V": {
-          "type": "announcement",
-          "settings": {
-            "text": "Free shipping all orders on over $60",
-            "link": ""
-          }
-        },
-        "announcement-bar-0": {
-          "type": "announcement",
-          "settings": {
-            "text": "Returns extended to 60 days",
-            "link": ""
-          }
-        },
-        "announcement_awff64": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "link": ""
-          }
-        },
-        "announcement_aHG6ew": {
-          "type": "announcement",
-          "settings": {
-            "text": "15% off on all products",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "announcement_rjB39V",
-        "announcement-bar-0",
-        "announcement_awff64",
-        "announcement_aHG6ew"
-      ],
-      "custom_css": [
-
-      ],
-      "settings": {
-        "color_scheme": "scheme-3",
-        "show_line_separator": false,
-        "show_social": true,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "enable_country_selector": false,
-        "enable_language_selector": false
-      }
-    },
     "header": {
       "type": "header",
+      "disabled": true,
       "settings": {
         "logo_position": "top-center",
         "menu": "main-menu",
@@ -73,7 +23,6 @@
     }
   },
   "order": [
-    "announcement-bar",
     "header"
   ]
 }

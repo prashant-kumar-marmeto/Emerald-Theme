@@ -15,6 +15,7 @@
       "block_order": [
         "brand_information_GkEVtX"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-5",
         "newsletter_enable": false,

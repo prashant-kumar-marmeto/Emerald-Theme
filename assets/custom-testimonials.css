@@ -1,0 +1,140 @@
+
+.custom-component--slider-container .custom-testimonials--heading {
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 67.2px;
+    text-align: left;
+    align-self: flex-start;
+    margin: 0;
+
+}
+.custom-component--slider-container .custom-testimonials--description{
+    padding-bottom: 30px;
+}
+.custom-testimonials .custom-component--slider-container p {
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: left;
+
+}
+.custom-component--slider-container .custom-testimonials--slide-caruosel {
+    padding-bottom: 40px;
+}
+.custom-component--slider-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 600px;
+    margin-left: 20px;
+}
+.custom-testimonials--image-caruosel {
+    width: 50%;
+    height: 70vh;
+}
+.custom-testimonials--main-image {
+    height: 500px;
+    width: 480px;
+}
+.custom-testimonials--image-caruosel .splide__pagination {
+    display: none;
+}
+.splide__arrow {
+    display: none;
+}
+.custom-testimonials--image-splide__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-testimonials--content-splide__slide {
+    display: flex;
+    flex-direction: column;
+    width: 324px;
+    height: 254px;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid black ;
+    box-sizing: border-box;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    margin-left: 20px;
+}
+.custom-testimonials--slide {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.custom-testimonials--author-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-testimonials--container {
+    width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+}
+.custom-testimonials--riview {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30.8px;
+    text-align: left;
+
+}
+.custom-testimonials--author-details {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+.custom-testimonials--author-image {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.custom-testimonials--author-details div {
+    margin-right: 15px;
+}
+.custom-testimonials--author-details .custom-testimonials--author-name {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+    text-align: left;
+    color: #5C6E4A;
+}
+.custom-testimonials--author-details .custom-component--slider-container{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+
+}
+/* @media screen and (max-width: 749px) {
+    .custom-testimonials--container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+} */
+.splide__slide {
+    margin-right: 20px; /* Adjust the value to set the gap between slides */
+  }
+  
+  /* Remove margin from the last slide to prevent extra space */
+  .splide__slide:last-child {
+    margin-right: 0;
+  }

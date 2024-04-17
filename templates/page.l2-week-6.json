@@ -1,0 +1,63 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custome_testimonials_gd389F": {
+      "type": "custome-testimonials",
+      "blocks": {
+        "slide_XTTTHf": {
+          "type": "slide",
+          "settings": {
+            "active_slide_color": "#f6ffc2",
+            "slied_color": "#ffffff",
+            "testimonials_text": "Write your reviews",
+            "autor_name": "Author",
+            "author_title": "Author title"
+          }
+        },
+        "slide_yPW3Fn": {
+          "type": "slide",
+          "settings": {
+            "active_slide_color": "#f6ffc2",
+            "slied_color": "#ffffff",
+            "testimonials_text": "Write your reviews",
+            "autor_name": "Author",
+            "author_title": "Author title"
+          }
+        },
+        "slide_RfAMwz": {
+          "type": "slide",
+          "settings": {
+            "active_slide_color": "#f6ffc2",
+            "slied_color": "#ffffff",
+            "testimonials_text": "Write your reviews",
+            "autor_name": "Author",
+            "author_title": "Author title"
+          }
+        }
+      },
+      "block_order": [
+        "slide_XTTTHf",
+        "slide_yPW3Fn",
+        "slide_RfAMwz"
+      ],
+      "settings": {
+        "background_color": "#b14040",
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "heading_text": "",
+        "description_text": "<p>Description<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custome_testimonials_gd389F"
+  ]
+}
