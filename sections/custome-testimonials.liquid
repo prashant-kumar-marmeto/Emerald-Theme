@@ -8,8 +8,8 @@
     }
     .custom-testimonials--slide-caruosel .splide__slide.is-active{
         background-color: {{ section.settings.active_slide_color }};
-        border-radius: 4px 0px 0px 0px;
-        border: 1px 0px 0px 0px;
+        border-radius: 5px ;
+        border: 1px solid gray;
     }
     
     @media screen and (max-width: 749px) {
@@ -17,63 +17,103 @@
             padding-top: {{ section.settings.padding_top }}px;
             padding-bottom: {{ section.settings.padding_bottom }}px; 
     }
+    .custom-testimonials .custom-testimonials--container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .custom-testimonials--image-caruosel {
+    height: auto;
+    width: 100%;
+}
+.custom-testimonials--slide {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.custom-component--slider-container {
+    width: 100%;
+    height: auto;
+    
+}
+.custom-testimonials--main-image {
+    height: 340px;
+    width: 320px;
+}
+.custom-testimonials--content-splide__slide  {
+    width: 380px;
+}
+.custom-component--slider-container .custom-testimonials--slide-caruosel {
+    width: 85vw;
+}
 }
 {% endstyle %}
 
-
-<div class='custom-testimonials page-width  custom-testiomonials--{{ section.id }}'>
-    <div class='custom-testimonials--container'>
-        <carousel-component id="image-carousel" class="custom-testimonials--image-caruosel splide" aria-label="Beautiful Images">
-            <div class="custom-testimonials--splide__track   splide__track">
-                  <ul class="custom-testimonials--splide__list splide__list">
-                    {% for block in section.blocks %}
-                        <li class="custom-testimonials--image-splide__slide splide__slide">
-                            <img class="custom-testimonials--main-image" src="{{ block.settings.main_image | image_url }}" height="500" width="480">
-                        </li>
-                    {% endfor %}    
-                  </ul>
-            </div>
-        </carousel-component>
-        <div class='custom-component--slider-container'>
-            <h1 class="custom-testimonials--heading" >{{ section.settings.heading_text }}</h1>
-            <p class="custom-testimonials--description" >{{ section.settings.description_text }}</p>
-            <carousel-component id="slide-carousel" class="custom-testimonials--slide-caruosel splide" aria-label="Beautiful Images">
+{% comment %} {% if customer %} {% endcomment %}
+    <div class='custom-testimonials page-width  custom-testiomonials--{{ section.id }}'>
+        <div class='custom-testimonials--container'>
+            <carousel-component id="image-carousel" class="custom-testimonials--image-caruosel splide" aria-label="Beautiful Images">
                 <div class="custom-testimonials--splide__track   splide__track">
-                    <ul class="custom-testimonials--splide__list splide__list">
+                      <ul class="custom-testimonials--splide__list splide__list">
                         {% for block in section.blocks %}
-                            <li class="custom-testimonials--content-splide__slide splide__slide">
-                                <div class='custom-testimonials--slide'>
-                                    <p class="custom-testimonials--riview">{{ block.settings.testimonials_text }}</p>
-                                    <div class="custom-testimonials--author-details">
-                                        <img class="custom-testimonials--author-image" src="{{ block.settings.author_image | image_url }}" height="65" width="65">
-                                        <div>
-                                            <p class="custom-testimonials--author-name">{{ block.settings.autor_name }}</p>
-                                            <p class="custom-testimonials--author-title">{{ block.settings.author_title }}</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li class="custom-testimonials--image-splide__slide splide__slide">
+                                <img class="custom-testimonials--main-image" src="{{ block.settings.main_image | image_url }}" height="500" width="480">
                             </li>
                         {% endfor %}    
-                    </ul>
+                      </ul>
                 </div>
             </carousel-component>
+            <div class='custom-component--slider-container'>
+                <h1 class="custom-testimonials--heading" >{{ section.settings.heading_text }}</h1>
+                {{ section.settings.description_text }}
+                <carousel-component id="slide-carousel" class="custom-testimonials--slide-caruosel splide" aria-label="Beautiful Images">
+                    <div class="custom-testimonials--splide__track   splide__track">
+                        <ul class="custom-testimonials--splide__list splide__list">
+                            {% for block in section.blocks %}
+                                <li class="custom-testimonials--content-splide__slide splide__slide">
+                                    <div class='custom-testimonials--slide'>
+                                        <p class="custom-testimonials--riview">{{ block.settings.testimonials_text }}</p>
+                                        <div class="custom-testimonials--author-details">
+                                            <img class="custom-testimonials--author-image" src="{{ block.settings.author_image | image_url }}" height="65" width="65">
+                                            <div>
+                                                <p class="custom-testimonials--author-name">{{ block.settings.autor_name }}</p>
+                                                <p class="custom-testimonials--author-title">{{ block.settings.author_title }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}    
+                        </ul>
+                    </div>
+                </carousel-component>
+            </div>
         </div>
     </div>
-</div>
+{% comment %} {% else %}   
+    <div class="page-width">
+        <h1> Please login and try again</h1>
+    </div>
+{% endif %}     {% endcomment %}
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var imageCarousel = new Splide('#image-carousel', {
             type: 'fade',
             perPage: 1,
-            sync: '#slide-carousel',
         });
 
         var slideCarousel = new Splide('#slide-carousel', {
             type: 'carousel',
             perPage: 2,
-            sync: '#image-carousel',
-
+            keyboard: "global",
+            
             breakpoints: {
                 768: {
                     perPage: 2, // Number of slides per page for screens >= 768px width
