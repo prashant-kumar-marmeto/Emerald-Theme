@@ -99,13 +99,25 @@
             "author_name": "THERESA",
             "content_position_desktop": "center"
           }
+        },
+        "slide_AmLrBg": {
+          "type": "slide",
+          "settings": {
+            "product_url": "",
+            "rating_range_review": 4.5,
+            "comment": "Amazing",
+            "text_area": "",
+            "author_name": "",
+            "content_position_desktop": "center"
+          }
         }
       },
       "block_order": [
         "slide_rjUqdP",
         "slide_qRHjgf",
         "slide_ig9zaJ",
-        "slide_ebRew6"
+        "slide_ebRew6",
+        "slide_AmLrBg"
       ],
       "settings": {
         "heading_customer_review": "Customer Review",

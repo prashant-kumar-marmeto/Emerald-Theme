@@ -1,10 +1,11 @@
-{% comment %} {{ 'custom-customer-section.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{{ 'custom-customer-section.css' | asset_url | stylesheet_tag }}
 {% style %}
+  .custom-customer-reviews--splide__slide .star-rating {
+    display: block;
+  }
   .star-rating:before {
-    {% assign block = section.blocks %}
-      
       content: "\2605\2605\2605\2605\2605";
-       background: linear-gradient(90deg, #ffaa47 calc({{block.first.settings.rating_range_review}}/5 * 100%), #e1e1e1 calc({{block.first.settings.rating_range_review}}/5 * 100%));
+       background: linear-gradient(90deg, #ffaa47 calc(4.5/5 * 100%), #e1e1e1 calc(4.5/5 * 100%));
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -31,23 +32,45 @@
 
 <div class="custom-customer-reviews padding-{{ section.id }}">
     <div class="page-width">
-        {% comment %} <div class="star-rating"></div>
-        <h2 class="heading">{{ section.settings.heading_customer_review }}</h2> {% endcomment %}
-        <section id="image-carousel" class="custom-customer-reviews--splide splide" aria-label="Splide Basic HTML Example">
-            <div class="splide__track">
-                  <ul class="splide__list">
-                      <li class="splide__slide">Slide 01</li>
-                      <li class="splide__slide">Slide 02</li>
-                      <li class="splide__slide">Slide 03</li>
+        <h2 class="heading">{{ section.settings.heading_customer_review }}</h2>
+        <carousel-component class="custom-customer-reviews--splide splide" aria-label="Splide Basic HTML Example">
+            <div class="custom-customer-reviews--splide__track splide__track">
+                  <ul class="custom-customer-reviews--splide__list splide__list">
+                    {% for block in section.blocks %}
+                        <li class="custom-customer-reviews--splide__slide splide__slide">
+                            <div class="custom-customer-reviews--product">
+                                <img class="custom-customer-reviews--product-image " src="{{ block.settings.slide_image | image_url }}" alt=""  height="250" width="300">
+                                <a class="custom-customer-reviews--button-wrapper" href="{{ block.settings.product_url }}" >
+                                    <div class="ustom-customer-reviews"></div>
+                                </a>
+                            </div>
+                            <div class="star-rating"></div>
+                            <div class="custom-customer-reviews--author-container">
+                                <h2 class="custom-customer-reviews--author-comment">{{ block.settings.comment }}</h2>
+                                <p class="custom-customer-reviews--author-review" >{{ block.settings.text_area }}</p>
+                                <p class="custom-customer-reviews--author-name">{{ block.settings.author_name }}</p>
+                            </div>
+                        </li>
+                    {% endfor %}    
                   </ul>
             </div>
-          </section>
+          </carousel-component>
     </div>
     
 </div>
 <script>
     document.addEventListener( 'DOMContentLoaded', function() {
-      var splide = new Splide( '#image-carousel' );
+      var splide = new Splide( '.custom-customer-reviews--splide', {
+            type : 'slide',
+            perPage : 4, 
+
+            breakpoints: {
+                 768: {
+                perPage: 2, // 2 slides per page on screens above 768px
+            }
+        }
+      }
+    );
       splide.mount();
     } );
   </script>
@@ -176,8 +199,11 @@
         ],
         "presets": [
             {
-                "name": "Customer Review",
+                "name": "Custom Customer Review",
                 "blocks": [
+                    {
+                        "type": "slide"
+                    },
                     {
                         "type": "slide"
                     },

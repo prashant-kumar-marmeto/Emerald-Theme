@@ -40,7 +40,7 @@
   align-items: center;
 }
 .custom-slideshow {
-  width: 100vw;
+  width: 100%;
 }
 .custom-slideshow--splide{
   width: 100%;
@@ -109,9 +109,9 @@
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
 }
-.custom-slideshow--splide__slide {
+.custom-slideshow--splide__list .custom-slideshow--splide__slide {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
     overflow: hidden;
 }
