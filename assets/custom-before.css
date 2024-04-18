@@ -1,0 +1,131 @@
+.custom-before-after-image {
+    width:100%;
+    display:block;
+  }
+  
+  .custom-before-after--container {
+    display:flex;
+  }
+
+  .custom-before-after--text-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   } 
+
+   .custom-before-after-badge{
+    display: inline-flex;
+    align-items: center;
+    background: #fbe3cd;
+    color: #3b5342;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 15px 8px 30px;
+    position: relative;
+    border-radius: 15px;
+    white-space: nowrap;
+    height: 30px;
+    margin-bottom: 25px;
+   }
+   
+.custom-before-after-badge:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  left: 14px;
+  top: 12px;
+  background: #3b5342;
+}
+.custom-before-after--discription{
+  word-spacing: .001em;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  line-height: calc(1.0*1.6);
+}
+
+.custom-before-after--heading{
+    font-size: calc(1.15 * 24px);
+    letter-spacing: -0.02em;
+    line-height: calc(1.15*44px);
+    font-style: normal;
+  }
+
+  #before-after-slider {
+    width:50%;
+    max-height: 550px;
+    position:relative;
+    overflow:hidden;
+    border:3px solid white;
+  }
+
+  
+  #after-image {
+    display:block
+  }
+  
+  #before-image {
+    position:absolute;
+    height:100%;
+    width:50%;
+    top:0;
+    left:0;
+    overflow:hidden;
+    z-index:2;
+  }
+  
+  #resizer {
+    position:absolute;
+    display:flex;
+    align-items:center;
+    z-index:5;
+    top:0;
+    left:50%;
+    height:100%;
+    width:4px;
+    background:#8d5d48;
+    /*Stop vertical scrolling on touch*/
+    -ms-touch-action: pan-y;
+      touch-action: pan-y;
+  }
+  
+  #resizer:after {
+    background:#8d5d48;
+    font-family: "roboto";
+    content:'|||';
+    font-weight:900;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    position:absolute;
+    margin: 0 0 0 -18px;
+    width:40px;
+    height:54px;
+    border-radius:30%;  
+  }
+  
+  @media (max-width:767px) {
+    .container {
+      width:100%;
+      padding:0 20px
+    }
+    .custom-before-after--container{
+      flex-direction: column;
+    }
+    .custom-before-after--text-container{
+      width: 100%;
+    }
+    #before-after-slider{
+      width: 100%;
+    }
+    .custom-before-after--heading{
+      font-size: calc(1.15 * 20px);
+      letter-spacing: -0.02em;
+      line-height: calc(1.15*50px);
+    }
+  }
+  

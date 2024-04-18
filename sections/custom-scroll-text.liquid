@@ -1,0 +1,129 @@
+{{ 'custom-scrol-text.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+    #section-id-{{ section.id }}.custom-scrool-section--scroll {
+        background-color: {{section.settings.bg_color}} ;
+    }
+
+     .custom-scrool-section--slide .custom-scrool-section--heading {
+        color: {{section.settings.font_color}};
+        font-size:{{section.settings.font_size}}px;
+    }
+
+    .custom-scrool-section--scroll .custom-scrool-section-slide-track {
+        animation: scroll {{section.settings.scroll_time}}s linear infinite;
+        display: flex;
+        width: calc(var(--width) * 22);
+        padding: {{ section.settings.padding}}px 0;
+      }
+    .custom-scrool-section--scroll .custom-scrool-section-slide-track:hover {
+        animation-play-state: {{section.settings.pause_text}};
+      }
+{% endstyle %}
+
+<section class="custom-scrool-section">
+  <div id="section-id-{{section.id}}" class="custom-scrool-section--scroll">
+    <div class="custom-scrool-section-slide-track">
+      {% for i in (1..2) %}
+        {% for block in section.blocks %}
+          <div class="custom-scrool-section--slide">
+              <div class="text-wrapper">
+                <img src="{{ section.settings.image_picker | image_url }}" height="auto" width="auto" class="custom-scrool-section--logo">
+                <h3 class="text custom-scrool-section--heading {% if block.settings.checkbox %}text-outline{% endif %}">{{ block.settings.text }}</h3>
+              </div>
+          </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Sliding Text",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 50,
+      "step": 1,    
+      "unit": "px",
+      "label": "Padding from top and bottom",
+      "default": 16
+    },
+    {
+      "type": "text",
+      "label": "Scroll Time",
+      "id": "scroll_time",
+      "default": "50"
+    },
+    {
+      "type": "color",
+      "id": "font_color",
+      "label": "Font color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 8,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 80
+    },
+    {
+      "type": "select",
+      "id": "pause_text",
+      "label": "Pause text on mouse hover",
+      "options": [
+        {
+          "value": "paused",
+          "label": "Yes"
+        },
+        {
+          "value": "initial",
+          "label": "No"
+        }
+      ],
+      "default": "initial"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_picker",
+      "label": "Pick splitter image"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Sliding text",
+      "type": "block",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Add Text",
+          "id": "text"
+        },
+        {
+          "type": "checkbox",
+          "id": "checkbox",
+          "label": "Text-outline",
+          "default": false,
+          "info": "Make your text visible by outline"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sliding Text"
+    }
+  ]
+}
+{% endschema %}

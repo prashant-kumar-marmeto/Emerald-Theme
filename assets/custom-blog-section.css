@@ -1,0 +1,20 @@
+
+.custom-blog-section--para-btn {
+    /* border: 1px solid red; */
+    margin-top: -34px;
+    /* margin-left: 14px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 749px) {
+    .custom-blog-section--para-btn {
+        margin: 4px 16px;
+        margin-top: -30px;
+    }
+}
+
+.custom-blog-section--para-btn a{
+    color: #8d5d48;
+}

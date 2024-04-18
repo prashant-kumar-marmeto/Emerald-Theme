@@ -1,0 +1,188 @@
+{{ 'custom-product.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'custom-product.js' | asset_url }}" defer></script>
+
+
+{% style %}
+    .custom-product-{{ section.id }}{
+        padding-top:{{ section.settings.padding_top | divided_by:2 }}px;
+        padding-bottom:{{ section.settings.padding_bottom | divided_by:2 }}px;
+    }
+    @media screen and (min-width:749px){
+        .custom-product-{{ section.id }}{
+            padding-top:{{ section.settings.padding_top }}px;
+            padding-bottom:{{ section.settings.padding_bottom }}px;
+        }
+    }
+{% endstyle %}
+
+<div class="custom-rings-product color-{{ section.settings.color_scheme }} gradient">
+    <div class="page-width custom-product-{{ section.id }}">
+        {%- unless section.settings.title == blank -%}
+            <div>
+                <h2 class="section-{{ section.id }} {{ section.settings.heading_size }}" id="SectionHeading-{{ section.id }}">
+                    {{ section.settings.title }}
+                </h2>
+            </div>
+        {%- endunless -%}
+        <div>
+            <div class="custom-rings-product--all-products">
+                {%- for block in section.blocks -%}
+                  {%- assign product = block.settings.product -%}
+                    {%- if product != blank -%}
+                        <div class="custom-rings-product--each-product" id="eachProduct">
+                            {%- if product.featured_image != blank -%}
+                                <a href="{{ product.url }}">
+                                    <div class="custom-rings-product--image-container" id="imageContainer">
+                                        <div>
+                                            <img src="{{ product.images[1] | image_url}}" height="auto" width="auto" class="custom-rings-product--first-image" id="firstImage"/>
+                                            {% if product.images.size > 1 %}
+                                                <img src="{{ product.images[0] | image_url }}" height="" width="" alt="{{ product.title }}" class="custom-rings-product--second-image" id="secondImage">
+                                            {% endif %}
+                                        </div>
+                                        {%- if block.settings.Quick_view_button -%}
+                                            <div class="custom-rings-product--view-container">
+                                                <button>Quick view</button>
+                                            </div>
+                                        {%- endif -%}
+                                    </div>
+                                </a>
+                            {%- endif -%}
+                            <div class="custom-rings-product--card-details" style="background-color:{{ block.settings.card_color }};">
+                                {%- if product.vendor != blank -%}
+                                    <h4>{{ product.vendor }}</h4>
+                                {%- endif -%}
+                                {%- if product.title != blank -%}
+                                    <h2>{{ product.title }}</h2>
+                                {%- endif -%}
+                                {%- if product.price != blank -%}
+                                    <p>{{ product.price | money }}</p>
+                                {%- endif -%}
+                                <div class="custom-rings-product--animation-container">
+                                    <p class="custom-rings-product--available">Available in {{ product.options_by_name['Color'].values.size }} colors</p>
+                                    <div class="custom-rings-product--colors-container">
+                                        {% for eachcolor in product.options_by_name['Color'].values %}
+                                            {% assign val = forloop.index %}
+                                            <div class="custom-rings-product--outer-radio">
+                                                <div class="custom-rings-product--radio" style="background-color:{{eachcolor}};" data-images="{{ product.images[val].src | image_url }}" data-imageindex="{{ forloop.parentloop.index }}"></div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    {%- endif -%}
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "custom-product",
+        "class": "section",
+        "tag": "section",
+        "settings": [
+            {
+                "type": "inline_richtext",
+                "id": "title",
+                "label": "Collection Heading",
+                "default": "Products"
+            },
+            {
+                "type": "select",
+                "id": "heading_size",
+                "label": "Heading size",
+                "options": [
+                    {
+                        "value": "h2",
+                        "label": "t:sections.all.heading_size.options__1.label"
+                      },
+                      {
+                        "value": "h1",
+                        "label": "t:sections.all.heading_size.options__2.label"
+                      },
+                      {
+                        "value": "h0",
+                        "label": "t:sections.all.heading_size.options__3.label"
+                      }
+                ],
+                "default": "h1"
+            },
+            {
+                "type": "color_scheme",
+                "id": "color_scheme",
+                "label": "Color scheme",
+                "info": "To change the card color scheme, update your theme settings.",
+                "default": "scheme-1"
+              },
+              {
+                "type": "header",
+                "content": "Section padding"
+              },
+              {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding top",
+                "default": 36
+              },
+              {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding bottom",
+                "default": 36
+              }
+        ],
+        "blocks": [
+            {
+                "type": "product",
+                "name" : "Product",
+                "settings": [
+                      {
+                        "type": "product",
+                        "id": "product",
+                        "label": "product"
+                      },
+                      {
+                        "type": "color",
+                        "id": "card_color",
+                        "label": "Card color",
+                        "default": "#fcf9f6"
+                      },
+                      {
+                        "type": "checkbox",
+                        "id": "Quick_view_button",
+                        "label": "Quick View Button",
+                        "default": true,
+                        "info": "Enable Quick View Button"
+                      }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "custom-product",
+                "blocks": [
+                    {
+                        "type": "product"
+                      },
+                      {
+                        "type": "product"
+                      },
+                      {
+                        "type": "product"
+                      }
+                ]
+            }
+        ]
+    }
+{% endschema %}

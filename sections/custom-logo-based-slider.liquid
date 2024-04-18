@@ -1,0 +1,143 @@
+{{ 'custom-logo-based-slider.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+    .custom-padding--{{ section.id }}{
+        padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | divided_by: 2  }}px;
+    }
+    /* mobile first approach */
+    @media screen and (min-width: 749px){
+        .custom-padding--{{ section.id }}{
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
+{% endstyle %}
+
+<div class="logo-slider-section page-width custom-padding--{{ section.id }}">
+    <div class="logo-slider-container">
+        {% if section.settings.heading != blank %} 
+        <div class="logo-slider-section--heading h4">
+            {{ section.settings.heading }}
+        </div>
+        {% endif %}
+
+        <div class="logo-slider-section--slider">
+            <div id="logo-slider" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        {% for block in section.blocks %}
+                            <li class="splide__slide">
+                                <p>{{ block.settings.slider_text }}</p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="slider-pagination">
+                {% for block in section.blocks %}
+                    <img class="slider-pagination__item" src="{{ block.settings.slider_image | img_url: 'medium' }}" height="" width="" alt="Logo">
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var splide = new Splide('#logo-slider', {
+        perPage: 1,
+        pagination: false,
+        autoplay: true,
+        interval: 4000,
+        gap: 20,
+        pagination: false,
+        arrows: false,
+        rewind: true
+      }).mount();
+  
+      var paginationItems = document.querySelectorAll('.slider-pagination__item');
+  
+      splide.on('moved', function (newIndex) {
+        paginationItems.forEach(function (item, index) {
+          if (index === newIndex) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        });
+      });
+  
+      paginationItems.forEach(function (item, index) {
+        item.addEventListener('click', function () {
+          splide.go(index);
+        });
+      });
+    });
+  </script>
+  
+
+{% schema %}
+    {
+        "name": "Logo Based Text Slider",
+        "tag": "section",
+        "class": "section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "IN THE PRESS"
+            },
+            {
+                "type": "header",
+                "content": "Section padding"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "px",
+                "label": "Padding Top",
+                "default": 30
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "px",
+                "label": "Padding Bottom",
+                "default": 30
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Slider",
+                "type": "text_slider",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "slider_text",
+                        "label": "Slider Text",
+                        "default": "“A GREAT STYLE IS ALWAYS UPLIFTING, IT CAN MAKE YOU FEEL CONFIDENT, GLAMOROUS, AND SEXY. WHAT ARE YOU WAITING FOR?"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "slider_image",
+                        "label": "Image Logo"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+              "name": "Logo Based Text Slider"
+            }
+          ]
+    }
+{% endschema %}

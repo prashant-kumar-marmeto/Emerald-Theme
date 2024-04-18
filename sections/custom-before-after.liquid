@@ -1,0 +1,176 @@
+{{ 'custom-before.css' |asset_url |stylesheet_tag }}
+
+<script src="{{ 'custom-before.js' | asset_url }}" defer></script>
+
+<div class="page-width custom-before-{{ section.id }} custom-before-after">
+  <div class="custom-before-after--container">
+    <div class="custom-before-after--text-container">
+        <div>
+            {% for block in section.blocks %}
+                {%- if block.settings.badge != blank -%}
+                    <div>
+                        <span class="custom-before-after-badge">{{ block.settings.badge }}</span>
+                    </div>
+                {%- endif -%}
+                {%- if block.settings.heading != blank -%}
+                    <div class="custom-before-after--heading">{{ block.settings.heading }}</div>
+                {%- endif -%}
+                {%- if block.settings.discription != blank -%}
+                    <div class="custom-before-after--discription">{{ block.settings.discription }}</div>
+                {%- endif -%}
+            {% endfor %}
+        </div>
+    </div>
+    <div id="before-after-slider">
+      <div id="before-image">
+        <img src="{{ section.settings.image_before | image_url }}" height="auto" width="auto" class="custom-before-after-image">
+      </div>
+      <div id="after-image">
+        <img src="{{ section.settings.image_after | image_url }}" height="auto" width="auto" class="custom-before-after-image">
+      </div>
+      <div id="resizer"></div>
+   </div>
+  </div>
+</div>
+
+
+{% schema %}
+    {
+        "name": "custom-before-after",
+        "class": "section",
+        "tag": "section",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image_before",
+                "label": "Image before"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_after",
+                "label": "Image after"
+            },
+            {
+                "type": "select",
+                "id": "desktop-image-placement",
+                "label": "Desktop image placement",
+                "options": [
+                    {
+                    "value": "image_first",
+                    "label": "Image first"
+                    },
+                    {
+                    "value": "image_second",
+                    "label": "Image second"
+                    }
+                ],
+                "default": "image_first"
+            },
+            {
+                "type": "select",
+                "id": "desktop_content_alignment",
+                "options": [
+                  {
+                    "value": "left",
+                    "label": "left"
+                  },
+                  {
+                    "value": "center",
+                    "label":"center"
+                  },
+                  {
+                    "value": "right",
+                    "label": "right"
+                  }
+                ],
+                "default": "left",
+                "label": "Desktop content alignment"
+              },
+              {
+                "type": "color_scheme",
+                "id": "color_scheme",
+                "label": "Color scheme",
+                "default": "scheme-1"
+              },
+              {
+                "type": "header",
+                "content": "Section padding"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "px",
+                "label": "Padding Top",
+                "default": 0
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "px",
+                "label": "Padding Bottom",
+                "default": 0
+            }
+        ],
+        "blocks": [
+            {
+                "type": "badge",
+                "name":"badge",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "badge",
+                        "label": "badge text",
+                        "default": "Custom Design"
+                    }
+                ]
+            },
+            {
+                "type": "heading",
+                "name" : "Heading",
+                "settings": [
+                    {
+                        "type": "richtext",
+                        "id": "heading",
+                        "label": "heading",
+                        "default": "<p>THE DIAMONDS ARE REAL BUT THE MAGIC IS IN YOUR EYES</p>"
+                    }
+                ]
+            },
+            {
+            "type": "text",
+            "name":"Discription",
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "discription",
+                    "label": "Discription text",
+                    "default": "<p>Luxury jewelry is a high-end category of jewelry that is often made of precious metals and gems, and is known for its exceptional craftsmanship and quality. This type of jewelry is often associated with elegance and status.</p>"
+                }
+            ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "custom-before",
+                "blocks": [
+                    {
+                        "type": "badge"
+                    },
+                    {
+                        "type": "heading"
+                    },
+                    {
+                        "type": "text"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

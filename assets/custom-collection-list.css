@@ -1,0 +1,34 @@
+.custom-collection--each-collection{
+    position:relative;
+  }
+  .custom-collection--each-collection a{
+    overflow: hidden;
+    height:300px;
+    width: 100%;
+    display: block;
+    border-radius:6px;
+  }
+  .custom-collection--image{
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: center;
+    transition: transform 0.5s ease-in-out;
+  }
+  .custom-collection--each-collection:hover .custom-collection--image{
+    transform: scale(1.1);
+  }
+  
+  .custom-collection--collection-title p{
+    position:absolute;
+    bottom:10%;
+    left:10%;
+    color:#ffffff;
+    font-weight: 700;
+    font-size:calc(1.15*28px);
+  }
+  @media screen and (max-width:1068px){
+    .custom-collection--collection-title p{
+        font-size:calc(1.15*20px);
+    }
+  }
