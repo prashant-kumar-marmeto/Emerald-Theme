@@ -30,14 +30,14 @@
     }
     {% endstyle %}
 
-<div class="custom-customer-reviews padding-{{ section.id }}">
-    <div class="page-width">
+<div class="custom-customer-reviews page-width padding-{{ section.id }}">
+    <div class="">
         <h2 class="heading">{{ section.settings.heading_customer_review }}</h2>
         <carousel-component class="custom-customer-reviews--splide splide" aria-label="Splide Basic HTML Example">
             <div class="custom-customer-reviews--splide__track splide__track">
                   <ul class="custom-customer-reviews--splide__list splide__list">
                     {% for block in section.blocks %}
-                        <li class="custom-customer-reviews--splide__slide splide__slide">
+                        <li class="custom-customer-reviews--splide__slide splide__slide" style="width: 20%;" >
                             <div class="custom-customer-reviews--product">
                                 <img class="custom-customer-reviews--product-image " src="{{ block.settings.slide_image | image_url }}" alt=""  height="250" width="300">
                                 <a class="custom-customer-reviews--button-wrapper" href="{{ block.settings.product_url }}" >
@@ -62,14 +62,10 @@
     document.addEventListener( 'DOMContentLoaded', function() {
       var splide = new Splide( '.custom-customer-reviews--splide', {
             type : 'slide',
-            perPage : 4, 
-
-            breakpoints: {
-                 768: {
-                perPage: 2, // 2 slides per page on screens above 768px
-            }
+            keyboard: "global",
+            perMove: 1,
+            perPage: 4
         }
-      }
     );
       splide.mount();
     } );

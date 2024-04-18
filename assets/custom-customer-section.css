@@ -15,11 +15,11 @@ div, h1, h2, p, li, span {
     flex-direction: column;
     justify-content: space-evenly;
 }
-.custom-customer-reviews--splide__list {
+.custom-customer-reviews--splide__track .custom-customer-reviews--splide__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -51,7 +51,9 @@ div, h1, h2, p, li, span {
 .customer-reviews--quick-views {
     display: none; 
 }
-
+.custom-customer-reviews--splide__track .custom-customer-reviews--splide__list .custom-customer-reviews--splide__slide {
+    
+}
 .customer-reviews:hover .customer-reviews--quick-views {
     display: flex; 
 }
@@ -133,6 +135,6 @@ div, h1, h2, p, li, span {
 .custom-customer-reviews--splide .splide__arrow.splide__arrow--prev {
     left: -1em;
 }
-.custom-customer-reviews--splide:hover .splide__arrow:not([disabled]) {
+.custom-customer-reviews--splide:hover .splide__arrow {
     display: block;
 }

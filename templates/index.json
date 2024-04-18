@@ -95,7 +95,7 @@
             "product_url": "",
             "rating_range_review": 4.5,
             "comment": "Super Cute",
-            "text_area": "I'm hoping that the studs are long enough so they never fall off my ears.",
+            "text_area": "I'm hoping that the studs are long enough  they never fall off my ears.",
             "author_name": "THERESA",
             "content_position_desktop": "center"
           }
@@ -103,11 +103,12 @@
         "slide_AmLrBg": {
           "type": "slide",
           "settings": {
+            "slide_image": "shopify:\/\/shop_images\/ring_4.png",
             "product_url": "",
             "rating_range_review": 4.5,
-            "comment": "Amazing",
-            "text_area": "",
-            "author_name": "",
+            "comment": "Extraordinary!",
+            "text_area": "Add your customer review here to showcase them.",
+            "author_name": "Melanie",
             "content_position_desktop": "center"
           }
         }
