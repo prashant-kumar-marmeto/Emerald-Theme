@@ -17,7 +17,7 @@
         margin-inline-end: 0px;
         unicode-bidi: isolate;
     }
-    .custom-container {
+    .custom-usp {
         width: 100%;
         height: 214px;
         display: flex;
@@ -30,16 +30,16 @@
         background: #f9f5f0;
         overflow-x: auto;
     }
-    .custom-container::-webkit-scrollbar {
+    .custom-usp::-webkit-scrollbar {
         display: none;
     }
     
     /* Hide scrollbar for Firefox */
-    .custom-container {
+    .custom-usp {
         scrollbar-width: none;
     }
 
-    .custom-container .custom-container__slide .custome-container__title{
+    .custom-usp .custom-usp__slide .custome-usp__title{
       text-align: center;
       font-size: 20px;
       width: 100%;
@@ -50,7 +50,7 @@
       line-height: 1;
       letter-spacing: -0.02em;
     }
-    .custom-container__description {
+    .custom-usp__description {
       font-size: 15px;
       color: #3b5342;
       font-weight: 400;
@@ -58,7 +58,7 @@
       margin: 0;
       text-align: center;
     }
-    .custom-container__slide{
+    .custom-usp__slide{
         height: auto;
         max-width: 300px;
         display: flex;
@@ -68,45 +68,49 @@
         padding: 0;
         box-sizing: border-box;
     }
-    .custom-container__image {
+    .custom-usp__image {
         width: auto;
     }
 
   @media screen and (max-width: 1024px){
-    .custom-container {
+    .custom-usp {
       height: 360px;
       display: grid;
       grid-template-columns: repeat(2, 300px);
       gap: 2rem;
     }
+    
   }
   @media screen and (max-width: 767px) {
-    .custom-container {
+    .custom-usp {
       padding-left: 20px;
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
       align-items: flex-start;
-      overflow-x: auto;
+      overflow: auto;
     }
-    .custom-container::-webkit-scrollbar {
+    .custom-usp::-webkit-scrollbar {
         display: none;
     }
     
     /* Hide scrollbar for Firefox */
-    .custom-container {
+    .custom-usp {
         scrollbar-width: none;
+    }
+    .custom-usp__slide {
+        min-width: 300px;
     }
   }
 </style>
 
 
-<div class="custom-container">
+<div class="custom-usp">
     
     {% for block in section.blocks %}
-    <div class="custom-container__slide">
+    <div class="custom-usp__slide">
         {% if block.settings.image_url != empty %}
-          <div class="custom-container__image">
+          <div class="custom-usp__image">
             {% if block.settings.image_picker != blank  %}
                 <img src="{{ block.settings.image_picker | image_url }}" alt="select image" height="32" width="32" />
             {% endif %}  
@@ -114,8 +118,8 @@
         {% endif %}
         
         <div>
-            <h2 class="custome-container__title" >{{ block.settings.title }}</h2>
-            <p class='custom-container__description'>{{ block.settings.description }}</p>
+            <h2 class="custome-usp__title" >{{ block.settings.title }}</h2>
+            <p class='custom-usp__description'>{{ block.settings.description }}</p>
         </div>
     </div>
     {% endfor %}
