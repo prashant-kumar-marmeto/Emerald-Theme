@@ -15,7 +15,7 @@
 {% endstyle %}
 
 <div class="custom-slideshow custom-slideshow-wrapper custom-slideshow--{{ section.id }}">
-    <section id="image-carousel" class="custom-slideshow--splide splide" aria-label="Beautiful Images">
+    <carousel-component id="image-carousel" class="custom-slideshow--splide splide" aria-label="Beautiful Images">
         <div class="custom-slideshow--splide__track splide__track">
               <ul class="custom-slideshow--splide__list splide__list">
                 {% for block in section.blocks %}
@@ -48,7 +48,7 @@
                 {% endfor %}
               </ul>
         </div>
-    </section>
+    </carousel-component>
 </div>
 
 <script>
