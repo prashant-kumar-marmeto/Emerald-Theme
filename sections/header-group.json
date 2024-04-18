@@ -4,7 +4,6 @@
   "sections": {
     "header": {
       "type": "header",
-      "disabled": true,
       "settings": {
         "logo_position": "top-center",
         "menu": "main-menu",
