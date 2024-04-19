@@ -187,6 +187,33 @@
         "padding_bottom": 36
       }
     },
+    "custom_hotspot_EqAb3d": {
+      "type": "custom-hotspot",
+      "blocks": {
+        "product_QjnaYK": {
+          "type": "product",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/hotspot_Banner.webp",
+            "primary_left_position": 20,
+            "primary_top_position": 20,
+            "primary_product": "",
+            "secondary_left_position": 20,
+            "secondary_top_position": 20,
+            "secondary_product": "",
+            "third_left_position": 20,
+            "third_top_position": 20,
+            "third_product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_QjnaYK"
+      ],
+      "settings": {
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    },
     "custom_before_after_pMbWJH": {
       "type": "custom-before-after",
       "blocks": {
@@ -357,6 +384,7 @@
     "custom_static_banner_8cGfez",
     "custom_scroll_text_itLk76",
     "custom_products_MBGWfi",
+    "custom_hotspot_EqAb3d",
     "custom_before_after_pMbWJH",
     "custom_richtext_animation_8rEFdB",
     "custom_customer_section_R3QngN",
