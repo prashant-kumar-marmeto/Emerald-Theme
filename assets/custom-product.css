@@ -89,7 +89,7 @@
     border-radius: 50%;
     display: block;
 }
-.custom-rings-product--radio{
+.custom-rings-product .custom-rings-product--radio{
     height:10px;
     width:10px;
     border-radius: 50%;
