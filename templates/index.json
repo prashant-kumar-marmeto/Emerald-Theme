@@ -198,12 +198,20 @@
             "text": "JEWELRYIZE ME",
             "checkbox": false
           }
+        },
+        "block_ahEygh": {
+          "type": "block",
+          "settings": {
+            "text": "YOU’LL LOVE IT",
+            "checkbox": true
+          }
         }
       },
       "block_order": [
         "block_hKAx6G",
         "block_Gnetij",
-        "block_HpJpDf"
+        "block_HpJpDf",
+        "block_ahEygh"
       ],
       "settings": {
         "bg_color": "",
