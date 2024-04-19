@@ -177,6 +177,18 @@
     },
     "custom_scroll_text_itLk76": {
       "type": "custom-scroll-text",
+      "blocks": {
+        "block_hKAx6G": {
+          "type": "block",
+          "settings": {
+            "text": "A PERSONAL TOUCH",
+            "checkbox": false
+          }
+        }
+      },
+      "block_order": [
+        "block_hKAx6G"
+      ],
       "settings": {
         "bg_color": "",
         "padding": 16,
