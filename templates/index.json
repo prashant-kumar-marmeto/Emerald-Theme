@@ -83,6 +83,56 @@
         "padding_bottom": 0
       }
     },
+    "custom_static_banner_8cGfez": {
+      "type": "custom-static-banner",
+      "blocks": {
+        "column_KCUfVB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hands.webp",
+            "title": "BESPOKE ENGAGEMENT RINGS",
+            "title_color": "#000000",
+            "text": "<p>Looking to get the perfect engagement ring? Browse hundreds of ring styles find the perfect engagement ring today.<\/p>",
+            "text_color": "#000000",
+            "link_label": "Browse Rings",
+            "link_color": "#000000",
+            "link": "#"
+          }
+        },
+        "column_MKaBzJ": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "title_color": "#000000",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_color": "#000000",
+            "link_label": "",
+            "link_color": "#000000",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_KCUfVB",
+        "column_MKaBzJ"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "custom_products_gGYaK9": {
       "type": "custom-products",
       "blocks": {
@@ -120,55 +170,6 @@
         "title": "Products",
         "heading_size": "h1",
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "custom_static_banner_8cGfez": {
-      "type": "custom-static-banner",
-      "blocks": {
-        "column_KCUfVB": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "title_color": "#000000",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_color": "#000000",
-            "link_label": "",
-            "link_color": "#000000",
-            "link": ""
-          }
-        },
-        "column_MKaBzJ": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "title_color": "#000000",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_color": "#000000",
-            "link_label": "",
-            "link_color": "#000000",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_KCUfVB",
-        "column_MKaBzJ"
-      ],
-      "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -420,8 +421,8 @@
   "order": [
     "custom_hero_section_VMLhkw",
     "custom_product_slider_tab_ECrpYJ",
-    "custom_products_gGYaK9",
     "custom_static_banner_8cGfez",
+    "custom_products_gGYaK9",
     "custom_scroll_text_itLk76",
     "custom_products_MBGWfi",
     "custom_hotspot_EqAb3d",
