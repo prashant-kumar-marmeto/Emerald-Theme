@@ -134,6 +134,18 @@
         "padding_bottom": 36
       }
     },
+    "custom_scroll_text_itLk76": {
+      "type": "custom-scroll-text",
+      "settings": {
+        "bg_color": "",
+        "padding": 16,
+        "scroll_time": "50",
+        "font_color": "#000000",
+        "font_size": 80,
+        "pause_text": "initial",
+        "image_picker": "shopify:\/\/shop_images\/WhatsApp_Image.jpg"
+      }
+    },
     "custom_products_MBGWfi": {
       "type": "custom-products",
       "blocks": {
@@ -343,6 +355,7 @@
     "custom_hero_section_VMLhkw",
     "custom_products_gGYaK9",
     "custom_static_banner_8cGfez",
+    "custom_scroll_text_itLk76",
     "custom_products_MBGWfi",
     "custom_before_after_pMbWJH",
     "custom_richtext_animation_8rEFdB",
