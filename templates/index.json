@@ -44,6 +44,31 @@
         "padding_bottom": 40
       }
     },
+    "custom_product_slider_tab_ECrpYJ": {
+      "type": "custom-product-slider-tab",
+      "blocks": {
+        "product_collections_EpwnV4": {
+          "type": "product_collections",
+          "settings": {
+            "imageHeading": "SALE OFF",
+            "imageDescription": "<p>Advertise a promotion or a sale<\/p>",
+            "imageButton": "Shop Sale",
+            "url": "",
+            "collection_name": "Earings",
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_collections_EpwnV4"
+      ],
+      "settings": {
+        "heading": "NEW ARRIVALS",
+        "para": "Beyond mere adornment, these pieces are made to make you feel good.",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_products_gGYaK9": {
       "type": "custom-products",
       "blocks": {
@@ -380,6 +405,7 @@
   },
   "order": [
     "custom_hero_section_VMLhkw",
+    "custom_product_slider_tab_ECrpYJ",
     "custom_products_gGYaK9",
     "custom_static_banner_8cGfez",
     "custom_scroll_text_itLk76",
