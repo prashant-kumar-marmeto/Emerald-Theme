@@ -58,10 +58,23 @@
             "collection_name": "Earings",
             "collection": "earrings"
           }
+        },
+        "product_collections_KzEky6": {
+          "type": "product_collections",
+          "settings": {
+            "image_select": "shopify:\/\/shop_images\/promotion_624x820_crop_center_68972312-525b-469b-94d3-c63a1eb25b6e.png",
+            "imageHeading": "SALE OFF",
+            "imageDescription": "<p>Advertise a promotion or a sale<\/p>",
+            "imageButton": "Shop Sale",
+            "url": "",
+            "collection_name": "Neckleas",
+            "collection": ""
+          }
         }
       },
       "block_order": [
-        "product_collections_EpwnV4"
+        "product_collections_EpwnV4",
+        "product_collections_KzEky6"
       ],
       "settings": {
         "heading": "NEW ARRIVALS",
