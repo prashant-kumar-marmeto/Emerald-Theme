@@ -463,6 +463,24 @@
         "padding_bottom": 30
       }
     },
+    "custom_blog_section_az9YAJ": {
+      "type": "custom-blog-section",
+      "settings": {
+        "heading": "LATEST NEWS",
+        "heading_size": "h1",
+        "paragraph": "Beyond mere adornment, these pieces are made to make you feel good.",
+        "blog": "customer-reviews",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "custom_usp_6YwExV": {
       "type": "custom-USP",
       "blocks": {
@@ -522,6 +540,7 @@
     "custom_customer_section_R3QngN",
     "custom_before_after_pMbWJH",
     "custom_logo_based_slider_rKryaU",
+    "custom_blog_section_az9YAJ",
     "custom_usp_6YwExV"
   ]
 }
