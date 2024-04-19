@@ -50,12 +50,13 @@
         "product_collections_EpwnV4": {
           "type": "product_collections",
           "settings": {
+            "image_select": "shopify:\/\/shop_images\/earrings_624x820_crop_center_51416ce6-dcaa-4c27-835f-7f5d20591420.png",
             "imageHeading": "SALE OFF",
             "imageDescription": "<p>Advertise a promotion or a sale<\/p>",
             "imageButton": "Shop Sale",
             "url": "",
             "collection_name": "Earings",
-            "collection": ""
+            "collection": "earrings"
           }
         }
       },
