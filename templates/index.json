@@ -194,7 +194,7 @@
           "type": "product",
           "settings": {
             "desktop_image": "shopify:\/\/shop_images\/hotspot_Banner.webp",
-            "primary_left_position": 20,
+            "primary_left_position": 23,
             "primary_top_position": 20,
             "primary_product": "",
             "secondary_left_position": 20,
