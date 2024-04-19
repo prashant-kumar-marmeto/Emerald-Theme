@@ -209,8 +209,8 @@
         "bg_color": "",
         "padding": 16,
         "scroll_time": "50",
-        "font_color": "rgba(0,0,0,0)",
-        "font_size": 80,
+        "font_color": "#7d5c70",
+        "font_size": 56,
         "pause_text": "initial",
         "image_picker": "shopify:\/\/shop_images\/Star_100x100_crop_center_07605463-0f2e-467f-9604-122ee50ae181.png"
       }
