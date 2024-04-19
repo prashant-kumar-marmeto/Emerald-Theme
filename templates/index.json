@@ -191,11 +191,19 @@
             "text": "SHOP THE LATEST TRENDS",
             "checkbox": true
           }
+        },
+        "block_HpJpDf": {
+          "type": "block",
+          "settings": {
+            "text": "JEWELRYIZE ME",
+            "checkbox": false
+          }
         }
       },
       "block_order": [
         "block_hKAx6G",
-        "block_Gnetij"
+        "block_Gnetij",
+        "block_HpJpDf"
       ],
       "settings": {
         "bg_color": "",
@@ -204,7 +212,7 @@
         "font_color": "#000000",
         "font_size": 80,
         "pause_text": "initial",
-        "image_picker": "shopify:\/\/shop_images\/WhatsApp_Image.jpg"
+        "image_picker": "shopify:\/\/shop_images\/Star_100x100_crop_center_07605463-0f2e-467f-9604-122ee50ae181.png"
       }
     },
     "custom_products_MBGWfi": {
