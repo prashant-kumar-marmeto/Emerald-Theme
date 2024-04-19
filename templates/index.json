@@ -418,6 +418,8 @@
         "text_4zWwnX"
       ],
       "settings": {
+        "image_before": "shopify:\/\/shop_images\/before.png",
+        "image_after": "shopify:\/\/shop_images\/After.png",
         "desktop-image-placement": "image_first",
         "desktop_content_alignment": "left",
         "color_scheme": "",
