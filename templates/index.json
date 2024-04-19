@@ -184,10 +184,18 @@
             "text": "A PERSONAL TOUCH",
             "checkbox": false
           }
+        },
+        "block_Gnetij": {
+          "type": "block",
+          "settings": {
+            "text": "SHOP THE LATEST TRENDS",
+            "checkbox": true
+          }
         }
       },
       "block_order": [
-        "block_hKAx6G"
+        "block_hKAx6G",
+        "block_Gnetij"
       ],
       "settings": {
         "bg_color": "",
