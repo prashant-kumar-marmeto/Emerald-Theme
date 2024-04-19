@@ -443,11 +443,19 @@
             "slider_text": "“A GREAT STYLE IS ALWAYS UPLIFTING, IT CAN MAKE YOU FEEL CONFIDENT, GLAMOROUS, AND SEXY. WHAT ARE YOU WAITING FOR?",
             "slider_image": "shopify:\/\/shop_images\/verdura.png"
           }
+        },
+        "text_slider_NqKYr6": {
+          "type": "text_slider",
+          "settings": {
+            "slider_text": "“A GREAT STYLE IS ALWAYS UPLIFTING, IT CAN MAKE YOU FEEL CONFIDENT, GLAMOROUS, AND SEXY. WHAT ARE YOU WAITING FOR?",
+            "slider_image": "shopify:\/\/shop_images\/doves.png"
+          }
         }
       },
       "block_order": [
         "text_slider_F6pmLU",
-        "text_slider_LMTMzE"
+        "text_slider_LMTMzE",
+        "text_slider_NqKYr6"
       ],
       "settings": {
         "heading": "IN THE PRESS",
