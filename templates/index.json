@@ -293,15 +293,15 @@
           "type": "product",
           "settings": {
             "desktop_image": "shopify:\/\/shop_images\/hotspot_Banner.webp",
-            "primary_left_position": 23,
-            "primary_top_position": 20,
-            "primary_product": "",
-            "secondary_left_position": 20,
-            "secondary_top_position": 20,
-            "secondary_product": "",
-            "third_left_position": 20,
-            "third_top_position": 20,
-            "third_product": ""
+            "primary_left_position": 54,
+            "primary_top_position": 15,
+            "primary_product": "14k-gold-barbelle-choker-necklace",
+            "secondary_left_position": 31,
+            "secondary_top_position": 24,
+            "secondary_product": "18k-gold-double-initial-custom-ring",
+            "third_left_position": 67,
+            "third_top_position": 25,
+            "third_product": "stephanie-18k-gold-plated-bracelet"
           }
         }
       },
@@ -310,7 +310,84 @@
       ],
       "settings": {
         "padding_top": 30,
-        "padding_bottom": 30
+        "padding_bottom": 0
+      }
+    },
+    "custom_customer_section_R3QngN": {
+      "type": "custom-customer-section",
+      "blocks": {
+        "slide_rjUqdP": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/p1_600x500_crop_center_c9d12458-9172-4e61-ab84-da1e5b5cef45.png",
+            "product_url": "",
+            "rating_range_review": 4.5,
+            "comment": "Unique Hand Pendant!",
+            "text_area": "Very beautiful representation of hand symbol, Thanks!.",
+            "author_name": "JANIS W.",
+            "content_position_desktop": "center"
+          }
+        },
+        "slide_qRHjgf": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/ring_1.png",
+            "product_url": "",
+            "rating_range_review": 4.5,
+            "comment": "Beautiful Ring!",
+            "text_area": "Gorgeous, dainty, sparkly band that works as a solo everyday ring.",
+            "author_name": "JULIE THOMAS",
+            "content_position_desktop": "center"
+          }
+        },
+        "slide_ig9zaJ": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/ring_2.png",
+            "product_url": "",
+            "rating_range_review": 4.5,
+            "comment": "So Pretty!",
+            "text_area": "I love all of this collection, bracelets and necklaces.",
+            "author_name": "GRISELLE",
+            "content_position_desktop": "center"
+          }
+        },
+        "slide_ebRew6": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/ring_3.png",
+            "product_url": "",
+            "rating_range_review": 4.5,
+            "comment": "Super Cute",
+            "text_area": "I'm hoping that the studs are long enough  they never fall off my ears.",
+            "author_name": "THERESA",
+            "content_position_desktop": "center"
+          }
+        },
+        "slide_AmLrBg": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/ring_4.png",
+            "product_url": "",
+            "rating_range_review": 4.5,
+            "comment": "Extraordinary!",
+            "text_area": "Add your customer review here to showcase them.",
+            "author_name": "Melanie",
+            "content_position_desktop": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_rjUqdP",
+        "slide_qRHjgf",
+        "slide_ig9zaJ",
+        "slide_ebRew6",
+        "slide_AmLrBg"
+      ],
+      "settings": {
+        "heading_customer_review": "Customer Review",
+        "padding_top": 0,
+        "padding_bottom": 40
       }
     },
     "custom_products_MBGWfi": {
@@ -389,83 +466,6 @@
         "padding_bottom": 0
       }
     },
-    "custom_customer_section_R3QngN": {
-      "type": "custom-customer-section",
-      "blocks": {
-        "slide_rjUqdP": {
-          "type": "slide",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/p1_600x500_crop_center_c9d12458-9172-4e61-ab84-da1e5b5cef45.png",
-            "product_url": "",
-            "rating_range_review": 4.5,
-            "comment": "Unique Hand Pendant!",
-            "text_area": "Very beautiful representation of hand symbol, Thanks!.",
-            "author_name": "JANIS W.",
-            "content_position_desktop": "center"
-          }
-        },
-        "slide_qRHjgf": {
-          "type": "slide",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/ring_1.png",
-            "product_url": "",
-            "rating_range_review": 4.5,
-            "comment": "Beautiful Ring!",
-            "text_area": "Gorgeous, dainty, sparkly band that works as a solo everyday ring.",
-            "author_name": "JULIE THOMAS",
-            "content_position_desktop": "center"
-          }
-        },
-        "slide_ig9zaJ": {
-          "type": "slide",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/ring_2.png",
-            "product_url": "",
-            "rating_range_review": 4.5,
-            "comment": "So Pretty!",
-            "text_area": "I love all of this collection, bracelets and necklaces.",
-            "author_name": "GRISELLE",
-            "content_position_desktop": "center"
-          }
-        },
-        "slide_ebRew6": {
-          "type": "slide",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/ring_3.png",
-            "product_url": "",
-            "rating_range_review": 4.5,
-            "comment": "Super Cute",
-            "text_area": "I'm hoping that the studs are long enough  they never fall off my ears.",
-            "author_name": "THERESA",
-            "content_position_desktop": "center"
-          }
-        },
-        "slide_AmLrBg": {
-          "type": "slide",
-          "settings": {
-            "slide_image": "shopify:\/\/shop_images\/ring_4.png",
-            "product_url": "",
-            "rating_range_review": 4.5,
-            "comment": "Extraordinary!",
-            "text_area": "Add your customer review here to showcase them.",
-            "author_name": "Melanie",
-            "content_position_desktop": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_rjUqdP",
-        "slide_qRHjgf",
-        "slide_ig9zaJ",
-        "slide_ebRew6",
-        "slide_AmLrBg"
-      ],
-      "settings": {
-        "heading_customer_review": "Customer Review",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "custom_usp_6YwExV": {
       "type": "custom-USP",
       "blocks": {
@@ -522,9 +522,9 @@
     "custom_richtext_animation_8rEFdB",
     "custom_products_gGYaK9",
     "custom_hotspot_EqAb3d",
+    "custom_customer_section_R3QngN",
     "custom_products_MBGWfi",
     "custom_before_after_pMbWJH",
-    "custom_customer_section_R3QngN",
     "custom_usp_6YwExV"
   ]
 }
