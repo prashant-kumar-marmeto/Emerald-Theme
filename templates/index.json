@@ -427,6 +427,34 @@
         "padding_bottom": 0
       }
     },
+    "custom_logo_based_slider_rKryaU": {
+      "type": "custom-logo-based-slider",
+      "blocks": {
+        "text_slider_F6pmLU": {
+          "type": "text_slider",
+          "settings": {
+            "slider_text": "“A GREAT STYLE IS ALWAYS UPLIFTING, IT CAN MAKE YOU FEEL CONFIDENT, GLAMOROUS, AND SEXY. WHAT ARE YOU WAITING FOR?",
+            "slider_image": "shopify:\/\/shop_images\/swarovski.png"
+          }
+        },
+        "text_slider_LMTMzE": {
+          "type": "text_slider",
+          "settings": {
+            "slider_text": "“A GREAT STYLE IS ALWAYS UPLIFTING, IT CAN MAKE YOU FEEL CONFIDENT, GLAMOROUS, AND SEXY. WHAT ARE YOU WAITING FOR?",
+            "slider_image": "shopify:\/\/shop_images\/verdura.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_slider_F6pmLU",
+        "text_slider_LMTMzE"
+      ],
+      "settings": {
+        "heading": "IN THE PRESS",
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    },
     "custom_usp_6YwExV": {
       "type": "custom-USP",
       "blocks": {
@@ -485,6 +513,7 @@
     "custom_hotspot_EqAb3d",
     "custom_customer_section_R3QngN",
     "custom_before_after_pMbWJH",
+    "custom_logo_based_slider_rKryaU",
     "custom_usp_6YwExV"
   ]
 }
