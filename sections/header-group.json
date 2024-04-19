@@ -2,6 +2,45 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "custom_announcement_bar_66HgCV": {
+      "type": "custom-announcement-bar",
+      "blocks": {
+        "slide_dihLTJ": {
+          "type": "slide",
+          "settings": {
+            "announcement": "Free shipping all orders over $60",
+            "color": "#ffffff"
+          }
+        },
+        "slide_fXEFxz": {
+          "type": "slide",
+          "settings": {
+            "announcement": "Free shipping all orders over $60",
+            "color": "#ffffff"
+          }
+        },
+        "slide_yqwAe6": {
+          "type": "slide",
+          "settings": {
+            "announcement": "Free shipping all orders over $60",
+            "color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "slide_dihLTJ",
+        "slide_fXEFxz",
+        "slide_yqwAe6"
+      ],
+      "settings": {
+        "auto_play": true,
+        "show_pagination": false,
+        "show_arrows": true,
+        "auto_play_duration": 4,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "header": {
       "type": "header",
       "disabled": true,
@@ -25,7 +64,6 @@
       "type": "custom-header",
       "settings": {
         "hover_logo_image": "shopify:\/\/shop_images\/logo2x_336x120_crop_center_99dafbab-fdd5-4d3b-b344-de4ff98ab341.png",
-        "logo_image": "shopify:\/\/shop_images\/logo2x_336x120_crop_center_99dafbab-fdd5-4d3b-b344-de4ff98ab341.png",
         "logo_position": "top-center",
         "menu": "main-menu",
         "menu_type_desktop": "mega",
@@ -39,6 +77,7 @@
     }
   },
   "order": [
+    "custom_announcement_bar_66HgCV",
     "header",
     "custom_header_jPpNnJ"
   ]
