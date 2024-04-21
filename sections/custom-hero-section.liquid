@@ -67,7 +67,6 @@
 {% endstyle %}
 
 <div class="custom-slideshow custom-slideshow-wrapper custom-slideshow--{{ section.id }}">
-<<<<<<< HEAD
     <carousel-component id="image-carousel" class="custom-slideshow--splide splide" aria-label="Beautiful Images">
         <div class="custom-slideshow--splide__track splide__track">
               <ul class="custom-slideshow--splide__list splide__list">
@@ -102,47 +101,6 @@
               </ul>
         </div>
     </carousel-component>
-=======
-  <carousel-component id="image-carousel" class="custom-slideshow--splide splide" aria-label="Beautiful Images">
-    <div class="custom-slideshow--splide__track splide__track">
-      <ul class="custom-slideshow--splide__list splide__list">
-        {% for block in section.blocks %}
-          <li class="custom-slideshow--splide__slide splide__slide">
-            {% if block.settings.video_url != blank %}
-              <video class="custom-slideshow--video" autoplay loop muted>
-                <source src="{{ block.settings.video_url }}" type="video/mp4">
-              </video>
-            {% elsif block.settings.video_url == blank and block.settings.desktop_image != blank %}
-              <img
-                class="custom-slideshow--image"
-                src="{{ block.settings.desktop_image | image_url }}"
-                alt="courasel image"
-                height="600"
-                width="1000"
-              >
-            {% elsif block.settings.video_url != blank and block.settings.desktop_image != blank %}
-              <video class="custom-slideshow--video" autoplay loop muted>
-                <source src="{{ block.settings.video_url | asset_url }}" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            {% endif %}
-            <div class="custom-slideshow--content">
-              <p class="custom-slideshow--caption">{{ block.settings.caption_text }}</p>
-              <div class="animate-popup">
-                <h1 class="custom-slideshow--split__text split-text slideshow__slide-heading h1">
-                  {{ block.settings.rich_text }}
-                </h1>
-                <a class="custom-slideshow--link__wrapper line-child" href="{{ block.settings.button_url }}">
-                  <button class="custom-slideshow--button">{{ block.settings.button_text }}</button>
-                </a>
-              </div>
-            </div>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </carousel-component>
->>>>>>> f1669ace1b06d0b23de63f69065d2ca5adce68c1
 </div>
 
 <script>
@@ -180,7 +138,6 @@
 "class": "section",
 "settings": [
     {
-<<<<<<< HEAD
     "name": "Custom Hero Section",
     "tag": "section",
     "class": "section",
@@ -404,82 +361,6 @@
         }
     ]   
     
-=======
-        "type": "header",
-        "content": "Slider options"
-    },
-    {
-        "type": "checkbox",
-        "id": "auto_play",
-        "label": "Enable autoplay",
-        "default": false
-    },
-    {
-        "type": "checkbox",
-        "id": "show_arrows",
-        "label": "Show arrows",
-        "default": false
-    },
-    {
-        "type": "checkbox",
-        "id": "show_pagination",
-        "label": "Show dots",
-        "default": false
-    },
-    {
-        "type": "range",
-        "id": "auto_play_duration",
-        "min": 1000,
-        "max": 5000,
-        "step": 1000,
-        "unit": "ms",
-        "label": "Autoplay Duration",
-        "default": 2000
-    },
-    {
-        "type": "select",
-        "id": "slide_animation",
-        "label": "slider animation",
-        "options": [
-            {
-                "value": "fade",
-                "label": "Fade"
-            },
-            {
-                "value": "slide",
-                "label": "Slide"
-            },
-            {
-                "value": "loop",
-                "label": "Loop"
-            }
-        ],
-        "default": "slide"
-    },
-    {
-        "type": "header",
-        "content": "Section padding"
-    },
-    {
-        "type": "range",
-        "id": "padding_top",
-        "min": 0,
-        "max": 100,
-        "step": 10,
-        "unit": "px",
-        "label": "Padding top",
-        "default": 40
-    },
-    {
-        "type": "range",
-        "id": "padding_bottom",
-        "min": 0,
-        "max": 100,
-        "step": 10,
-        "unit": "px",
-        "label": "Padding botttom",
-        "default": 40
->>>>>>> f1669ace1b06d0b23de63f69065d2ca5adce68c1
     }
 ],
 "blocks": [
