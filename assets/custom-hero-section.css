@@ -25,7 +25,9 @@
   opacity: 0;
   transform-origin: bottom;
 }
-
+.custom-slideshow--content .custom-slideshow--caption{
+  color:red;
+}
 .custom-slideshow--content .animate-popup {
   animation: popup 0.7s ease-out forwards;
   -webkit-animation: popup 0.7s ease-out forwards;
