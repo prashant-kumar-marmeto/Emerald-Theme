@@ -1,261 +1,276 @@
-{{ "custom-testimonials.css" | asset_url | stylesheet_tag }}
+{{ 'custom-testimonials.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-    .custom-testiomonials--{{ section.id }} {
-        background-color: {{ section.settings.background_color }};
-        padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
-        padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
-    }
-    .custom-testimonials--slide-caruosel .splide__slide.is-active{
-        background-color: {{ section.settings.active_slide_color }};
-        border-radius: 5px ;
-        border: 1px solid gray;
-    }
-    
-    @media screen and (max-width: 749px) {
-        .custom-testiomonials--{{ section.id }} {
-            padding-top: {{ section.settings.padding_top }}px;
-            padding-bottom: {{ section.settings.padding_bottom }}px; 
-    }
-    .custom-testimonials .custom-testimonials--container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-    }
-    .custom-testimonials--image-caruosel {
-    height: auto;
-    width: 100%;
-}
-.custom-testimonials--slide {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-}
-.custom-component--slider-container {
-    width: 100%;
-    height: auto;
-    
-}
-.custom-testimonials--main-image {
-    height: 360px;
-    width: 100%;
-    border-radius: 10px;
-}
-.custom-testimonials--content-splide__slide  {
-    width: 380px;
-}
-.custom-component--slider-container .custom-testimonials--slide-caruosel {
-    width: 75vw;
-}
+      .custom-testiomonials--{{ section.id }} {
+          background-color: {{ section.settings.background_color }};
+          padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+          padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+      }
+      .custom-testimonials--slide-caruosel .splide__slide.is-active{
+          background-color: {{ section.settings.active_slide_color }};
+          border-radius: 5px ;
+          border: 1px solid gray;
+      }
+
+      @media screen and (max-width: 749px) {
+          .custom-testiomonials--{{ section.id }} {
+              padding-top: {{ section.settings.padding_top }}px;
+              padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+      .custom-testimonials .custom-testimonials--container {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: auto;
+      }
+      .custom-testimonials--image-caruosel {
+      height: auto;
+      width: 100%;
+  }
+  .custom-testimonials--slide {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+  }
+  .custom-component--slider-container {
+      width: 100%;
+      height: auto;
+
+  }
+  .custom-testimonials--main-image {
+      height: 360px;
+      width: 100%;
+      border-radius: 10px;
+  }
+  .custom-testimonials--content-splide__slide  {
+      width: 380px;
+  }
+  .custom-component--slider-container .custom-testimonials--slide-caruosel {
+      width: 75vw;
+  }
 
 
-/* Remove left margin from the first slide */
-.custom-testimonials--splide__list .custom-testimonials--content-splide__slide {
-  margin-left: 0;
-}
-}
+  /* Remove left margin from the first slide */
+  .custom-testimonials--splide__list .custom-testimonials--content-splide__slide {
+    margin-left: 0;
+  }
+  }
 {% endstyle %}
 
-
 {% if customer %}
-    <div class='custom-testimonials page-width  custom-testiomonials--{{ section.id }}'>
-        <div class='custom-testimonials--container'>
-            <carousel-component id="image-carousel" class="custom-testimonials--image-caruosel splide" aria-label="Beautiful Images">
-                <div class="custom-testimonials--splide__track   splide__track">
-                      <ul class="custom-testimonials--splide__list splide__list">
-                        {% for block in section.blocks %}
-                            <li class="custom-testimonials--image-splide__slide splide__slide">
-                                <img class="custom-testimonials--main-image" src="{{ block.settings.main_image | image_url }}" height="500" width="480">
-                            </li>
-                        {% endfor %}    
-                      </ul>
-                </div>
-            </carousel-component>
-            <div class='custom-component--slider-container'>
-                <h1 class="custom-testimonials--heading" >{{ section.settings.heading_text }}</h1>
-                {{ section.settings.description_text }}
-                <carousel-component id="slide-carousel" class="custom-testimonials--slide-caruosel splide" aria-label="Beautiful Images">
-                    <div class="custom-testimonials--splide__track   splide__track">
-                        <ul class="custom-testimonials--splide__list splide__list">
-                            {% for block in section.blocks %}
-                                <li class="custom-testimonials--content-splide__slide splide__slide">
-                                    <div class='custom-testimonials--slide'>
-                                        <p class="custom-testimonials--riview">{{ block.settings.testimonials_text }}</p>
-                                        <div class="custom-testimonials--author-details">
-                                            <img class="custom-testimonials--author-image" src="{{ block.settings.author_image | image_url }}" height="65" width="65">
-                                            <div>
-                                                <p class="custom-testimonials--author-name">{{ block.settings.autor_name }}</p>
-                                                <p class="custom-testimonials--author-title">{{ block.settings.author_title }}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            {% endfor %}    
-                        </ul>
-                    </div>
-                </carousel-component>
-            </div>
+  <div class="custom-testimonials page-width  custom-testiomonials--{{ section.id }}">
+    <div class="custom-testimonials--container">
+      <carousel-component
+        id="image-carousel"
+        class="custom-testimonials--image-caruosel splide"
+        aria-label="Beautiful Images"
+      >
+        <div class="custom-testimonials--splide__track   splide__track">
+          <ul class="custom-testimonials--splide__list splide__list">
+            {% for block in section.blocks %}
+              <li class="custom-testimonials--image-splide__slide splide__slide">
+                <img
+                  class="custom-testimonials--main-image"
+                  src="{{ block.settings.main_image | image_url }}"
+                  height="500"
+                  width="480"
+                >
+              </li>
+            {% endfor %}
+          </ul>
         </div>
+      </carousel-component>
+      <div class="custom-component--slider-container">
+        <h1 class="custom-testimonials--heading">{{ section.settings.heading_text }}</h1>
+        {{ section.settings.description_text }}
+        <carousel-component
+          id="slide-carousel"
+          class="custom-testimonials--slide-caruosel splide"
+          aria-label="Beautiful Images"
+        >
+          <div class="custom-testimonials--splide__track   splide__track">
+            <ul class="custom-testimonials--splide__list splide__list">
+              {% for block in section.blocks %}
+                <li class="custom-testimonials--content-splide__slide splide__slide">
+                  <div class="custom-testimonials--slide">
+                    <p class="custom-testimonials--riview">{{ block.settings.testimonials_text }}</p>
+                    <div class="custom-testimonials--author-details">
+                      <img
+                        class="custom-testimonials--author-image"
+                        src="{{ block.settings.author_image | image_url }}"
+                        height="65"
+                        width="65"
+                      >
+                      <div>
+                        <p class="custom-testimonials--author-name">{{ block.settings.autor_name }}</p>
+                        <p class="custom-testimonials--author-title">{{ block.settings.author_title }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </carousel-component>
+      </div>
     </div>
-{% else %}   
-    <div class="page-width">
-        <h1> Please login and try again</h1>
-        <div class="week-6-login">
-            <a href="/account/login" class="button">Log in</a>
-         </div>
+  </div>
+{% else %}
+  <div class="page-width">
+    <h1>Please login and try again</h1>
+    <div class="week-6-login">
+      <a href="https://b03-prashant.myshopify.com/account" class="button">Log in</a>
     </div>
-{% endif %}   
-
+  </div>
+{% endif %}
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var imageCarousel = new Splide('#image-carousel', {
-            type: 'fade',
-            perPage: 1,
-        });
+  document.addEventListener('DOMContentLoaded', function () {
+      var imageCarousel = new Splide('#image-carousel', {
+          type: 'fade',
+          perPage: 1,
+      });
 
-        var slideCarousel = new Splide('#slide-carousel', {
-            type: 'carousel',
-            perPage: 2,
-            keyboard: "global",
-            
-            breakpoints: {
-                768: {
-                    perPage: 2, // Number of slides per page for screens >= 768px width
-                },
-                480: {
-                    perPage: 1, // Number of slides per page for screens >= 480px width
-                },
-            }
-        }).mount();
+      var slideCarousel = new Splide('#slide-carousel', {
+          type: 'carousel',
+          perPage: 2,
+          keyboard: "global",
 
-        imageCarousel.sync(slideCarousel)
-        imageCarousel.mount()
-        slideCarousel.mount()
-    });
+          breakpoints: {
+              768: {
+                  perPage: 2, // Number of slides per page for screens >= 768px width
+              },
+              480: {
+                  perPage: 1, // Number of slides per page for screens >= 480px width
+              },
+          }
+      }).mount();
+
+      imageCarousel.sync(slideCarousel)
+      imageCarousel.mount()
+      slideCarousel.mount()
+  });
 </script>
 
-
 {% schema %}
-    {
-        "name": "Cuastome Testimonials",
-        "tag": "section",
-        "class": "section",
-        "settings": [
-            {
-                "type": "header",
-                "content": "Section background"
-            },
-            {
-                "type": "color",
-                "id": "background_color",
-                "label": "Background color",
-                "default": "#FFFFF5"
-            },
-            {
-                "type": "color",
-                "id": "active_slide_color",
-                "label": "Active slide color",
-                "default": "#F6FFC2"
-            },
-            {
-                "type": "header",
-                "content": "Section padding"
-            },
-            {
-                "type": "range",
-                "id": "padding_top",
-                "min": 0,
-                "max": 100,
-                "step": 10,
-                "unit": "px",
-                "label": "Padding top",
-                "default": 40
-            },
-            {
-                "type": "range",
-                "id": "padding_bottom",
-                "min": 0,
-                "max": 100,
-                "step": 10,
-                "unit": "px",
-                "label": "Padding botttom",
-                "default": 40
-            },
-            {
-                "type": "header",
-                "content": "Content Text"
-            },
-            {
-                "type": "text",
-                "id": "heading_text",
-                "label": "Heading",
-                "placeholder": "Testimonials"
-            },
-            {
-                "type": "richtext",
-                "id": "description_text",
-                "label": "Description",
-                "default": "<p>Description</p>"
-            }
-        ] ,
-        "blocks": [
-            {
-                "type": "slide",
-                "name": "Slide",
-                "settings": [
-                    {
-                        "type": "header",
-                        "content": "Slide content"
-                    },
-                    {
-                        "type": "color",
-                        "id": "slied_color",
-                        "label": "Slide color",
-                        "default": "#ffffff"
-                    },
-                    {
-                        "type": "text",
-                        "id": "testimonials_text",
-                        "label": "Testimonial text",
-                        "default": "Write your reviews"
-                    },
-                    {
-                        "type": "image_picker",
-                        "id": "author_image",
-                        "label": "Author image"
-                    },
-                    {
-                        "type": "text",
-                        "id": "autor_name",
-                        "label": "Author name",
-                        "default": "Author"
-                    },
-                    {
-                        "type": "text",
-                        "id": "author_title",
-                        "label": "Author title",
-                        "default": "Author title"
-                    },
-                    {
-                        "type": "image_picker",
-                        "id": "main_image",
-                        "label": "Main image"
-                    }
-                ]
-            }
-        ],
-        "presets": [
-            {
-                "name": "Custom Testimonials"
-            }
-        ]
-          
-    }
+{
+    "name": "Cuastome Testimonials",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Section background"
+        },
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background color",
+            "default": "#FFFFF5"
+        },
+        {
+            "type": "color",
+            "id": "active_slide_color",
+            "label": "Active slide color",
+            "default": "#F6FFC2"
+        },
+        {
+            "type": "header",
+            "content": "Section padding"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "label": "Padding top",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "label": "Padding botttom",
+            "default": 40
+        },
+        {
+            "type": "header",
+            "content": "Content Text"
+        },
+        {
+            "type": "text",
+            "id": "heading_text",
+            "label": "Heading",
+            "placeholder": "Testimonials"
+        },
+        {
+            "type": "richtext",
+            "id": "description_text",
+            "label": "Description",
+            "default": "<p>Description</p>"
+        }
+    ] ,
+    "blocks": [
+        {
+            "type": "slide",
+            "name": "Slide",
+            "settings": [
+                {
+                    "type": "header",
+                    "content": "Slide content"
+                },
+                {
+                    "type": "color",
+                    "id": "slied_color",
+                    "label": "Slide color",
+                    "default": "#ffffff"
+                },
+                {
+                    "type": "text",
+                    "id": "testimonials_text",
+                    "label": "Testimonial text",
+                    "default": "Write your reviews"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "author_image",
+                    "label": "Author image"
+                },
+                {
+                    "type": "text",
+                    "id": "autor_name",
+                    "label": "Author name",
+                    "default": "Author"
+                },
+                {
+                    "type": "text",
+                    "id": "author_title",
+                    "label": "Author title",
+                    "default": "Author title"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "main_image",
+                    "label": "Main image"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Custom Testimonials"
+        }
+    ]
+
+}
 {% endschema %}
