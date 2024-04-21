@@ -63,7 +63,7 @@
 {% endstyle %}
 
 
-{% comment %} {% if customer %} {% endcomment %}
+{% if customer %}
     <div class='custom-testimonials page-width  custom-testiomonials--{{ section.id }}'>
         <div class='custom-testimonials--container'>
             <carousel-component id="image-carousel" class="custom-testimonials--image-caruosel splide" aria-label="Beautiful Images">
@@ -103,11 +103,14 @@
             </div>
         </div>
     </div>
-{% comment %} {% else %}   
+{% else %}   
     <div class="page-width">
         <h1> Please login and try again</h1>
+        <div class="week-6-login">
+            <a href="/account/login" class="button">Log in</a>
+         </div>
     </div>
-{% endif %}     {% endcomment %}
+{% endif %}   
 
 
 <script>
