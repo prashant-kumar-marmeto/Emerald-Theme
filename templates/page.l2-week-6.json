@@ -46,8 +46,8 @@
       ],
       "settings": {
         "background_color": "#b14040",
-        "active_slide_color": "#F6FFC2",
-        "padding_top": 40,
+        "active_slide_color": "#f6ffc2",
+        "padding_top": 100,
         "padding_bottom": 40,
         "heading_text": "",
         "description_text": "<p>Description<\/p>"
