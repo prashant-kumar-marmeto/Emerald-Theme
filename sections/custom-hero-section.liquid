@@ -1,7 +1,6 @@
 {{ 'custom-hero-section.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-<<<<<<< HEAD
     .top-left {
         display: flex;
         justify-content: flex-start;
@@ -51,13 +50,7 @@
         padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
         padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
     }
-=======
-      .custom-slideshow--{{ section.id }} {
-          padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
-          padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
-      }
->>>>>>> f1669ace1b06d0b23de63f69065d2ca5adce68c1
-
+      
       @media screen and (max-width: 749px) {
           .custom-slideshow--{{ section.id }} {
               padding-top: {{ section.settings.padding_top }}px;
