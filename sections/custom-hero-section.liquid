@@ -84,7 +84,10 @@
               </video>
             {% endif %}
             <div class="custom-slideshow--content">
-              <p class="custom-slideshow--caption">{{ block.settings.caption_text }}</p>
+              <p class="custom-slideshow--caption">
+                {{ block.settings.caption_text -}}
+                <span>Prashant</span>
+              </p>
               <div class="animate-popup">
                 <h1 class="custom-slideshow--split__text split-text slideshow__slide-heading h1">
                   {{ block.settings.rich_text }}
