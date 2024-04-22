@@ -145,7 +145,7 @@
     margin-top: 100px;
     margin-bottom: 20px;
 }
-.custom-slideshow--caption {
+.custom-slideshow--content .custom-slideshow--caption {
   text-transform: uppercase;
   color: #ffffff;
   font-size: 12px;

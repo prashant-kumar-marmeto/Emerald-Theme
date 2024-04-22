@@ -14,7 +14,6 @@
         "slide_XTTTHf": {
           "type": "slide",
           "settings": {
-            "active_slide_color": "#f6ffc2",
             "slied_color": "#ffffff",
             "testimonials_text": "Write your reviews",
             "autor_name": "Author",
@@ -24,7 +23,6 @@
         "slide_yPW3Fn": {
           "type": "slide",
           "settings": {
-            "active_slide_color": "#f6ffc2",
             "slied_color": "#ffffff",
             "testimonials_text": "Write your reviews",
             "autor_name": "Author",
@@ -34,7 +32,6 @@
         "slide_RfAMwz": {
           "type": "slide",
           "settings": {
-            "active_slide_color": "#f6ffc2",
             "slied_color": "#ffffff",
             "testimonials_text": "Write your reviews",
             "autor_name": "Author",
@@ -48,8 +45,9 @@
         "slide_RfAMwz"
       ],
       "settings": {
-        "background_color": "#b14040",
-        "padding_top": 60,
+        "background_color": "#fff",
+        "active_slide_color": "#f6ffc2",
+        "padding_top": 100,
         "padding_bottom": 40,
         "heading_text": "",
         "description_text": "<p>Description<\/p>"
