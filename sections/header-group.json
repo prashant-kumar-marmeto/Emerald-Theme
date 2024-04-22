@@ -23,7 +23,6 @@
     },
     "custom_header_jPpNnJ": {
       "type": "custom-header",
-      "disabled": true,
       "settings": {
         "logo_position": "top-center",
         "menu": "main-menu",
