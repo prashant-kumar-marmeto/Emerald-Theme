@@ -304,7 +304,7 @@
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
-    
+
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
@@ -350,7 +350,20 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    
+
     <script src="{{ "splide.min.js" | asset_url }}"></script>
+
+    {% if template == 'index' %}
+      {% style %}
+        .header-wrapper{
+            position: absolute;
+            width: 100%;
+            background: transparent;
+        }
+        .header-wrapper .header{
+            margin-top: 20px;
+        }
+      {% endstyle %}
+    {% endif %}
   </body>
 </html>
