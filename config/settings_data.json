@@ -130,6 +130,25 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
+      },
+      "swatches": {
+        "type": "swatches",
+        "blocks": {
+          "solid_color_EWjKWQ": {
+            "type": "solid-color",
+            "settings": {
+              "solid_color": "",
+              "solide_color_name": "",
+              "gradient_color": "",
+              "gradient_color_name": ""
+            }
+          }
+        },
+        "block_order": [
+          "solid_color_EWjKWQ"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
