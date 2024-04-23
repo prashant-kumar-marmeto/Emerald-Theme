@@ -1,6 +1,6 @@
 <style>
   {% for block in section.blocks %}
-    .my-custom-swatches .custom-swatch {
+    .my-custom-swatches .custom-swatch--{{ block.settings.solide_color_name }}{
       background: {{ block.settings.solid_color }} !important;
     }
   {% endfor %}
