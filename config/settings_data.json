@@ -147,11 +147,19 @@
               "solid_color": "#2739a1",
               "solide_color_name": "Blue"
             }
+          },
+          "solid_color_jHKCVc": {
+            "type": "solid-color",
+            "settings": {
+              "solid_color": "#e1a01c",
+              "solide_color_name": "Orange"
+            }
           }
         },
         "block_order": [
           "solid_color_pgPFMe",
-          "solid_color_w9nFk8"
+          "solid_color_w9nFk8",
+          "solid_color_jHKCVc"
         ],
         "settings": {
         }
