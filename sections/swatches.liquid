@@ -1,6 +1,36 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Swatches",
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "name": "Solid color",
+      "type": "solid-color",
+      "settings": [
+        {
+          "type": "color",
+          "id": "solid_color",
+          "label": "Solid color"
+        },
+        {
+          "type": "text",
+          "id": "solide_color_name",
+          "label": "Solide color name"
+        },
+        {
+          "type": "color_background",
+          "id": "gradient_color",
+          "label": "Gradient color"
+        },
+        {
+          "type": "text",
+          "id": "gradient_color_name",
+          "label": "Gradient color name"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
