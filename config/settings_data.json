@@ -139,8 +139,8 @@
             "settings": {
               "solid_color": "",
               "solide_color_name": "",
-              "gradient_color": "",
-              "gradient_color_name": "Blue"
+              "gradient_color": "linear-gradient(105deg, rgba(126, 126, 126, 1), rgba(59, 61, 153, 1) 100%)",
+              "gradient_color_name": "Gray blue"
             }
           }
         },
