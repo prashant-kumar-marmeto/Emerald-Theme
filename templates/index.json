@@ -126,6 +126,97 @@
         "padding_bottom": 40
       }
     },
+    "custom_before_after_pMbWJH": {
+      "type": "custom-before-after",
+      "blocks": {
+        "badge_dfeHym": {
+          "type": "badge",
+          "settings": {
+            "badge": "Custom Design"
+          }
+        },
+        "heading_gAtPt6": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>THE DIAMONDS ARE REAL BUT THE MAGIC IS IN YOUR EYES<\/p>"
+          }
+        },
+        "text_4zWwnX": {
+          "type": "text",
+          "settings": {
+            "discription": "<p>Luxury jewelry is a high-end category of jewelry that is often made of precious metals and gems, and is known for its exceptional craftsmanship and quality. This type of jewelry is often associated with elegance and status.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "badge_dfeHym",
+        "heading_gAtPt6",
+        "text_4zWwnX"
+      ],
+      "settings": {
+        "image_before": "shopify:\/\/shop_images\/before.png",
+        "image_after": "shopify:\/\/shop_images\/After.png",
+        "desktop-image-placement": "image_first",
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_logo_based_slider_rKryaU": {
+      "type": "custom-logo-based-slider",
+      "blocks": {
+        "text_slider_F6pmLU": {
+          "type": "text_slider",
+          "settings": {
+            "slider_text": "“A GREAT STYLE IS ALWAYS UPLIFTING, IT CAN MAKE YOU FEEL CONFIDENT, GLAMOROUS, AND SEXY. WHAT ARE YOU WAITING FOR?",
+            "slider_image": "shopify:\/\/shop_images\/swarovski.png"
+          }
+        },
+        "text_slider_LMTMzE": {
+          "type": "text_slider",
+          "settings": {
+            "slider_text": "“A GREAT STYLE IS ALWAYS UPLIFTING, IT CAN MAKE YOU FEEL CONFIDENT, GLAMOROUS, AND SEXY. WHAT ARE YOU WAITING FOR?",
+            "slider_image": "shopify:\/\/shop_images\/verdura.png"
+          }
+        },
+        "text_slider_NqKYr6": {
+          "type": "text_slider",
+          "settings": {
+            "slider_text": "“A GREAT STYLE IS ALWAYS UPLIFTING, IT CAN MAKE YOU FEEL CONFIDENT, GLAMOROUS, AND SEXY. WHAT ARE YOU WAITING FOR?",
+            "slider_image": "shopify:\/\/shop_images\/doves.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_slider_F6pmLU",
+        "text_slider_LMTMzE",
+        "text_slider_NqKYr6"
+      ],
+      "settings": {
+        "heading": "IN THE PRESS",
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    },
+    "custom_blog_section_az9YAJ": {
+      "type": "custom-blog-section",
+      "settings": {
+        "heading": "LATEST NEWS",
+        "heading_size": "h1",
+        "paragraph": "Beyond mere adornment, these pieces are made to make you feel good.",
+        "blog": "customer-reviews",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "custom_usp_6YwExV": {
       "type": "custom-USP",
       "blocks": {
