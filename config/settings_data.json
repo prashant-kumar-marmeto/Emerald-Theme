@@ -138,34 +138,12 @@
             "type": "solid-color",
             "settings": {
               "solid_color": "#2b744a",
-              "solide_color_name": "Green",
-              "gradient_color": "",
-              "gradient_color_name": ""
-            }
-          },
-          "solid_color_EWjKWQ": {
-            "type": "solid-color",
-            "settings": {
-              "solid_color": "#9e2828",
-              "solide_color_name": "Red",
-              "gradient_color": "linear-gradient(105deg, rgba(126, 126, 126, 1), rgba(59, 61, 153, 1) 100%)",
-              "gradient_color_name": "Gray blue"
-            }
-          },
-          "solid_color_dYB3UJ": {
-            "type": "solid-color",
-            "settings": {
-              "solid_color": "",
-              "solide_color_name": "",
-              "gradient_color": "",
-              "gradient_color_name": ""
+              "solide_color_name": "Green"
             }
           }
         },
         "block_order": [
-          "solid_color_pgPFMe",
-          "solid_color_EWjKWQ",
-          "solid_color_dYB3UJ"
+          "solid_color_pgPFMe"
         ],
         "settings": {
         }
