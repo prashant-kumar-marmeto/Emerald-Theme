@@ -5,7 +5,7 @@
       width: 60px;
       border-radius: 50%;
       {% if block.settings.image != blank or block.settings.solide_color_name == blank %}
-      background:url("{{ block.settings.image | img_url:"small" }}") fixed no-repeat center/cover;
+      background:url("{{ block.settings.image | image_url:"small" }}") fixed no-repeat center/cover;
       {% else %}
       background: {{ block.settings.solid_color }} !important;
       {% endif %}
