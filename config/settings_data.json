@@ -146,14 +146,16 @@
             "type": "solid-color",
             "settings": {
               "solide_color_name": "Emerald Blue",
-              "solid_color": "#2739a1"
+              "solid_color": "#2739a1",
+              "image": "shopify:\/\/shop_images\/p6-1_1220x_crop_center_6c7f824e-8352-4d7e-8775-41cd8ff8e032.png"
             }
           },
           "solid_color_jHKCVc": {
             "type": "solid-color",
             "settings": {
               "solide_color_name": "Emerald Orange",
-              "solid_color": "#e1a01c"
+              "solid_color": "#e1a01c",
+              "image": "shopify:\/\/shop_images\/p6-3_1220x_crop_center_e6cf16c4-8440-43d9-9966-418225a6c389.png"
             }
           }
         },
