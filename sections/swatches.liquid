@@ -11,18 +11,6 @@
   {% endfor %}
 </style>
 
-<style>
-  {% for block in section.blocks %}
-    .custom .color-swatch--{{ block.settings.title | handleize }}{
-      {% if block.settings.image != blank or block.settings.title == blank %}
-      background:url("{{ block.settings.image | img_url:"small" }}") fixed no-repeat center/cover;
-      {% else %}
-      background:{{ block.settings.color_code }};
-      {% endif %}
-    }
-  {% endfor %}
-</style>
-
 {% schema %}
 {
   "name": "Swatches",
