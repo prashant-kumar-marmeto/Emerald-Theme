@@ -1,3 +1,10 @@
+<style>
+  {% for block in section.blocks %}
+    .my-custom-swatches .swatch--{{block.settings.gradient_color_name}} {
+      background: {{ block.settings.gradient_color }} !important;
+    }
+  {% endfor %}
+</style>
 {% schema %}
 {
   "name": "Swatches",
