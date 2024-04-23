@@ -1,8 +1,9 @@
 <style>
   {% for block in section.blocks %}
     .my-custom-swatches .custom-swatch--{{ block.settings.solide_color_name | handleize }}{
-      height: 40px;
+      height: 60px;
       width: 60px;
+      border-radius: 50%;
       {% if block.settings.image != blank or block.settings.solide_color_name == blank %}
       background:url("{{ block.settings.image | img_url:"small" }}") fixed no-repeat center/cover;
       {% else %}
