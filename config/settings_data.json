@@ -140,10 +140,18 @@
               "solid_color": "#2b744a",
               "solide_color_name": "Emerald green"
             }
+          },
+          "solid_color_w9nFk8": {
+            "type": "solid-color",
+            "settings": {
+              "solid_color": "#2739a1",
+              "solide_color_name": "Blue"
+            }
           }
         },
         "block_order": [
-          "solid_color_pgPFMe"
+          "solid_color_pgPFMe",
+          "solid_color_w9nFk8"
         ],
         "settings": {
         }
