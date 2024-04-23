@@ -1,6 +1,6 @@
 <style>
   {% for block in section.blocks %}
-    .my-custom-swatches .swatch--{{block.settings.gradient_color_name}} {
+    .my-custom-swatches .swatch--{{block.settings.gradient_color_name | handleize }} {
       background: {{ block.settings.gradient_color }} !important;
     }
   {% endfor %}
