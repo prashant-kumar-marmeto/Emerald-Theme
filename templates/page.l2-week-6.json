@@ -52,10 +52,22 @@
         "heading_text": "",
         "description_text": "<p>Description<\/p>"
       }
+    },
+    "custom_subscribe_QxVxmH": {
+      "type": "custom-subscribe",
+      "settings": {
+        "subscribe_background": "#EDFF84",
+        "heading_text": "Subscribe to our Newsletter",
+        "button_text": "Subscribe",
+        "button_url": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
     "main",
-    "custome_testimonials_gd389F"
+    "custome_testimonials_gd389F",
+    "custom_subscribe_QxVxmH"
   ]
 }
