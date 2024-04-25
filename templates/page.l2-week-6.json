@@ -45,7 +45,8 @@
         "slide_RfAMwz"
       ],
       "settings": {
-        "background_color": "#b14040",
+        "background_color": "#de544b",
+        "active_slide_color": "#F6FFC2",
         "padding_top": 60,
         "padding_bottom": 40,
         "heading_text": "",
