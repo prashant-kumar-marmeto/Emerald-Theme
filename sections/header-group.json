@@ -9,21 +9,21 @@
           "type": "slide",
           "settings": {
             "announcement": "Free shipping all orders over $60",
-            "color": "#4e6756"
+            "color": "#4f443b"
           }
         },
         "slide_KtzyUj": {
           "type": "slide",
           "settings": {
             "announcement": "Return extended to 60 days",
-            "color": "#4f443b"
+            "color": "#de544b"
           }
         },
         "slide_NpYUbA": {
           "type": "slide",
           "settings": {
             "announcement": "15% off on all products",
-            "color": "#de544b"
+            "color": "#4e6756"
           }
         }
       },
