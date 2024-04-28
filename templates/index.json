@@ -607,6 +607,106 @@
       "settings": {
         "heading": "My Custom Heading"
       }
+    },
+    "custom_text_on_image_qcKH83": {
+      "type": "custom-text-on-image",
+      "blocks": {
+        "card_kzriJd": {
+          "type": "card",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d5dbea9e9fea4cac9a540b9635a8b70c.mp4",
+            "desktop_image": "shopify:\/\/shop_images\/Emreld_Image_4fb687e5-ce6a-41b1-984e-bbdad2e8c3e5.webp",
+            "caption_text": "MADE FOR YOU",
+            "rich_text": "<p>Timeless Style<\/p>",
+            "button_text": "Shop now",
+            "button_url": ""
+          }
+        },
+        "card_tUyK3P": {
+          "type": "card",
+          "settings": {
+            "video_url": "",
+            "desktop_image": "shopify:\/\/shop_images\/Emreld_new.webp",
+            "caption_text": "MADE FOR YOU",
+            "rich_text": "<p>Timeless Style<\/p>",
+            "button_text": "Shop now",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_kzriJd",
+        "card_tUyK3P"
+      ],
+      "settings": {
+        "color_scheme": "scheme-5",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "custom_footer_zpkRd3": {
+      "type": "custom-footer",
+      "blocks": {
+        "column_eNJPj7": {
+          "type": "column",
+          "settings": {
+            "title": "Company",
+            "text": "<p><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Wholesale\">Wholesale<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Become a retailer\">Become a retailer<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Corporate orders\">Corporate orders<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Affiliates\">Affiliates<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/pages\/faq\" title=\"F.A.Q.\">F.A.Q.<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/pages\/contact\" title=\"Contact\">Contact<\/a><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yfFaKP": {
+          "type": "column",
+          "settings": {
+            "title": "Resources",
+            "text": "<p><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"About\">About<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"About\">Blog<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"About\">Careers<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"About\">Find a store<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"About\">Press<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"About\">Support<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"About\">Privacy<\/a><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_KWANr4": {
+          "type": "column",
+          "settings": {
+            "title": "Support",
+            "text": "<p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Delivery\">Delivery<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Shipping & returns\">Shipping & returns<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"My account\">My account<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Customer service\">Customer service<\/a><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_UGprEY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Emerald_logo.png",
+            "title": "The Perfect Present for Your Partner",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_eNJPj7",
+        "column_yfFaKP",
+        "column_KWANr4",
+        "column_UGprEY"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-5",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -623,6 +723,8 @@
     "custom_logo_based_slider_aggzaa",
     "custom_blog_section_wQ97Ha",
     "multicolumn_4U8RLr",
-    "custom_usp_6YwExV"
+    "custom_usp_6YwExV",
+    "custom_text_on_image_qcKH83",
+    "custom_footer_zpkRd3"
   ]
 }

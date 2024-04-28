@@ -1,0 +1,153 @@
+{{ "custom-text-on-image.css" | asset_url | stylesheet_tag }}
+
+{% style %}
+    .custom-padding--{{ section.id }}{
+        padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | divided_by: 2  }}px;
+    }
+    @media screen and (min-width: 749px){
+        .custom-padding--{{ section.id }}{
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
+{% endstyle %}
+
+<div class="custom-text-on-image color-{{ section.settings.color_scheme }}  custom-padding--{{ section.id }}">
+    <div class="custom-text-on-image--cards page-width">
+        {% for block in section.blocks %}
+            <div class="custom-text-on-image--single-card">
+                <div class="custom-text-on-image--media">
+                    {% if block.settings.video_url != blank %}
+                        <video class="custom-text-on-image--video" autoplay loop muted>
+                            <source src="{{ block.settings.video_url }}" type="video/mp4">
+                        </video>
+                    {% elsif block.settings.video_url == blank and block.settings.desktop_image != blank %}    
+                        <img class="custom-text-on-image--image" src="{{ block.settings.desktop_image | image_url }}" alt="courasel image" height=600 width=1000>
+                    {% elsif block.settings.video_url != blank and block.settings.desktop_image != blank %}    
+                        <video class="custom-text-on-image--video" autoplay loop muted>
+                            <source src="{{ block.settings.video_url | asset_url }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    {% endif %}
+                </div>
+                <div class="custom-text-on-image--content">
+                    <p class="custom-text-on-image--caption">{{ block.settings.caption_text }}</p>
+                    <span class="custom-text-on-image--heading h1">
+                        {{ block.settings.rich_text }}
+                    </span>
+                    <a class="custom-text-on-image--button" href="{{ block.settings.button_url }}">
+                        {{ block.settings.button_text }}
+                        <span>
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5 5L1 9" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </a>    
+                </div>       
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Custom text on Image",
+        "tag": "section",
+        "class": "section",
+        "settings": [
+            {
+                "type": "color_scheme",
+                "id": "color_scheme",
+                "label": "Color scheme"
+            },
+            {
+                "type": "header",
+                "content": "Section padding"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "px",
+                "label": "Padding Top",
+                "default": 30
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "px",
+                "label": "Padding Bottom",
+                "default": 30
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Card",
+                "type": "card",
+                "settings": [
+                    {
+                        "type": "header",
+                        "content": "Media Option"
+                    },
+                    {
+                        "type": "url",
+                        "id": "video_url",
+                        "label": "Select viedo"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "desktop_image",
+                        "label": "Desktop image",
+                        "info": "Recommended Size: 1360 x 633 px"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "mobile_image",
+                        "label": "Mobile image",
+                        "info": "Recommended Size: 360 x 282 px"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Content Text"
+                    },
+                    {
+                        "type": "text",
+                        "id": "caption_text",
+                        "label": "Caption",
+                        "placeholder": "Caption",
+                        "default": "MADE FOR YOU"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "rich_text",
+                        "label": "Rich text",
+                        "default": "<p>Timeless Style</p>"
+                    },
+                    {
+                        "type": "text",
+                        "id": "button_text",
+                        "label": "Button text",
+                        "default": "Shop now"
+    
+                    },
+                    {
+                        "type": "url",
+                        "id": "button_url",
+                        "label": "Button url"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+              "name": "Custom text on Image"
+            }
+        ]
+    }
+{% endschema %}
