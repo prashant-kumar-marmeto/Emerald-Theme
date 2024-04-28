@@ -2,45 +2,6 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "custom_announcement_bar_x6bnyL": {
-      "type": "custom-announcement-bar",
-      "blocks": {
-        "slide_gTdeV4": {
-          "type": "slide",
-          "settings": {
-            "announcement": "Free shipping all orders over $60",
-            "color": "#4f443b"
-          }
-        },
-        "slide_KtzyUj": {
-          "type": "slide",
-          "settings": {
-            "announcement": "Return extended to 60 days",
-            "color": "#de544b"
-          }
-        },
-        "slide_NpYUbA": {
-          "type": "slide",
-          "settings": {
-            "announcement": "15% off on all products",
-            "color": "#4e6756"
-          }
-        }
-      },
-      "block_order": [
-        "slide_gTdeV4",
-        "slide_KtzyUj",
-        "slide_NpYUbA"
-      ],
-      "settings": {
-        "auto_play": true,
-        "show_pagination": false,
-        "show_arrows": true,
-        "auto_play_duration": 4,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "header": {
       "type": "header",
       "disabled": true,
@@ -76,7 +37,6 @@
     }
   },
   "order": [
-    "custom_announcement_bar_x6bnyL",
     "header",
     "custom_header_jPpNnJ"
   ]

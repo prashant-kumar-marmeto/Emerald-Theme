@@ -95,10 +95,10 @@
         "padding_bottom": 28
       }
     },
-    "custom_product_card_rg8rH9": {
+    "custom_product_card_tKbjVK": {
       "type": "custom-product-card",
       "settings": {
-        "product": "",
+        "product": "18k-handmade-double-date-earrings-in-gold",
         "name": "Product card"
       }
     }
@@ -106,6 +106,6 @@
   "order": [
     "main",
     "related-products",
-    "custom_product_card_rg8rH9"
+    "custom_product_card_tKbjVK"
   ]
 }
