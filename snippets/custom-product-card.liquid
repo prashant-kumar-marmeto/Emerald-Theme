@@ -1,11 +1,9 @@
 {{ "custom-product-card.css" | asset_url | stylesheet_tag}}
-{% assign cardProduct = product %}
 
 <div class="custom-product page-width">
     
     
     {% if product %}
         <h2>{{ product.title }}</h2>
-        {% render "card-product", product %}
     {% endif %}    
 </div>
