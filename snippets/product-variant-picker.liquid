@@ -34,7 +34,7 @@
         endif
       -%}
       {%- if picker_type == 'swatch' -%}
-        <fieldset class="js product-form__input product-form__input--swatch">
+        <fieldset class="js my-custom-swatches product-form__input product-form__input--swatch">
           <legend class="form__label">
             {{ option.name }}:
             <span data-selected-swatch-value="{{ option.name }}">
@@ -49,7 +49,7 @@
           %}
         </fieldset>
       {%- elsif picker_type == 'button' -%}
-        <fieldset class="js product-form__input product-form__input--pill">
+        <fieldset class="js my-custom-swatches product-form__input product-form__input--pill">
           <legend class="form__label">{{ option.name }}</legend>
           {% render 'product-variant-options',
             product: product,

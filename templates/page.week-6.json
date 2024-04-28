@@ -1,0 +1,79 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custome_testimonials_YMHKGH": {
+      "type": "custome-testimonials",
+      "blocks": {
+        "slide_RdMBJi": {
+          "type": "slide",
+          "settings": {
+            "slied_color": "#ffffff",
+            "testimonials_text": "“ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque  “",
+            "author_image": "shopify:\/\/shop_images\/Rectangle_8.png",
+            "autor_name": "Mr. John Doe",
+            "author_title": "Clients",
+            "main_image": "shopify:\/\/shop_images\/Rectangle_14.png"
+          }
+        },
+        "slide_8cCcjM": {
+          "type": "slide",
+          "settings": {
+            "slied_color": "#ffffff",
+            "testimonials_text": "“ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque  “",
+            "author_image": "shopify:\/\/shop_images\/Rectangle_8_1.png",
+            "autor_name": "Mr. John Doe",
+            "author_title": "Author title",
+            "main_image": "shopify:\/\/shop_images\/blog4.webp"
+          }
+        },
+        "slide_73T3iN": {
+          "type": "slide",
+          "settings": {
+            "slied_color": "#ffffff",
+            "testimonials_text": "“ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque  “",
+            "author_image": "shopify:\/\/shop_images\/slide-01.png",
+            "autor_name": "Mr. John Doe",
+            "author_title": "Author title",
+            "main_image": "shopify:\/\/shop_images\/slide-01.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide_RdMBJi",
+        "slide_8cCcjM",
+        "slide_73T3iN"
+      ],
+      "settings": {
+        "background_color": "#fffff5",
+        "active_slide_color": "#b8cc46",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "heading_text": "Testimonials",
+        "description_text": "<p>DescriptionLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+      }
+    },
+    "custom_subscribe_yAkM4f": {
+      "type": "custom-subscribe",
+      "settings": {
+        "subscribe_background": "#edff84",
+        "heading_text": "Subscribe to our Newsletter",
+        "button_text": "Subscribe",
+        "button_url": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custome_testimonials_YMHKGH",
+    "custom_subscribe_yAkM4f"
+  ]
+}

@@ -14,7 +14,6 @@
         "slide_XTTTHf": {
           "type": "slide",
           "settings": {
-            "active_slide_color": "#f6ffc2",
             "slied_color": "#ffffff",
             "testimonials_text": "Write your reviews",
             "autor_name": "Author",
@@ -24,7 +23,6 @@
         "slide_yPW3Fn": {
           "type": "slide",
           "settings": {
-            "active_slide_color": "#f6ffc2",
             "slied_color": "#ffffff",
             "testimonials_text": "Write your reviews",
             "autor_name": "Author",
@@ -34,7 +32,6 @@
         "slide_RfAMwz": {
           "type": "slide",
           "settings": {
-            "active_slide_color": "#f6ffc2",
             "slied_color": "#ffffff",
             "testimonials_text": "Write your reviews",
             "autor_name": "Author",
@@ -48,16 +45,29 @@
         "slide_RfAMwz"
       ],
       "settings": {
-        "background_color": "#b14040",
+        "background_color": "#de544b",
+        "active_slide_color": "#F6FFC2",
         "padding_top": 60,
         "padding_bottom": 40,
         "heading_text": "",
         "description_text": "<p>Description<\/p>"
       }
+    },
+    "custom_subscribe_QxVxmH": {
+      "type": "custom-subscribe",
+      "settings": {
+        "subscribe_background": "#EDFF84",
+        "heading_text": "Subscribe to our Newsletter",
+        "button_text": "Subscribe",
+        "button_url": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
     "main",
-    "custome_testimonials_gd389F"
+    "custome_testimonials_gd389F",
+    "custom_subscribe_QxVxmH"
   ]
 }
