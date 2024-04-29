@@ -61,11 +61,10 @@
     "rich_text_xefMQV": {
       "type": "rich-text",
       "blocks": {
-        "heading_79Naxg": {
-          "type": "heading",
+        "text_mBBDmi": {
+          "type": "text",
           "settings": {
-            "heading": "USE IT TO ADD SEO TEXT",
-            "heading_size": "h1"
+            "text": "<h2><strong>USE IT TO ADD SEO TEXT<\/strong><\/h2>"
           }
         },
         "text_GFdRyf": {
@@ -73,23 +72,11 @@
           "settings": {
             "text": "<p>Due to high demand, occasionally some of our products do go out of stock. We are constantly monitoring our stock levels, and we usually expect to replenish any product line within a couple of weeks. If you have placed a pre-order for an item that is out of stock and it looks like it will take longer than expected to get it to you.<\/p>"
           }
-        },
-        "button_QCHbJD": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
-        "heading_79Naxg",
-        "text_GFdRyf",
-        "button_QCHbJD"
+        "text_mBBDmi",
+        "text_GFdRyf"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -99,11 +86,48 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "custom_text_on_image_rxy9N8": {
+      "type": "custom-text-on-image",
+      "blocks": {
+        "card_tKJwjb": {
+          "type": "card",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d5dbea9e9fea4cac9a540b9635a8b70c.mp4",
+            "desktop_image": "shopify:\/\/shop_images\/Emreld_Image_4fb687e5-ce6a-41b1-984e-bbdad2e8c3e5.webp",
+            "caption_text": "MADE FOR YOU",
+            "rich_text": "<p>Timeless Style<\/p>",
+            "button_text": "Shop now",
+            "button_url": ""
+          }
+        },
+        "card_pt7YqK": {
+          "type": "card",
+          "settings": {
+            "video_url": "",
+            "desktop_image": "shopify:\/\/shop_images\/Emreld_new.webp",
+            "caption_text": "LATEST TRENDS",
+            "rich_text": "<p>Unique & Affordable<\/p>",
+            "button_text": "Shop now",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_tKJwjb",
+        "card_pt7YqK"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
     }
   },
   "order": [
     "main",
     "custom_scroll_text_wV3xyF",
-    "rich_text_xefMQV"
+    "rich_text_xefMQV",
+    "custom_text_on_image_rxy9N8"
   ]
 }
