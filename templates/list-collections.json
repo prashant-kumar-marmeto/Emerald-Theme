@@ -9,16 +9,9 @@
         "columns_desktop": 3,
         "columns_mobile": "2"
       }
-    },
-    "custom_product_card_3Mxkw7": {
-      "type": "custom-product-card",
-      "settings": {
-        "product": "14k-gold-barbelle-choker-necklace"
-      }
     }
   },
   "order": [
-    "main",
-    "custom_product_card_3Mxkw7"
+    "main"
   ]
 }
