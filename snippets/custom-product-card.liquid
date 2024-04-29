@@ -1,7 +1,14 @@
 {{ 'custom-product-card.css' | asset_url | stylesheet_tag }}
+{% assign card_product = product.selected_or_first_available_variant %}
+{% if card_product.featured_image != blank %}
+  {% assign varient_featured_image = card_product.featured_image %}
+{% else %}
+  {% assign varient_featured_image = product.featured_image %}
+{% endif %}
 
-<div class="custom-product page-width">
-  {% if product %}
-    <h2>{{ product.title }}</h2>
-  {% endif %}
+<div class="custom-tutorial-product-card page-width">
+  <div class="custom-tutorial-product-card-image-wrapper">
+    {% render 'responsive-picture', desktopImage: varient_featured_image %}
+  </div>
+  <div class="custom-tutorial-product-card-info"></div>
 </div>
