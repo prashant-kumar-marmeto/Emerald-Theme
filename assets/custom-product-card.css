@@ -1,4 +1,5 @@
 .custom-tutorial-product-card {
+  display: block;
   width: 400px;
 }
 .image-width {
