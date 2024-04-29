@@ -170,6 +170,9 @@
         "column_UNR6cy",
         "column_qbmciN"
       ],
+      "custom_css": [
+        "* {text-decoration: none}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
