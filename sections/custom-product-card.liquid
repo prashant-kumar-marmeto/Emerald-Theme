@@ -1,7 +1,7 @@
 <script src="{{ "custom-section-render.js" | asset_url }}" defer></script>
 
 <div>
-  {% render 'custom-product-card', product: product %}
+  {% render 'custom-product-card', product: section.settings.product %}
 </div>
 
 {% schema %}
