@@ -11,7 +11,7 @@ class MarmetoProductCard extends HTMLElement {
     variantChange() {
       
       this.selectedVariantId = this.querySelector('[name="id"]').value;
-      let variantUrl = `/products/${this.dataset.productHandle}?view=card&variant=${this.selectedVariantId}`;
+      let variantUrl = `/products/${this.dataset.productHandle}?view=custom-product-card=${this.selectedVariantId}`;
        
       //Change the DOM Elements
       fetch(variantUrl)
