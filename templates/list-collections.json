@@ -122,12 +122,77 @@
         "padding_top": 30,
         "padding_bottom": 30
       }
+    },
+    "custom_footer_LdHxd3": {
+      "type": "custom-footer",
+      "blocks": {
+        "column_nVaJFA": {
+          "type": "column",
+          "settings": {
+            "title": "Company",
+            "text": "<p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Wholesale\">Wholesale<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Become a retailer\">Become a retailer<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Corporate orders\">Corporate orders<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/#\" title=\"Affiliates\">Affiliates<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/pages\/faq\" title=\"F.A.Q.\">F.A.Q.<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/pages\/contact\" title=\"Contact\">Contact<\/a><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_pN3Lj4": {
+          "type": "column",
+          "settings": {
+            "title": "Resources",
+            "text": "<p><a href=\"https:\/\/vision-jewelery.myshopify.com\/collections\/all#\" title=\"About\">About<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/blogs\/news\" title=\"Blog\">Blog<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/collections\/all#\" title=\"Careers\">Careers<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/collections\/all#\" title=\"Find a store\">Find a store<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/collections\/all#\" title=\"Press\">Press<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/collections\/all#\" title=\"Support\">Support<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/collections\/all#\" title=\"Privacy\">Privacy<\/a><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_UNR6cy": {
+          "type": "column",
+          "settings": {
+            "title": "Support",
+            "text": "<p><a href=\"https:\/\/vision-jewelery.myshopify.com\/collections\/all#\" title=\"Delivery\">Delivery<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/collections\/all#\" title=\"Shipping & returns\">Shipping & returns<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/collections\/all#\" title=\"My account\">My account<\/a><\/p><p><a href=\"https:\/\/vision-jewelery.myshopify.com\/collections\/all#\" title=\"Customer service\">Customer service<\/a><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_qbmciN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Emerald_logo.png",
+            "title": "<strong>The Perfect Present for Your Partner<\/strong>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_nVaJFA",
+        "column_pN3Lj4",
+        "column_UNR6cy",
+        "column_qbmciN"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-5",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "custom_scroll_text_wV3xyF",
     "rich_text_xefMQV",
-    "custom_text_on_image_rxy9N8"
+    "custom_text_on_image_rxy9N8",
+    "custom_footer_LdHxd3"
   ]
 }
