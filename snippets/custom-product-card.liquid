@@ -1,5 +1,5 @@
 {{ 'custom-product-card.css' | asset_url | stylesheet_tag }}
-{% assign product = product.selected_or_first_available_variant %}
+{% assign card_product = product.selected_or_first_available_variant %}
 {% if product.featured_image != blank %}
   {% assign varient_featured_image = product.featured_image %}
 {% else %}
