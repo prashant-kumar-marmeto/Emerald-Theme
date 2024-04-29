@@ -1,33 +1,29 @@
-
-<script src={{ "custom-section-render.js" | asset_url }} defer></script>
+<script src="{{ "custom-section-render.js" | asset_url }}" defer></script>
 
 <div>
-    {% comment %} <button class='generate' >Generate</button>
-    <div id='append_container' ></div>     {% endcomment %}
-    {% render "custom-product-card", product: product %}
+  {% render 'custom-product-card', product: product %}
 </div>
 
-
 {% schema %}
-    {
-        "name": "Custom product card",
-        "settings": [
-            {
-              "type": "product",
-              "id": "product",
-              "label": "Product"
-            },
-            {
-                "type": "text",
-                "id": "name",
-                "label": "Name",
-                "default": "Product card"
-            }
-        ],
-        "presets": [
-            {
-                "name": "Cusotom product card"
-            }
-        ]
-    }
+{
+    "name": "Custom product card",
+    "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+            "type": "text",
+            "id": "name",
+            "label": "Name",
+            "default": "Product card"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Cusotom product card"
+        }
+    ]
+}
 {% endschema %}
