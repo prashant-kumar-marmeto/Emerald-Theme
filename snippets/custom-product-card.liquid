@@ -6,9 +6,15 @@
   {% assign varient_featured_image = product.featured_image %}
 {% endif %}
 
-<div class="custom-tutorial-product-card page-width center ">
+<marmeto-product-card class="custom-tutorial-product-card page-width center ">
   <div class="custom-tutorial-product-card-image-wrapper">
     {% render 'responsive-picture', desktopImage: varient_featured_image, size: small %}
+    {% for tag in product.tags %}
+      {% if tag contains 'badge-' %}
+        {% assign badge_text = tag | split: 'badge-' %}
+        <span class="badge"> {{ badge_text }} </span>
+      {% endif %}
+    {% endfor %}
   </div>
   <div class="custom-tutorial-product-card-info">
     <div>
@@ -30,6 +36,10 @@
       <span class="money on-sale">{{ card_product.compare_at_price | money_with_currency }}</span>
       <span class="money ">{{ card_product.price | money_with_currency }}</span>
     </div>
-    <div class="">{{ card_product.inventory_quantity }}</div>
+    <div
+      class=""
+    >
+      {{ card_product.inventory_quantity }}
+    </div>
   </div>
-</div>
+</marmeto-product-card>
