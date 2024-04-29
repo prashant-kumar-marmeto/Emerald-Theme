@@ -9,9 +9,58 @@
         "columns_desktop": 3,
         "columns_mobile": "2"
       }
+    },
+    "custom_scroll_text_wV3xyF": {
+      "type": "custom-scroll-text",
+      "blocks": {
+        "block_L6gz3R": {
+          "type": "block",
+          "settings": {
+            "text": "DIAMONDS ARE FOREVER",
+            "checkbox": false
+          }
+        },
+        "block_7LqK7A": {
+          "type": "block",
+          "settings": {
+            "text": "TIMELESS STYLE",
+            "checkbox": true
+          }
+        },
+        "block_VU9Mnm": {
+          "type": "block",
+          "settings": {
+            "text": "UNIQUE & AFFORDABLE",
+            "checkbox": false
+          }
+        },
+        "block_N8ig97": {
+          "type": "block",
+          "settings": {
+            "text": "A PERSONAL TOUCH",
+            "checkbox": true
+          }
+        }
+      },
+      "block_order": [
+        "block_L6gz3R",
+        "block_7LqK7A",
+        "block_VU9Mnm",
+        "block_N8ig97"
+      ],
+      "settings": {
+        "bg_color": "#7d5c70",
+        "padding": 22,
+        "scroll_time": "30",
+        "font_color": "#ecdbc3",
+        "font_size": 66,
+        "pause_text": "initial",
+        "image_picker": "shopify:\/\/shop_images\/Star_100x100_crop_center_07605463-0f2e-467f-9604-122ee50ae181.png"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_scroll_text_wV3xyF"
   ]
 }
