@@ -6,7 +6,7 @@
   {% assign varient_featured_image = product.featured_image %}
 {% endif %}
 
-<marmeto-product-card class="custom-tutorial-product-card page-width center ">
+<marmeto-product-card class="custom-tutorial-product-card center ">
   <div class="custom-tutorial-product-card-image-wrapper isolate">
     {% render 'responsive-picture', desktopImage: varient_featured_image, size: small %}
     {% for tag in product.tags %}
