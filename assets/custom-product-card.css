@@ -1,17 +1,11 @@
-.custom-tutorial-product-card {
-  display: block;
-  width: 400px;
-}
-.image-width {
-  height: 400px;
-}
-.on-sale {
+.
+.custom-product-card--price-on-sale{
+  text-decoration:line-through;
   color:red;
-  text-decoration: line-through;
 }
-.badge 
-{
-  top: 0;
-  left: 0;
-  position: absolute;
+.custom-product-card--inventory.low-stock{
+  color:red;
+}
+.custom-product-card--inventory.high-stock{
+  color:green;
 }
