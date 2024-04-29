@@ -15,7 +15,7 @@
       {% for option in product.options_with_values %}
         {% if option.name == 'color' or option.name == 'Color' %}
           {% for value in option.values %}
-            <input type="radio" value="{{ option.value }}" name="{{ option.name }}">
+            <input type="radio" value="{{ value }}" name="{{ name }}">
           {% endfor %}
         {% endif %}
       {% endfor %}
