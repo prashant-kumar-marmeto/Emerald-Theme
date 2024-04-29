@@ -73,18 +73,11 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
-    },
-    "custom_product_card_YEHmPV": {
-      "type": "custom-product-card",
-      "settings": {
-        "product": "asymmetrical-bits-hoop-earrings-in-green"
-      }
     }
   },
   "order": [
     "custom_announcement_bar_RzidxH",
     "header",
-    "custom_header_jPpNnJ",
-    "custom_product_card_YEHmPV"
+    "custom_header_jPpNnJ"
   ]
 }
