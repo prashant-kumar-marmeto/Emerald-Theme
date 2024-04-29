@@ -118,7 +118,7 @@
         "card_pt7YqK"
       ],
       "custom_css": [
-        "* {text-decoration: none}"
+        "* {text-decoration: none; margin: 0;}"
       ],
       "settings": {
         "color_scheme": "scheme-5",
