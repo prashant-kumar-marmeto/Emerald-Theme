@@ -117,6 +117,9 @@
         "card_tKJwjb",
         "card_pt7YqK"
       ],
+      "custom_css": [
+        "* {text-decoration: none}"
+      ],
       "settings": {
         "color_scheme": "scheme-5",
         "padding_top": 30,
@@ -171,7 +174,7 @@
         "column_qbmciN"
       ],
       "custom_css": [
-        "* {text-decoration: none}"
+        "* {text-decoration: none;}"
       ],
       "settings": {
         "title": "",
