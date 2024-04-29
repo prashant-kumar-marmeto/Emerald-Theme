@@ -5,3 +5,9 @@
   color:red;
   text-decoration: line-through;
 }
+.badge 
+{
+  top: 0;
+  left: 0;
+  position: absolute;
+}
