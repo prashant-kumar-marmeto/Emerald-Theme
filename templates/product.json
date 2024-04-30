@@ -1,5 +1,10 @@
 {
   "sections": {
+    "custom_breadcrumbs_Frxbph": {
+      "type": "Custom-breadcrumbs",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -111,6 +116,7 @@
     }
   },
   "order": [
+    "custom_breadcrumbs_Frxbph",
     "main",
     "related-products"
   ]
