@@ -157,12 +157,20 @@
               "solid_color": "#e1a01c",
               "image": "shopify:\/\/shop_images\/p6-3_1220x_crop_center_e6cf16c4-8440-43d9-9966-418225a6c389.png"
             }
+          },
+          "solid_color_n3JM9k": {
+            "type": "solid-color",
+            "settings": {
+              "solide_color_name": "Gold",
+              "solid_color": "#f7f40c"
+            }
           }
         },
         "block_order": [
           "solid_color_pgPFMe",
           "solid_color_w9nFk8",
-          "solid_color_jHKCVc"
+          "solid_color_jHKCVc",
+          "solid_color_n3JM9k"
         ],
         "settings": {
         }
