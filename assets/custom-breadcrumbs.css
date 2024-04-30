@@ -9,6 +9,6 @@
   letter-spacing: 0em;
   font-size: 12px;
 }
-.tw-underline a[href="/"] {
+.tw-inline-block a[href="/"] {
   text-decoration: underline;
 }
