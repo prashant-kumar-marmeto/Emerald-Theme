@@ -2,3 +2,6 @@
   list-style: none;
   display: flex;
 }
+.tw-inline-block {
+  text-decoration: none;
+}
