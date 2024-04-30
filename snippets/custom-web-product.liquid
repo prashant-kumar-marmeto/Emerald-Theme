@@ -1,0 +1,74 @@
+<custom-web-product class="custom-rings-product--each-product" data-product-handle="{{ product.handle}}">
+  <div id="eachProduct">
+    {%- if product.featured_image != blank -%}
+      <a href="{{ product.url }}">
+        <div class="custom-rings-product--image-container" id="imageContainer">
+          <div class="image-box">
+            <img
+              src="{{ product.selected_or_first_available_variant.image | image_url}}"
+              height="auto"
+              width="auto"
+              class="custom-rings-product--first-image"
+              id="firstImage"
+            >
+            {%- if product.images.size > 1 -%}
+              <img
+                src="{{ product.images[1] | image_url }}"
+                height=""
+                width=""
+                alt="{{ product.title }}"
+                class="custom-rings-product--second-image"
+                id="secondImage"
+              >
+            {%- endif -%}
+          </div>
+          {%- if Quick_view_button -%}
+            <div class="custom-rings-product--view-container">
+              <button>Quick view</button>
+            </div>
+          {%- endif -%}
+        </div>
+      </a>
+    {%- endif -%}
+    <div class="custom-rings-product--card-details" style="background-color:{{ card_color }};">
+      {%- if product.vendor != blank -%}
+        <h4 class="custom-rings-product--vendor">{{ product.vendor }}</h4>
+      {%- endif -%}
+      {%- if product.title != blank -%}
+        <h2 class="custom-rings-product--title">{{ product.title }}</h2>
+      {%- endif -%}
+      {%- if product.price != blank -%}
+        <p class="custom-rings-product--price">{{ product.price | money }}</p>
+      {%- endif -%}
+      <div class="custom-rings-product--animation-container item-swatch">
+        {% comment %} <p class="custom-rings-product--available">Available in {{ product.options_by_name['Color'].values.size }} colors</p> {% endcomment %}
+        {%- for product_option in product.options_with_values -%}
+          {%- if product_option.name == 'Color' -%}
+            {%- for value in product_option.values -%}
+              <div
+                {% if product_option.selected_value == value %}
+                  style="border:1px solid black"
+                {% endif %}
+                class="custom-rings-product--selected-border"
+              >
+                <input
+                  type="radio"
+                  id="{{ product.id | append : value }}"
+                  name="{{ product_option.name }}"
+                  value="{{ value.variant.id }}"
+                  {% if product_option.selected_value == value %}
+                    checked
+                  {% endif %}
+                >
+                <label for="{{ product.id | append : value }}" data-value="{{ value }}"> </label>
+              </div>
+            {%- endfor -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+  <script>
+    {{ product.variants | json }}
+  </script>
+</custom-web-product>
