@@ -1,5 +1,10 @@
 {
   "sections": {
+    "custom_breadcrumbs_XrL6f7": {
+      "type": "Custom-breadcrumbs",
+      "settings": {
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -108,6 +113,7 @@
     }
   },
   "order": [
+    "custom_breadcrumbs_XrL6f7",
     "banner",
     "product-grid",
     "custom_scroll_text_AKgKVh",
