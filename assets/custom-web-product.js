@@ -51,7 +51,7 @@ if (!customElements.get('custom-web-product')) {
             this.getUpdatedCard();
           }
           getUpdatedCard() {
-            const url = `/products/${this.productHandle}?view=card&variant=${this.selectedId}`;
+            const url = `/products/${this.productHandle}?view=custom-product-card&variant=${this.selectedId}`;
             console.log(url);
             fetch(url)
               .then((response) => response.text())
