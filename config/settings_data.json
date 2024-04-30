@@ -164,13 +164,21 @@
               "solide_color_name": "Gold",
               "solid_color": "#f7f40c"
             }
+          },
+          "solid_color_itiWfg": {
+            "type": "solid-color",
+            "settings": {
+              "solide_color_name": "Silver",
+              "solid_color": "#f5f5f5"
+            }
           }
         },
         "block_order": [
           "solid_color_pgPFMe",
           "solid_color_w9nFk8",
           "solid_color_jHKCVc",
-          "solid_color_n3JM9k"
+          "solid_color_n3JM9k",
+          "solid_color_itiWfg"
         ],
         "settings": {
         }
