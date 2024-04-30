@@ -1,6 +1,15 @@
+{{ 'custom-breadcrumbs.css' | asset_url | stylesheet_tag }}
+
+{% render 'breadcrumbs' %}
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Custom Breadcrumbs",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Custom Breadcrumbs"
+    }
+  ]
+}
 {% endschema %}
