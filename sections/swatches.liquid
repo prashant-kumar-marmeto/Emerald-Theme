@@ -4,15 +4,14 @@
       height: 30px;
       width: 30px;
       border-radius: 50%;
+      padding: 0;
       {% if block.settings.image != blank or block.settings.solide_color_name == blank %}
       background:url("{{ block.settings.image | img_url:"small" }}") fixed no-repeat center/cover;
       {% else %}
       background: {{ block.settings.solid_color }} !important;
       {% endif %}
     }
-    .product-form__input--pill input[type=radio]{
-      padding: 0;
-    }
+
   {% endfor %}
 </style>
 
