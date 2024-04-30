@@ -134,30 +134,6 @@
       "swatches": {
         "type": "swatches",
         "blocks": {
-          "solid_color_pgPFMe": {
-            "type": "solid-color",
-            "settings": {
-              "solide_color_name": "Emerald green",
-              "solid_color": "#2b744a",
-              "image": "shopify:\/\/shop_images\/p6_596x596_crop_center_02cf8b7e-827c-4b00-9cd1-b5c81100e9cf.jpg"
-            }
-          },
-          "solid_color_w9nFk8": {
-            "type": "solid-color",
-            "settings": {
-              "solide_color_name": "Emerald Blue",
-              "solid_color": "#2739a1",
-              "image": "shopify:\/\/shop_images\/p6-1_1220x_crop_center_6c7f824e-8352-4d7e-8775-41cd8ff8e032.png"
-            }
-          },
-          "solid_color_jHKCVc": {
-            "type": "solid-color",
-            "settings": {
-              "solide_color_name": "Emerald Orange",
-              "solid_color": "#e1a01c",
-              "image": "shopify:\/\/shop_images\/p6-3_1220x_crop_center_e6cf16c4-8440-43d9-9966-418225a6c389.png"
-            }
-          },
           "solid_color_n3JM9k": {
             "type": "solid-color",
             "settings": {
@@ -202,9 +178,6 @@
           }
         },
         "block_order": [
-          "solid_color_pgPFMe",
-          "solid_color_w9nFk8",
-          "solid_color_jHKCVc",
           "solid_color_n3JM9k",
           "solid_color_itiWfg",
           "solid_color_iHntJz",
