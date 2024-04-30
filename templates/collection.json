@@ -28,6 +28,54 @@
         "padding_bottom": 36
       }
     },
+    "custom_scroll_text_AKgKVh": {
+      "type": "custom-scroll-text",
+      "blocks": {
+        "block_FmgM8a": {
+          "type": "block",
+          "settings": {
+            "text": "TIMELESS STYLE",
+            "checkbox": true
+          }
+        },
+        "block_TBjJcg": {
+          "type": "block",
+          "settings": {
+            "text": "UNIQUE & AFFORDABLE",
+            "checkbox": false
+          }
+        },
+        "block_Nwifct": {
+          "type": "block",
+          "settings": {
+            "text": "A PERSONAL TOUCH",
+            "checkbox": true
+          }
+        },
+        "block_G8X7Qk": {
+          "type": "block",
+          "settings": {
+            "text": "DIAMONDS ARE FOREVER",
+            "checkbox": false
+          }
+        }
+      },
+      "block_order": [
+        "block_FmgM8a",
+        "block_TBjJcg",
+        "block_Nwifct",
+        "block_G8X7Qk"
+      ],
+      "settings": {
+        "bg_color": "#7d5c70",
+        "padding": 16,
+        "scroll_time": "30",
+        "font_color": "#ecdbc3",
+        "font_size": 66,
+        "pause_text": "initial",
+        "image_picker": "shopify:\/\/shop_images\/Star_100x100_crop_center_07605463-0f2e-467f-9604-122ee50ae181.png"
+      }
+    },
     "rich_text_QDr8zA": {
       "type": "rich-text",
       "blocks": {
@@ -57,24 +105,12 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "custom_scroll_text_AKgKVh": {
-      "type": "custom-scroll-text",
-      "settings": {
-        "bg_color": "#7d5c70",
-        "padding": 16,
-        "scroll_time": "30",
-        "font_color": "#3b5342",
-        "font_size": 66,
-        "pause_text": "initial",
-        "image_picker": "shopify:\/\/shop_images\/Star_100x100_crop_center_07605463-0f2e-467f-9604-122ee50ae181.png"
-      }
     }
   },
   "order": [
     "banner",
     "product-grid",
-    "rich_text_QDr8zA",
-    "custom_scroll_text_AKgKVh"
+    "custom_scroll_text_AKgKVh",
+    "rich_text_QDr8zA"
   ]
 }
