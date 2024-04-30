@@ -1,8 +1,6 @@
 <style>
   {% for block in section.blocks %}
     .my-custom-swatches .custom-swatch--{{ block.settings.solide_color_name | handleize }}{
-      height: 30px;
-      width: 30px;
       border-radius: 50%;
       padding: 0;
       {% if block.settings.image != blank or block.settings.solide_color_name == blank %}
