@@ -171,6 +171,13 @@
               "solide_color_name": "Silver",
               "solid_color": "#f5f5f5"
             }
+          },
+          "solid_color_iHntJz": {
+            "type": "solid-color",
+            "settings": {
+              "solide_color_name": "Black",
+              "solid_color": "#121212"
+            }
           }
         },
         "block_order": [
@@ -178,7 +185,8 @@
           "solid_color_w9nFk8",
           "solid_color_jHKCVc",
           "solid_color_n3JM9k",
-          "solid_color_itiWfg"
+          "solid_color_itiWfg",
+          "solid_color_iHntJz"
         ],
         "settings": {
         }
