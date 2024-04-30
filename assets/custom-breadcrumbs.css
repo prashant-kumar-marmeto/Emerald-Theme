@@ -2,9 +2,7 @@
   list-style: none;
   display: flex;
 }
-.tw-inline-block {
-  text-decoration: none;
-}
+
 .tw-inline-block .tw-underline {
   text-decoration: none;
 }
