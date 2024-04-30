@@ -1,4 +1,4 @@
-<script src="{{ "custom-section-render.js" | asset_url }}" defer></script>
+{{ 'custom-web-product.css' | asset_url | stylesheet_tag }}
 
 <div>
   {% render 'custom-web-product', product: section.settings.product %}
