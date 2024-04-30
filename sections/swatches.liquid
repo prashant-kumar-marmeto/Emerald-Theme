@@ -10,7 +10,7 @@
   .color-swatch-enabled[data-tag="{{ block.settings.solide_color_name }}"] span,
   .color-swatch-enabled[data-tag="{{ block.settings.solide_color_name | downcase }}"] span,
   .color-swatch-enabled[data-tag="{{ block.settings.solide_color_name | capitalize }}"] span {
-    background-color: {{ block.settings.color_code }} !important;
+    background-color: {{ block.settings.solid_color }} !important;
     margin: 1px !important;
   }
   {% endfor %}
