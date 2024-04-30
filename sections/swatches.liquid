@@ -1,49 +1,56 @@
 <style>
   {% for block in section.blocks %}
-    .my-custom-swatches .custom-swatch--{{ block.settings.solide_color_name | handleize }}{
-      border-radius: 50%;
-      padding: 0;
-      {% if block.settings.image != blank or block.settings.solide_color_name == blank %}
-      background:url("{{ block.settings.image | img_url:"small" }}") fixed no-repeat center/cover;
-      {% else %}
-      background: {{ block.settings.solid_color }} !important;
-      {% endif %}
-    }
-
+  .item-swatch [data-value="{{ block.settings.title }}"],
+  .item-swatch [data-value="{{ block.settings.title | downcase }}"],
+  .item-swatch [data-value="{{ block.settings.title | downcase | handle }}"],
+  .item-swatch [data-value="{{ block.settings.title | capitalize  }}"],
+  .swatch [data-value="{{ block.settings.title }}"] .bgImg,
+  .swatch [data-value="{{ block.settings.title | downcase }}"] .bgImg,
+  .swatch [data-value="{{ block.settings.title | capitalize  }}"] .bgImg,
+  .color-swatch-enabled[data-tag="{{ block.settings.title }}"] span,
+  .color-swatch-enabled[data-tag="{{ block.settings.title | downcase }}"] span,
+  .color-swatch-enabled[data-tag="{{ block.settings.title | capitalize }}"] span {
+    background-color: {{ block.settings.color_code }} !important;
+    margin: 1px !important;
+  }
   {% endfor %}
 </style>
 
 {% schema %}
 {
-  "name": "Swatches",
+  "name": "Color Settings",
   "settings": [
-
+    {
+      "type": "header",
+      "content": "Color Settings"
+    },
+    {
+      "type": "paragraph",
+      "content": "Add Color Settings here"
+    }
   ],
   "blocks": [
     {
-      "name": "Solid color",
-      "type": "solid-color",
+      "type": "colorSettings",
+      "name": "Color Settings",
       "settings": [
         {
           "type": "text",
-          "id": "solide_color_name",
-          "label": "Color name"
+          "id": "title",
+          "label": "Color Name"
         },
         {
           "type": "color",
-          "id": "solid_color",
-          "label": "Color"
-        },
-        {
-          "type": "header",
-          "content": "Choose image or color according to your need"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Swatch image"
+          "id": "color_code",
+          "label": "Color Code",
+          "default": "#000000"
         }
       ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Color Swatch"
     }
   ]
 }
