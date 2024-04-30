@@ -1,6 +1,7 @@
 .breadcrumbs-list {
   list-style: none;
   display: flex;
+  padding: 0;
 }
 
 .tw-inline-block .tw-underline {
