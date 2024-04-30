@@ -185,6 +185,13 @@
               "solide_color_name": "Rose",
               "solid_color": "#ef7474"
             }
+          },
+          "solid_color_qLz46f": {
+            "type": "solid-color",
+            "settings": {
+              "solide_color_name": "Green",
+              "solid_color": "#008000"
+            }
           }
         },
         "block_order": [
@@ -194,7 +201,8 @@
           "solid_color_n3JM9k",
           "solid_color_itiWfg",
           "solid_color_iHntJz",
-          "solid_color_3htirD"
+          "solid_color_3htirD",
+          "solid_color_qLz46f"
         ],
         "settings": {
         }
