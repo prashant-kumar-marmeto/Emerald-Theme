@@ -1,15 +1,15 @@
 <style>
   {% for block in section.blocks %}
-  .item-swatch [data-value="{{ block.settings.title }}"],
-  .item-swatch [data-value="{{ block.settings.title | downcase }}"],
-  .item-swatch [data-value="{{ block.settings.title | downcase | handle }}"],
-  .item-swatch [data-value="{{ block.settings.title | capitalize  }}"],
-  .swatch [data-value="{{ block.settings.title }}"] .bgImg,
-  .swatch [data-value="{{ block.settings.title | downcase }}"] .bgImg,
-  .swatch [data-value="{{ block.settings.title | capitalize  }}"] .bgImg,
-  .color-swatch-enabled[data-tag="{{ block.settings.title }}"] span,
-  .color-swatch-enabled[data-tag="{{ block.settings.title | downcase }}"] span,
-  .color-swatch-enabled[data-tag="{{ block.settings.title | capitalize }}"] span {
+  .item-swatch [data-value="{{ block.settings.solid_color }}"],
+  .item-swatch [data-value="{{ block.settings.solid_color | downcase }}"],
+  .item-swatch [data-value="{{ block.settings.solid_color | downcase | handle }}"],
+  .item-swatch [data-value="{{ block.settings.solid_color | capitalize  }}"],
+  .swatch [data-value="{{ block.settings.solid_color }}"] .bgImg,
+  .swatch [data-value="{{ block.settings.solid_color | downcase }}"] .bgImg,
+  .swatch [data-value="{{ block.settings.solid_color | capitalize  }}"] .bgImg,
+  .color-swatch-enabled[data-tag="{{ block.settings.solid_color }}"] span,
+  .color-swatch-enabled[data-tag="{{ block.settings.solid_color | downcase }}"] span,
+  .color-swatch-enabled[data-tag="{{ block.settings.solid_color | capitalize }}"] span {
     background-color: {{ block.settings.color_code }} !important;
     margin: 1px !important;
   }
