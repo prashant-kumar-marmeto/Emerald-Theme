@@ -192,6 +192,13 @@
               "solide_color_name": "Green",
               "solid_color": "#008000"
             }
+          },
+          "solid_color_nEN3KP": {
+            "type": "solid-color",
+            "settings": {
+              "solide_color_name": "Red",
+              "solid_color": "#ff0000"
+            }
           }
         },
         "block_order": [
@@ -202,7 +209,8 @@
           "solid_color_itiWfg",
           "solid_color_iHntJz",
           "solid_color_3htirD",
-          "solid_color_qLz46f"
+          "solid_color_qLz46f",
+          "solid_color_nEN3KP"
         ],
         "settings": {
         }
