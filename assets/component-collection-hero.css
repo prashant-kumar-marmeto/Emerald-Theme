@@ -96,3 +96,22 @@
     min-height: 20rem;
   }
 }
+.collection--links-container{
+  display: flex;
+  gap: 15px;
+}
+.collection--links-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.collection--links-image{
+  border-radius: 50%;
+}
+.collection--links-link{
+  color: black;
+  text-decoration: none;
+}
+.collection--links-link:hover{
+  color: rgb(239, 47, 47);
+}
