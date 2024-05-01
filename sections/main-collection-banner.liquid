@@ -24,8 +24,10 @@
         <div class="collection--links-container">
           {%- for item in collection.metafields.custom.collection_links.value -%}
             <div class="collection--links-wrapper">
-              <img src="{{ item.image | image_url }}" height="50px" width="50px" class="collection--links-image">
-              <a href="{{ item.url }}" class="collection--links-link">{{ item.title }}</a>
+              <a href="{{ item.url }}" class="collection--links-link collection--links-wrapper">
+                <img src="{{ item.image | image_url }}" height="50px" width="50px" class="collection--links-image">
+                {{ item.title }}
+              </a>
             </div>
           {%- endfor -%}
         </div>
