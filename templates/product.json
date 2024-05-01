@@ -230,7 +230,7 @@
         "block_nTPmpq"
       ],
       "custom_css": [
-        "{background-color: #e9f1eb; transform: rotate(3deg);}"
+        "{background-color: #e9f1eb; transform: rotate(3deg); margin: 20px;}"
       ],
       "settings": {
         "bg_color": "#e9f1eb",
