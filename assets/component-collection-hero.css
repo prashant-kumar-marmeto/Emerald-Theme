@@ -100,6 +100,7 @@
   display: flex;
   gap: 15px;
   scrollbar-width: none;
+  overflow: auto;
 }
 .collection--links-wrapper{
   display: flex;
