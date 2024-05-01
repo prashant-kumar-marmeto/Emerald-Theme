@@ -216,6 +216,46 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "custom_scroll_text_RW3qJY": {
+      "type": "custom-scroll-text",
+      "blocks": {
+        "block_YHHWXL": {
+          "type": "block",
+          "settings": {
+            "text": "THE FINEST GEMSTONES",
+            "checkbox": false
+          }
+        },
+        "block_DtETj7": {
+          "type": "block",
+          "settings": {
+            "text": "ROMANCE IS PRICELESS",
+            "checkbox": false
+          }
+        },
+        "block_nTPmpq": {
+          "type": "block",
+          "settings": {
+            "text": "YOUR STYLE, OUR DESIGN",
+            "checkbox": false
+          }
+        }
+      },
+      "block_order": [
+        "block_YHHWXL",
+        "block_DtETj7",
+        "block_nTPmpq"
+      ],
+      "settings": {
+        "bg_color": "#e9f1eb",
+        "padding": 16,
+        "scroll_time": "50",
+        "font_color": "#263d2d",
+        "font_size": 40,
+        "pause_text": "initial",
+        "image_picker": "shopify:\/\/shop_images\/Star_100x100_crop_center_07605463-0f2e-467f-9604-122ee50ae181.png"
+      }
     }
   },
   "order": [
@@ -223,6 +263,7 @@
     "main",
     "multicolumn_mpkUDM",
     "image_with_text_3WQnRz",
-    "related-products"
+    "related-products",
+    "custom_scroll_text_RW3qJY"
   ]
 }
