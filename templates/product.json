@@ -266,15 +266,12 @@
             "text": "<p>For women, jewelry is often seen as a way to express their personal style and add a touch of glamour to their outfit. Popular jewelry styles for women include delicate necklaces, statement earrings, and stackable bracelets.<\/p>"
           }
         },
-        "button_yUADUB": {
-          "type": "button",
+        "caption_LyBceV": {
+          "type": "caption",
           "settings": {
-            "button_label": "Book an appointment",
-            "button_link": "",
-            "button_style_secondary": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "caption": "Book an appointment >",
+            "text_style": "subtitle",
+            "text_size": "medium"
           }
         }
       },
@@ -282,7 +279,7 @@
         "caption_grH8CT",
         "heading_GpNbWq",
         "text_UUB8Pm",
-        "button_yUADUB"
+        "caption_LyBceV"
       ],
       "custom_css": [
         "{margin: 30px 0;}"
