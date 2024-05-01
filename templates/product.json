@@ -242,6 +242,14 @@
         "image_picker": "shopify:\/\/shop_images\/Star_100x100_crop_center_07605463-0f2e-467f-9604-122ee50ae181.png"
       }
     },
+    "custom_richtext_animation_GK7ex3": {
+      "type": "custom-richtext-animation",
+      "custom_css": [
+        "{margin: 30px 0 }"
+      ],
+      "settings": {
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -267,6 +275,7 @@
     "multicolumn_mpkUDM",
     "image_with_text_3WQnRz",
     "custom_scroll_text_RW3qJY",
+    "custom_richtext_animation_GK7ex3",
     "related-products"
   ]
 }
