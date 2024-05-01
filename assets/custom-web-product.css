@@ -1,3 +1,6 @@
+.custom-rings-product--each-product {
+  border-radius: 10px;
+}
 .product-card__vendor {
     font-size: 14px;
     letter-spacing: 0.3px;
