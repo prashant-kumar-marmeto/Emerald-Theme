@@ -25,6 +25,11 @@
           "settings": {
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -42,11 +47,6 @@
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
           }
         },
         "share": {
@@ -73,10 +73,10 @@
         "vendor",
         "title",
         "price",
+        "description",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
         "share",
         "complementary_cJAxzc"
       ],
