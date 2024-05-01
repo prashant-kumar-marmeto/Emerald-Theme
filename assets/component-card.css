@@ -482,3 +482,7 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+.product-grid {
+  column-gap: 15px;
+  row-gap: 15px;
+}
