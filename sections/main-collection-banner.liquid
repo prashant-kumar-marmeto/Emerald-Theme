@@ -20,6 +20,16 @@
       {%- if section.settings.show_collection_description -%}
         <div class="collection-hero__description rte">{{ collection.description }}</div>
       {%- endif -%}
+      {%- if collection.metafields.custom.collection_link != blank -%}
+        <div class="collection--links-container">
+          {%- for item in collection.metafields.custom.collection_link.value -%}
+            <div class="collection--links-wrapper">
+              <img src="{{ item.image | image_url }}" height="50px" width="50px" class="collection--links-image">
+              <a href="{{ item.url }}" class="collection--links-link">{{ item.title }}</a>
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
     </div>
 
     {%- if section.settings.show_collection_image and collection.image -%}
