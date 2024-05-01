@@ -97,3 +97,48 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
+
+.static-product-slider {
+  /* border: 1px solid red; */
+  height: 550px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.static-product-slider .static-image {
+  /* border: 1px solid red; */
+  height: 100%;
+}
+.static-product-slider .static-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.static-product-slider .static-content {
+  /* border: 1px solid red; */
+  position: absolute;
+  bottom: 34px;
+  left: 34px;
+  color: white;
+  width: 80%;
+}
+.static-product-slider .static-content h2 {
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-family: "ITC Stepp", serif;
+  font-size: 28px;
+  margin-bottom: -10px;
+}
+.static-product-slider .static-content p {
+  color: white;
+  line-height: 24px;
+}
+.static-product-slider .static-content a {
+  color: black;
+  border: 1px solid white;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 8px;
+  font-size: 14px;
+}
