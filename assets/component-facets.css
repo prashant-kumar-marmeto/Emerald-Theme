@@ -702,6 +702,9 @@ a.active-facets__button.focused .active-facets__button-inner,
 .mobile-facets__header-inner {
   flex-grow: 1;
   position: relative;
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
 }
 
 .mobile-facets__info {
