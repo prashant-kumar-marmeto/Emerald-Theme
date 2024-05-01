@@ -175,6 +175,20 @@
               "solide_color_name": "Red",
               "solid_color": "#ff0000"
             }
+          },
+          "solid_color_hwpWWj": {
+            "type": "solid-color",
+            "settings": {
+              "solide_color_name": "Brown",
+              "solid_color": "#713f3f"
+            }
+          },
+          "solid_color_Fk9TfD": {
+            "type": "solid-color",
+            "settings": {
+              "solide_color_name": "Orange",
+              "solid_color": "#ffa500"
+            }
           }
         },
         "block_order": [
@@ -183,7 +197,9 @@
           "solid_color_iHntJz",
           "solid_color_3htirD",
           "solid_color_qLz46f",
-          "solid_color_nEN3KP"
+          "solid_color_nEN3KP",
+          "solid_color_hwpWWj",
+          "solid_color_Fk9TfD"
         ],
         "settings": {
         }
