@@ -229,6 +229,9 @@
         "block_DtETj7",
         "block_nTPmpq"
       ],
+      "custom_css": [
+        "section-id-template--17760751583468__custom_scroll_text_RW3qJY.custom-scrool-section--scroll {background-color: #e9f1eb; transform: rotate(3deg);}"
+      ],
       "settings": {
         "bg_color": "#e9f1eb",
         "padding": 20,
