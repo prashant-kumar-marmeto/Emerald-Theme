@@ -99,6 +99,7 @@
 .collection--links-container{
   display: flex;
   gap: 15px;
+  scrollbar-width: none;
 }
 .collection--links-wrapper{
   display: flex;
