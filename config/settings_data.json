@@ -176,6 +176,13 @@
               "solid_color": "#ff0000"
             }
           },
+          "solid_color_WzQrY7": {
+            "type": "solid-color",
+            "settings": {
+              "solide_color_name": "White",
+              "solid_color": "#fff"
+            }
+          },
           "solid_color_hwpWWj": {
             "type": "solid-color",
             "settings": {
@@ -198,6 +205,7 @@
           "solid_color_3htirD",
           "solid_color_qLz46f",
           "solid_color_nEN3KP",
+          "solid_color_WzQrY7",
           "solid_color_hwpWWj",
           "solid_color_Fk9TfD"
         ],
