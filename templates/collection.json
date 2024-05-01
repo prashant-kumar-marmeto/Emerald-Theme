@@ -30,7 +30,12 @@
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 32,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "image_select": "shopify:\/\/shop_images\/img19_1200x1356_crop_center_0f0ef8e9-4cb2-4717-b4a7-7231f6483ae1.png",
+        "imageHeading": "SALE OFF",
+        "imageDescription": "<p>Advertise a promotion or a sale<\/p>",
+        "imageButton": "Shop Sale",
+        "url": ""
       }
     },
     "custom_scroll_text_AKgKVh": {
