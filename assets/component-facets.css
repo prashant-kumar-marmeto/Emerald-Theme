@@ -715,6 +715,7 @@ a.active-facets__button.focused .active-facets__button-inner,
   font-size: calc(var(--font-heading-scale) * 2.1rem);
   font-weight: 600;
   margin: 0;
+  line-height: 1;
 }
 
 .mobile-facets__count {
