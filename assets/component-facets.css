@@ -710,6 +710,7 @@ a.active-facets__button.focused .active-facets__button-inner,
 
 .mobile-facets__heading {
   font-size: calc(var(--font-heading-scale) * 2.1rem);
+  font-weight: 600;
   margin: 0;
 }
 
