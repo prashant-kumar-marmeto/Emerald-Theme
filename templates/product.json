@@ -285,7 +285,7 @@
         "button_yUADUB"
       ],
       "custom_css": [
-        "button {border-width: 0;}"
+        "{margin: 30px 0;}"
       ],
       "settings": {
         "desktop_content_position": "center",
