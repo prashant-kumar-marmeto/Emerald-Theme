@@ -196,7 +196,7 @@
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 100
       }
     },
     "custom_scroll_text_RW3qJY": {
@@ -234,7 +234,7 @@
       ],
       "settings": {
         "bg_color": "#e9f1eb",
-        "padding": 20,
+        "padding": 34,
         "scroll_time": "50",
         "font_color": "#263d2d",
         "font_size": 40,
