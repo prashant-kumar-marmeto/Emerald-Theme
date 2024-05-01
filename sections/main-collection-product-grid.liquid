@@ -147,6 +147,50 @@
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
+                {% if forloop.index == 4 %}
+                  <li
+                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    <div class="static-product-slider product-card">
+                      <div class="static-image">
+                        <img
+                          src="{{ section.settings.image_select | img_url: 'medium' }}"
+                          height=""
+                          width=""
+                          alt="{{ section.settings.imageHeading }}"
+                        >
+                      </div>
+                      <div class="static-content">
+                        {% if section.settings.imageHeading != blank %}
+                          <h2>{{ section.settings.imageHeading }}</h2>
+                        {% endif %}
+                        {% if section.settings.imageDescription != blank %}
+                          <p>{{ section.settings.imageDescription | strip_html }}</p>
+                        {% endif %}
+                        {% if section.settings.imageButton != blank %}
+                          <a href="">
+                            {{- section.settings.imageButton }}
+                            <span>
+                              <svg
+                                width="6"
+                                height="10"
+                                viewBox="0 0 6 10"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path d="M1 1L5 5L1 9" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                            </span>
+                          </a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </li>
+                {% endif %}
                 <li
                   class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                   {% if settings.animations_reveal_on_scroll %}
