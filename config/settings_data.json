@@ -180,7 +180,7 @@
             "type": "solid-color",
             "settings": {
               "solide_color_name": "White",
-              "solid_color": "#fff"
+              "solid_color": "#ffffff"
             }
           },
           "solid_color_hwpWWj": {
@@ -325,6 +325,17 @@
           "button_label": "#3b5342",
           "secondary_button_label": "#3b5342",
           "shadow": "#3b5342"
+        }
+      },
+      "scheme-1c13fe5b-a701-434e-9d1b-0b2d48448219": {
+        "settings": {
+          "background": "#ffe8e3",
+          "background_gradient": "",
+          "text": "#a45050",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "#edcdc5"
         }
       }
     }
