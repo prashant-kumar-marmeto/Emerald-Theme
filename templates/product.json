@@ -310,6 +310,24 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "video_479Xed": {
+      "type": "video",
+      "custom_css": [
+        "* {border-radius: 10px;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify:\/\/files\/videos\/5915fba7e49e419886a3689ac1cdd535.HD-1080p-4.8Mbps-12891231.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -319,6 +337,7 @@
     "image_with_text_3WQnRz",
     "custom_scroll_text_RW3qJY",
     "rich_text_8TDzVi",
-    "related-products"
+    "related-products",
+    "video_479Xed"
   ]
 }
