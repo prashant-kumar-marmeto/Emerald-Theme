@@ -131,7 +131,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/img33_407x_crop_center_0b8d6152-cd88-44fe-b462-9ebef2037681.png",
-            "title": "HANDMADE IN LONDON",
+            "title": "<strong>HANDMADE IN LONDON<\/strong>",
             "text": "<p>Stay connected to your community with real-time crime and safety alerts from your neighbors and local public safety agencies.<\/p>",
             "link_label": "",
             "link": ""
@@ -141,7 +141,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/img32_407x_crop_center_0d111fbe-8aa5-4b25-8032-e07c8d73bc43.png",
-            "title": "FINANCING OPTIONS",
+            "title": "<strong>FINANCING OPTIONS<\/strong>",
             "text": "<p>Keeping up with the devices connected to your network has never been easier. Invite guests or view and manage connected devices with just a few clicks.<\/p>",
             "link_label": "",
             "link": ""
