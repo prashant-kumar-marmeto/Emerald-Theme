@@ -113,11 +113,68 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "multicolumn_mpkUDM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_mMT4Xh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img31_407x_crop_center_f773ffd1-6f71-4c24-a585-70cde9c03aa2.png",
+            "title": "<strong>EASY RETURNS<\/strong>",
+            "text": "<p>Research your appliances and language capabilities to be sure the voice assistant you choose works with your household’s needs.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bQVfWx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img33_407x_crop_center_0b8d6152-cd88-44fe-b462-9ebef2037681.png",
+            "title": "HANDMADE IN LONDON",
+            "text": "<p>Stay connected to your community with real-time crime and safety alerts from your neighbors and local public safety agencies.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_QXn4TM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img32_407x_crop_center_0d111fbe-8aa5-4b25-8032-e07c8d73bc43.png",
+            "title": "FINANCING OPTIONS",
+            "text": "<p>Keeping up with the devices connected to your network has never been easier. Invite guests or view and manage connected devices with just a few clicks.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_mMT4Xh",
+        "column_bQVfWx",
+        "column_QXn4TM"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "custom_breadcrumbs_Frxbph",
     "main",
-    "related-products"
+    "related-products",
+    "multicolumn_mpkUDM"
   ]
 }
