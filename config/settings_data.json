@@ -332,9 +332,9 @@
           "background": "#ffe8e3",
           "background_gradient": "",
           "text": "#a45050",
-          "button": "#121212",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
+          "button": "#a45050",
+          "button_label": "#e9f1eb",
+          "secondary_button_label": "#a45050",
           "shadow": "#edcdc5"
         }
       }
