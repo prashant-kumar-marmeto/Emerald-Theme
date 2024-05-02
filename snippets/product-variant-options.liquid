@@ -96,9 +96,13 @@
         class="disabled"
       {% endif %}
     >
-    <label class="custom-swatch--{{ value | handleize }}" data-value="{{ value }}" for="{{ input_id }}">
-      {{- option.name -}}
-    </label>
+    {% if option.name == 'color' or option.name == 'Color' %}
+      <label class="custom-swatch--{{ value | handleize }}" data-value="{{ value }}" for="{{ input_id }}"> </label>
+    {% else %}
+      <label class="custom-swatch--{{ value | handleize }}" data-value="{{ value }}" for="{{ input_id }}">
+        {{- value -}}
+      </label>
+    {% endif %}
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
       value="{{ value | escape }}"
