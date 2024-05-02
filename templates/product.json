@@ -40,7 +40,7 @@
         "variant_offer_t6AdGU": {
           "type": "variant-offer",
           "settings": {
-            "offer_available": "{{ product.metafields.custom.offer_20_.value }}"
+            "offer_available": ""
           }
         },
         "quantity_selector": {
