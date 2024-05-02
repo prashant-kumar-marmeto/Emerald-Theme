@@ -1,127 +1,36 @@
 {
   "sections": {
-    "custom_breadcrumbs_XrL6f7": {
-      "type": "Custom-breadcrumbs",
-      "settings": {
-      }
-    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
-        "color_scheme": "scheme-74ebf8b3-7eb7-498b-a5a0-7044f65a9150"
+        "color_scheme": "scheme-1"
       }
     },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": 16,
-        "columns_desktop": 3,
-        "color_scheme": "scheme-74ebf8b3-7eb7-498b-a5a0-7044f65a9150",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": true,
-        "enable_quick_add": true,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
         "enable_filtering": true,
-        "filter_type": "drawer",
+        "filter_type": "horizontal",
         "enable_sorting": true,
         "columns_mobile": "2",
-        "padding_top": 32,
-        "padding_bottom": 36,
-        "image_select": "shopify:\/\/shop_images\/img19_1200x1356_crop_center_0f0ef8e9-4cb2-4717-b4a7-7231f6483ae1.png",
-        "imageHeading": "SALE OFF",
-        "imageDescription": "<p>Advertise a promotion or a sale<\/p>",
-        "imageButton": "Shop Sale",
-        "url": ""
-      }
-    },
-    "custom_scroll_text_AKgKVh": {
-      "type": "custom-scroll-text",
-      "blocks": {
-        "block_FmgM8a": {
-          "type": "block",
-          "settings": {
-            "text": "TIMELESS STYLE",
-            "checkbox": true
-          }
-        },
-        "block_TBjJcg": {
-          "type": "block",
-          "settings": {
-            "text": "UNIQUE & AFFORDABLE",
-            "checkbox": false
-          }
-        },
-        "block_Nwifct": {
-          "type": "block",
-          "settings": {
-            "text": "A PERSONAL TOUCH",
-            "checkbox": true
-          }
-        },
-        "block_G8X7Qk": {
-          "type": "block",
-          "settings": {
-            "text": "DIAMONDS ARE FOREVER",
-            "checkbox": false
-          }
-        }
-      },
-      "block_order": [
-        "block_FmgM8a",
-        "block_TBjJcg",
-        "block_Nwifct",
-        "block_G8X7Qk"
-      ],
-      "settings": {
-        "bg_color": "#7d5c70",
-        "padding": 16,
-        "scroll_time": "30",
-        "font_color": "#ecdbc3",
-        "font_size": 66,
-        "pause_text": "initial",
-        "image_picker": "shopify:\/\/shop_images\/Star_100x100_crop_center_07605463-0f2e-467f-9604-122ee50ae181.png"
-      }
-    },
-    "rich_text_QDr8zA": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_iAbdBT": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>USE IT TO ADD SEO TEXT<\/strong>",
-            "heading_size": "h2"
-          }
-        },
-        "text_4RND6z": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Due to high demand, occasionally some of our products do go out of stock. We are constantly monitoring our stock levels, and we usually expect to replenish any product line within a couple of weeks. If you have placed a pre-order for an item that is out of stock and it looks like it will take longer than expected to get it to you.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_iAbdBT",
-        "text_4RND6z"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-74ebf8b3-7eb7-498b-a5a0-7044f65a9150",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "custom_breadcrumbs_XrL6f7",
     "banner",
-    "product-grid",
-    "custom_scroll_text_AKgKVh",
-    "rich_text_QDr8zA"
+    "product-grid"
   ]
 }
