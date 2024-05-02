@@ -27,12 +27,6 @@
             "swatch_shape": "circle"
           }
         },
-        "variant_offer_t6AdGU": {
-          "type": "variant-offer",
-          "settings": {
-            "offer_available": ""
-          }
-        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -100,18 +94,10 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "custom_product_card_tKbjVK": {
-      "type": "custom-product-card",
-      "settings": {
-        "product": "18k-handmade-double-date-earrings-in-gold",
-        "name": "Product card"
-      }
     }
   },
   "order": [
     "main",
-    "related-products",
-    "custom_product_card_tKbjVK"
+    "related-products"
   ]
 }
