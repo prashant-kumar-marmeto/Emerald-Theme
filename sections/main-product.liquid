@@ -458,7 +458,7 @@
               {% when 'variant-offer' %}
                 <div class="coupon">
                   <div class="left">
-                    <div>{{ block.settings.offer_available }}</div>
+                    <div class="text">{{ block.settings.offer_available }}</div>
                   </div>
                   <div class="center">
                     <div>
@@ -475,7 +475,7 @@
                 <script>
                   document.addEventListener("DOMContentLoaded", function () {
                     const copyButton = document.querySelector(".center button");
-                    const couponContent = document.querySelector(".left div");
+                    const couponContent = document.querySelector(".left .text");
 
                     copyButton.addEventListener("click", function () {
                       const textToCopy = couponContent.innerText;
