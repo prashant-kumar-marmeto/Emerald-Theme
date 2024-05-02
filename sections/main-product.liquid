@@ -464,7 +464,7 @@
                     <div>
                       <h2>50% OFF</h2>
                       <h3>Coupon</h3>
-                      <button>Copy</button>
+                      <button class="copy">Copy</button>
                     </div>
                   </div>
 
@@ -474,7 +474,7 @@
                 </div>
                 <script>
                   document.addEventListener("DOMContentLoaded", function () {
-                    const copyButton = document.querySelector(".center button");
+                    const copyButton = document.querySelector(".center .copy");
                     const couponContent = document.querySelector(".left .text");
 
                     copyButton.addEventListener("click", function () {
