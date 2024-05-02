@@ -1,29 +1,33 @@
 <style>
-  .no-js-hidden .my-custom-swatches .swatch-label {
-    border-radius: .4rem!important;
-    font-size: 1.2rem;
-    letter-spacing: .02em;
-    font-weight: 400;
+    .product-form__input--pill input[type=radio]:checked+label {
+      border-color: black;
+      background-color: white;
   }
-  {% for block in section.blocks %}
-  .my-custom-swatches .custom-swatch--{{ block.settings.solide_color_name | downcase | handle }}{
-    background-color: {{ block.settings.solid_color }} !important;
-    padding: 1.5rem!important;
-  }
-  .item-swatch [data-value="{{ block.settings.solide_color_name }}"],
-  .item-swatch [data-value="{{ block.settings.solide_color_name | downcase }}"],
-  .item-swatch [data-value="{{ block.settings.solide_color_name | downcase | handle }}"],
-  .item-swatch [data-value="{{ block.settings.solide_color_name | capitalize  }}"],
-  .swatch [data-value="{{ block.settings.solide_color_name }}"] .bgImg,
-  .swatch [data-value="{{ block.settings.solide_color_name | downcase }}"] .bgImg,
-  .swatch [data-value="{{ block.settings.solide_color_name | capitalize  }}"] .bgImg,
-  .color-swatch-enabled[data-tag="{{ block.settings.solide_color_name }}"] span,
-  .color-swatch-enabled[data-tag="{{ block.settings.solide_color_name | downcase }}"] span,
-  .color-swatch-enabled[data-tag="{{ block.settings.solide_color_name | capitalize }}"] span {
-    background-color: {{ block.settings.solid_color }} !important;
-    margin: 1px !important;
-  }
-  {% endfor %}
+    .no-js-hidden .my-custom-swatches .swatch-label {
+      border-radius: .4rem!important;
+      font-size: 1.2rem;
+      letter-spacing: .02em;
+      font-weight: 400;
+    }
+    {% for block in section.blocks %}
+    .my-custom-swatches .custom-swatch--{{ block.settings.solide_color_name | downcase | handle }}{
+      background-color: {{ block.settings.solid_color }} !important;
+      padding: 1.5rem!important;
+    }
+    .item-swatch [data-value="{{ block.settings.solide_color_name }}"],
+    .item-swatch [data-value="{{ block.settings.solide_color_name | downcase }}"],
+    .item-swatch [data-value="{{ block.settings.solide_color_name | downcase | handle }}"],
+    .item-swatch [data-value="{{ block.settings.solide_color_name | capitalize  }}"],
+    .swatch [data-value="{{ block.settings.solide_color_name }}"] .bgImg,
+    .swatch [data-value="{{ block.settings.solide_color_name | downcase }}"] .bgImg,
+    .swatch [data-value="{{ block.settings.solide_color_name | capitalize  }}"] .bgImg,
+    .color-swatch-enabled[data-tag="{{ block.settings.solide_color_name }}"] span,
+    .color-swatch-enabled[data-tag="{{ block.settings.solide_color_name | downcase }}"] span,
+    .color-swatch-enabled[data-tag="{{ block.settings.solide_color_name | capitalize }}"] span {
+      background-color: {{ block.settings.solid_color }} !important;
+      margin: 1px !important;
+    }
+    {% endfor %}
 </style>
 
 {% schema %}
