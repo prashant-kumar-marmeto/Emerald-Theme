@@ -20,11 +20,6 @@
           "settings": {
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -44,6 +39,11 @@
             "show_gift_card_recipient": true
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -55,10 +55,10 @@
         "vendor",
         "title",
         "price",
-        "description",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "description",
         "share"
       ],
       "settings": {
@@ -94,10 +94,18 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "custom_product_card_tKbjVK": {
+      "type": "custom-product-card",
+      "settings": {
+        "product": "18k-handmade-double-date-earrings-in-gold",
+        "name": "Product card"
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "custom_product_card_tKbjVK"
   ]
 }

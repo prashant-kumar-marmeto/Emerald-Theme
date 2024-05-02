@@ -12,8 +12,8 @@
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": 16,
-        "columns_desktop": 3,
-        "color_scheme": "scheme-74ebf8b3-7eb7-498b-a5a0-7044f65a9150",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -21,16 +21,11 @@
         "show_rating": false,
         "enable_quick_add": false,
         "enable_filtering": true,
-        "filter_type": "drawer",
+        "filter_type": "horizontal",
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "image_select": "shopify:\/\/shop_images\/img19_1200x1356_crop_center_0f0ef8e9-4cb2-4717-b4a7-7231f6483ae1.png",
-        "imageHeading": "SALE OFF",
-        "imageDescription": "<p>Gold and crystal chained heart stud and ear cuff<\/p>",
-        "imageButton": "Shop Sale",
-        "url": ""
+        "padding_bottom": 36
       }
     }
   },
