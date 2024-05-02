@@ -1,6 +1,9 @@
 <style>
   .swatch-label {
     border-radius: .4rem!important;
+    font-size: .8rem;
+    letter-spacing: .02em;
+    font-weight: 400;
   }
   {% for block in section.blocks %}
   .my-custom-swatches .custom-swatch--{{ block.settings.solide_color_name | downcase | handle }}{
