@@ -12,8 +12,8 @@
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": 16,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-74ebf8b3-7eb7-498b-a5a0-7044f65a9150",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -25,7 +25,11 @@
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "imageHeading": "SALE OFF",
+        "imageDescription": "<p>Advertise a promotion or a sale<\/p>",
+        "imageButton": "Shop Sale",
+        "url": ""
       }
     }
   },
