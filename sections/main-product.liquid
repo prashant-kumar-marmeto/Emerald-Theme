@@ -472,6 +472,21 @@
                     <div>{{ product.selected_variant.id }}</div>
                   </div>
                 </div>
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const copyButton = document.querySelector(".center button");
+                    const couponContent = document.querySelector(".left div");
+
+                    copyButton.addEventListener("click", function () {
+                      const textToCopy = couponContent.innerText;
+                      navigator.clipboard.writeText(textToCopy).then(function () {
+                        alert("Copied to clipboard!");
+                      }).catch(function (error) {
+                        console.error("Unable to copy:", error);
+                      });
+                    });
+                  });
+                </script>
 
                 <!-- offer section end -->
 
