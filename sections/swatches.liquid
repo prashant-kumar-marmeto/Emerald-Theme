@@ -1,5 +1,6 @@
 <style>
   {% for block in section.blocks %}
+    .mt-custom-swatches .custom-swatch--{{ block.settings.solide_color_name }}
   .item-swatch [data-value="{{ block.settings.solide_color_name }}"],
   .item-swatch [data-value="{{ block.settings.solide_color_name | downcase }}"],
   .item-swatch [data-value="{{ block.settings.solide_color_name | downcase | handle }}"],
