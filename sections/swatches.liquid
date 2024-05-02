@@ -2,8 +2,8 @@
   {% for block in section.blocks %}
   .my-custom-swatches .custom-swatch--{{ block.settings.solide_color_name | downcase | handle }}{
     background-color: {{ block.settings.solid_color }} !important;
-    height: 30px!important;
-    width: 30px!important;
+    height: 40px!important;
+    width: 40px!important;
     border-radius: 50%!important;
   }
   .item-swatch [data-value="{{ block.settings.solide_color_name }}"],
