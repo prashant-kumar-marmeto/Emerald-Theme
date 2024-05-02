@@ -37,8 +37,8 @@
             "swatch_shape": "circle"
           }
         },
-        "varient_offer_RrBcT3": {
-          "type": "varient-offer",
+        "variant_offer_t6AdGU": {
+          "type": "variant-offer",
           "settings": {
             "offer_available": ""
           }
@@ -81,7 +81,7 @@
         "price",
         "description",
         "variant_picker",
-        "varient_offer_RrBcT3",
+        "variant_offer_t6AdGU",
         "quantity_selector",
         "buy_buttons",
         "share",
