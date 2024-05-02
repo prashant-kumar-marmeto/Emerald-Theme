@@ -1,5 +1,10 @@
 {
   "sections": {
+    "custom_breadcrumbs_Vz9jLa": {
+      "type": "Custom-breadcrumbs",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -104,6 +109,7 @@
     }
   },
   "order": [
+    "custom_breadcrumbs_Vz9jLa",
     "main",
     "related-products"
   ]
