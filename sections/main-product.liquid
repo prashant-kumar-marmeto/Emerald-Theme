@@ -455,42 +455,43 @@
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 
-              {% when 'variant-offer' %}
-                <div class="coupon">
-                  <div class="left">
-                    <div class="text">
-                      {{ product.selected_or_first_available_variant.metafields.custom.offer_2020 }}
+                {% when 'variant-offer' %}
+                  <div class="coupon">
+                    <div class="left">
+                      <div class="text">
+                        {{ product.selected_or_first_available_variant.metafields.custom.offer_2020 }}
+                      </div>
+                    </div>
+                    <div class="center">
+                      <div>
+                        <h2>50% OFF</h2>
+                        <h3>Coupon</h3>
+                        <button class="copy">Copy</button>
+                      </div>
+                    </div>
+  
+                    <div class="right">
+                      <div>{{ product.selected_variant.id }}</div>
                     </div>
                   </div>
-                  <div class="center">
-                    <div>
-                      <h2>50% OFF</h2>
-                      <h3>Coupon</h3>
-                      <button class="copy">Copy</button>
-                    </div>
-                  </div>
-
-                  <div class="right">
-                    <div>{{ product.selected_variant.id }}</div>
-                  </div>
-                </div>
-                <script>
-                  document.addEventListener("DOMContentLoaded", function () {
-                    const copyButton = document.querySelector(".center .copy");
-                    const couponContent = document.querySelector(".left .text");
-
-                    copyButton.addEventListener("click", function () {
-                      const textToCopy = couponContent.innerText;
-                      navigator.clipboard.writeText(textToCopy).then(function () {
-                        alert("{{ block.settings.offer_available }} is Copied to clipboard!");
-                      }).catch(function (error) {
-                        console.error("Unable to copy:", error);
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      const copyButton = document.querySelector(".center .copy");
+                      const couponContent = document.querySelector(".left .text");
+  
+                      copyButton.addEventListener("click", function () {
+                        const textToCopy = couponContent.innerText;
+                        navigator.clipboard.writeText(textToCopy).then(function () {
+                          alert("{{ product.selected_or_first_available_variant.metafields.custom.offer_2020 }} is Copied to clipboard!");
+                        }).catch(function (error) {
+                          console.error("Unable to copy:", error);
+                        });
                       });
                     });
-                  });
-                </script>
-
-                <!-- offer section end -->
+                  </script>
+  
+                  <!-- offer section end -->  
+              
 
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
