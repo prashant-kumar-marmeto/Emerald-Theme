@@ -458,7 +458,9 @@
               {% when 'variant-offer' %}
                 <div class="coupon">
                   <div class="left">
-                    <div class="text">{{ block.settings.offer_available }}</div>
+                    <div class="text">
+                      {{ product.selected_or_first_available_variant.metafields.custom.offer_2020 }}
+                    </div>
                   </div>
                   <div class="center">
                     <div>
