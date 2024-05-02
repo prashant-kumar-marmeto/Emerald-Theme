@@ -480,7 +480,7 @@
                     copyButton.addEventListener("click", function () {
                       const textToCopy = couponContent.innerText;
                       navigator.clipboard.writeText(textToCopy).then(function () {
-                        alert({{ block.settings.offer_available }}," is Copied to clipboard!");
+                        alert("{{ block.settings.offer_available }} is Copied to clipboard!");
                       }).catch(function (error) {
                         console.error("Unable to copy:", error);
                       });
