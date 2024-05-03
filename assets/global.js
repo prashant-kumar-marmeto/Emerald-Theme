@@ -1225,7 +1225,7 @@ class VariantSelects extends HTMLElement {
     const volumeNote = document.getElementById(`Volume-Note-${this.dataset.section}`);
     const volumeTable = document.getElementById(`Volume-${this.dataset.section}`);
     const qtyRules = document.getElementById(`Quantity-Rules-${this.dataset.section}`);
-    
+
     if (!addButton) return;
     addButtonText.textContent = window.variantStrings.unavailable;
     if (price) price.classList.add('hidden');
@@ -1363,19 +1363,3 @@ class pincodeChecker extends HTMLElement {
 }
 customElements.define("pincode-checker", pincodeChecker);
 
-document.addEventListener('DOMContentLoaded', function() {
-  const pincodeInput = document.getElementById('pinInput');
-  
-  pincodeInput.addEventListener('input', function(event) {
-    const inputValue = event.target.value;
-    const numericValue = inputValue.replace(/\D/g, ''); // Remove non-numeric characters
-    
-    if (inputValue !== numericValue) {
-      event.target.value = numericValue; // Update the input value with only numeric characters
-    }
-    
-    if (numericValue.length > 6) {
-      event.target.value = numericValue.slice(0, 6); // Limit the input to 6 characters
-    }
-  });
-});
