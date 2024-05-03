@@ -1116,7 +1116,18 @@ class VariantSelects extends HTMLElement {
         // prevent unnecessary ui changes from abandoned selections
         if (this.currentVariant.id !== requestedVariantId) return;
 
+        let emptyContainer = document.createElement('div');
+
         const html = new DOMParser().parseFromString(responseText, 'text/html');
+        
+        // coupon section rendering
+
+        const couponContainer = document.getElementById('coupon_container')
+        const newCouponContainer = html.getElementById("coupon_container")
+        if (newCouponContainer && couponContainer) couponContainer.innerHTML = newCouponContainer.innerHTML
+        
+      
+        
         const destination = document.getElementById(`price-${this.dataset.section}`);
         const source = html.getElementById(
           `price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
@@ -1166,15 +1177,15 @@ class VariantSelects extends HTMLElement {
         const price = document.getElementById(`price-${this.dataset.section}`);
 
         if (price) price.classList.remove('hidden');
-
+        
         if (inventoryDestination) inventoryDestination.classList.toggle('hidden', inventorySource.innerText === '');
-
+        
         const addButtonUpdated = html.getElementById(`ProductSubmitButton-${sectionId}`);
         this.toggleAddButton(
           addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true,
           window.variantStrings.soldOut
         );
-
+        
         publish(PUB_SUB_EVENTS.variantChange, {
           data: {
             sectionId,
@@ -1184,14 +1195,14 @@ class VariantSelects extends HTMLElement {
         });
       });
   }
-
+  
   toggleAddButton(disable = true, text, modifyClass = true) {
     const productForm = document.getElementById(`product-form-${this.dataset.section}`);
     if (!productForm) return;
     const addButton = productForm.querySelector('[name="add"]');
     const addButtonText = productForm.querySelector('[name="add"] > span');
     if (!addButton) return;
-
+    
     if (disable) {
       addButton.setAttribute('disabled', 'disabled');
       if (text) addButtonText.textContent = text;
@@ -1199,10 +1210,10 @@ class VariantSelects extends HTMLElement {
       addButton.removeAttribute('disabled');
       addButtonText.textContent = window.variantStrings.addToCart;
     }
-
+    
     if (!modifyClass) return;
   }
-
+  
   setUnavailable() {
     const button = document.getElementById(`product-form-${this.dataset.section}`);
     const addButton = button.querySelector('[name="add"]');
@@ -1214,7 +1225,7 @@ class VariantSelects extends HTMLElement {
     const volumeNote = document.getElementById(`Volume-Note-${this.dataset.section}`);
     const volumeTable = document.getElementById(`Volume-${this.dataset.section}`);
     const qtyRules = document.getElementById(`Quantity-Rules-${this.dataset.section}`);
-
+    
     if (!addButton) return;
     addButtonText.textContent = window.variantStrings.unavailable;
     if (price) price.classList.add('hidden');
@@ -1225,7 +1236,7 @@ class VariantSelects extends HTMLElement {
     if (volumeTable) volumeTable.classList.add('hidden');
     if (qtyRules) qtyRules.classList.add('hidden');
   }
-
+  
   getVariantData() {
     this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
     return this.variantData;
@@ -1238,27 +1249,27 @@ class ProductRecommendations extends HTMLElement {
   constructor() {
     super();
   }
-
+  
   connectedCallback() {
     const handleIntersection = (entries, observer) => {
       if (!entries[0].isIntersecting) return;
       observer.unobserve(this);
-
+      
       fetch(this.dataset.url)
         .then((response) => response.text())
         .then((text) => {
           const html = document.createElement('div');
           html.innerHTML = text;
           const recommendations = html.querySelector('product-recommendations');
-
+          
           if (recommendations && recommendations.innerHTML.trim().length) {
             this.innerHTML = recommendations.innerHTML;
           }
-
+          
           if (!this.querySelector('slideshow-component') && this.classList.contains('complementary-products')) {
             this.remove();
           }
-
+          
           if (html.querySelector('.grid__item')) {
             this.classList.add('product-recommendations--loaded');
           }
@@ -1267,9 +1278,104 @@ class ProductRecommendations extends HTMLElement {
           console.error(e);
         });
     };
-
+    
     new IntersectionObserver(handleIntersection.bind(this), { rootMargin: '0px 0px 400px 0px' }).observe(this);
   }
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+
+// Coupon custom component 
+
+class variantOffer extends HTMLElement {
+  constructor() {
+    super();
+    this.couponCode = this.querySelector('[data-code]').dataset.code;
+    this.copyButton = this.querySelector('#copy-coupon');
+    this.copyButton.addEventListener('click', ()=>{
+      this.copyAction();
+    })
+  }
+  copyAction() {
+    // Use the Clipboard API to copy the text
+    navigator.clipboard.writeText(this.couponCode).then(function () {
+      alert('Coupon code copied to clipboard!');
+    }, function (err) {
+      alert('Failed to copy: ', err);
+    });
+  }
+}
+customElements.define("variant-offer", variantOffer);
+
+// Pin-code custom component
+
+var toastCounter = 1;
+class pincodeChecker extends HTMLElement {
+  constructor() {
+    super();
+    this.resultDisplay = this.querySelector("#result");
+    this.checkbtn=this.querySelector(".checkPin");
+    this.checkbtn.addEventListener('click', ()=>{
+      this.checkPin();
+    })
+  }
+  checkPin() {
+    this.pincode= this.querySelector(".pinInput").value;
+    if (this.pincode.length !== 6 || isNaN(this.pincode)) {
+      this.resultDisplay.innerText = "Please enter a valid 6 digit pin code.";
+      this.displayToastNotification("Please enter a valid 6 digit pin code", "fa-xmark", "#F39C12", "slide-in-fade-out");
+      return;
+    }
+    fetch(`https://api.postalpincode.in/pincode/${this.pincode}`)
+      .then(response => response.json())
+      .then(data => {
+          // Check if pin code exists
+          if (data[0].PostOffice[0].DeliveryStatus === "Delivery") {
+             console.log(data[0]);
+              this.resultDisplay.innerText = "Pin code is valid.";
+              this.displayToastNotification("We deliver at your locations", "fa-check", "#27AE60", "slide-in-fade-out");
+          } else {
+              this.resultDisplay.innerText = "Pin code does not exist.";
+              this.displayToastNotification("cant deliver at your locations", "fa-xmark", "#C0392B", "slide-in-fade-out");
+          }
+      })
+      .catch(error => {
+          console.error('Error:', error);
+          // this.resultDisplay.innerText = "An error occurred while fetching data.";
+      });
+  }
+  displayToastNotification(msg, icon, icon_color, animation) {
+    var class_name = 'toast-' + toastCounter;
+    var new_node = this.querySelector('.master-toast-notification').cloneNode(true);
+    new_node.classList.remove('hide-toast');
+    new_node.classList.remove('master-toast-notification');
+    new_node.classList.add(class_name, 'toast-notification', animation);
+    new_node.querySelector('.toast-msg').innerText = msg;
+    new_node.querySelector('.toast-icon i').className = 'fa-solid ' + icon;
+    new_node.querySelector('.toast-icon').style.backgroundColor = icon_color;
+    this.querySelector('.toasts').appendChild(new_node);
+    setTimeout(function() {
+        new_node.remove();
+    }, 3800);
+    toastCounter++;
+}
+}
+customElements.define("pincode-checker", pincodeChecker);
+
+document.addEventListener('DOMContentLoaded', function() {
+  const pincodeInput = document.getElementById('pinInput');
+  
+  pincodeInput.addEventListener('input', function(event) {
+    const inputValue = event.target.value;
+    const numericValue = inputValue.replace(/\D/g, ''); // Remove non-numeric characters
+    
+    if (inputValue !== numericValue) {
+      event.target.value = numericValue; // Update the input value with only numeric characters
+    }
+    
+    if (numericValue.length > 6) {
+      event.target.value = numericValue.slice(0, 6); // Limit the input to 6 characters
+    }
+  });
+});

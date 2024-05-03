@@ -454,43 +454,58 @@
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
-
+                 
+                <!-- offer section start --> 
+                
                 {% when 'variant-offer' %}
-                  <div class="coupon">
+                <div id="coupon_container">  
+                  {%  if product.selected_or_first_available_variant.metafields.custom.offer_2020 != blank %}
+                  <variant-offer  class="coupon">
                     <div class="left">
-                      <div class="text">
+                      <div id="coupon_code" class="text" data-code="{{ product.selected_or_first_available_variant.metafields.custom.offer_2020 }}">
                         {{ product.selected_or_first_available_variant.metafields.custom.offer_2020 }}
                       </div>
                     </div>
                     <div class="center">
                       <div>
-                        <h2>50% OFF</h2>
+                        <h2>Get offers</h2>
                         <h3>Coupon</h3>
-                        <button class="copy">Copy</button>
+                        <button id="copy-coupon" class="copy">Copy</button>
                       </div>
                     </div>
   
                     <div class="right">
-                      <div>{{ product.selected_variant.id }}</div>
+                      <div id="variant__id">{{ product.selected_variant.id }}</div>
                     </div>
-                  </div>
-                  <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                      const copyButton = document.querySelector(".center .copy");
-                      const couponContent = document.querySelector(".left .text");
+                  </variant-offer>
+                  {% endif %}
+                </div>  
   
-                      copyButton.addEventListener("click", function () {
-                        const textToCopy = couponContent.innerText;
-                        navigator.clipboard.writeText(textToCopy).then(function () {
-                          alert("{{ product.selected_or_first_available_variant.metafields.custom.offer_2020 }} is Copied to clipboard!");
-                        }).catch(function (error) {
-                          console.error("Unable to copy:", error);
-                        });
-                      });
-                    });
-                  </script>
-  
-                  <!-- offer section end -->  
+                <!-- offer section end -->  
+
+                <!-- PINCODE CHECKER START -->
+                {% when 'pincode-checker'  %}
+                  <pincode-checker class="container">
+                    <label class="label" for="pinInput">Enter pincode</label>
+                    <div>
+                      <input type="text" class="pinInput" id="pinInput" placeholder="Enter 6 digit pincode">
+                      <button class="checkPin button-pincode">Check PIN Code</button>
+                    </div>
+                    <p id="result"></p>
+                    <div class="toasts"></div>
+                    <div class="master-toast-notification hide-toast">
+                      <div class="toast-content">
+                        <div class="toast-icon">
+                          <i class="fa-solid"></i>
+                        </div>
+                        <div class="toast-msg"></div>
+                      </div>
+                      <div class="toast-progress">
+                        <div class="toast-progress-bar"></div>
+                      </div>
+                    </div>
+                  </pincode-checker>
+                <!-- PINCODE CHECKER END -->
               
 
               {%- when 'buy_buttons' -%}
@@ -869,6 +884,11 @@
           "label": "Available offer"
         }
       ]
+    },
+    {
+      "type": "pincode-checker",
+      "name": "Pincode checker",
+      "limit": 1
     },
     {
       "type": "price",

@@ -1222,8 +1222,15 @@ button.shopify-payment-button__button--unbranded,
 button.shopify-payment-button__button--unbranded {
   min-width: calc(12rem + var(--buttons-border-width) * 2);
   min-height: calc(4.5rem + var(--buttons-border-width) * 2);
-}
 
+}
+button.shopify-payment-button__button--unbranded {
+  width: 25rem;
+  background: #263d2d;
+  border: 0 solid;
+  border-radius: 10px;
+  color: white;
+}
 .shopify-payment-button__button--branded {
   z-index: auto;
 }
@@ -1298,9 +1305,9 @@ button.shopify-payment-button__button--unbranded {
     0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
 }
 
-.button--secondary:after {
+/* .button--secondary:after {
   --border-opacity: var(--buttons-border-opacity);
-}
+} */
 
 .button:focus-visible,
 .button:focus,
@@ -1892,10 +1899,12 @@ input[type='checkbox'] {
 .quantity {
   color: rgba(var(--color-foreground));
   position: relative;
-  width: calc(14rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
+  width: 11rem;
   display: flex;
-  border-radius: var(--inputs-radius);
-  min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #dbd1d0;
+  min-height: calc((var(--inputs-border-width)* 2) + 4.5rem);
 }
 
 .quantity:after {
@@ -1908,7 +1917,6 @@ input[type='checkbox'] {
   left: var(--inputs-border-width);
   border: 0.1rem solid transparent;
   border-radius: var(--inputs-radius);
-  box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
   transition: box-shadow var(--duration-short) ease;
   z-index: 1;
 }
@@ -3519,3 +3527,4 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+
