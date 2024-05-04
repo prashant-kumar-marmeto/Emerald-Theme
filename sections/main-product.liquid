@@ -468,14 +468,14 @@
                     </div>
                     <div class="center">
                       <div>
-                        <h2>Get offers</h2>
+                        <h2 class="offer-code">Get offers</h2>
                         <h3>Coupon</h3>
                         <button id="copy-coupon" class="copy">Copy</button>
                       </div>
                     </div>
   
                     <div class="right">
-                      <div id="variant__id">{{ product.selected_variant.id }}</div>
+                      <div id="variant__id">{{ product.selected_or_first_available_variant.id }}</div>
                     </div>
                   </variant-offer>
                   {% endif %}

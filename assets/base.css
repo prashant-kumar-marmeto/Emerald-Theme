@@ -1224,12 +1224,25 @@ button.shopify-payment-button__button--unbranded {
   min-height: calc(4.5rem + var(--buttons-border-width) * 2);
 
 }
-button.shopify-payment-button__button--unbranded {
+.wallet-button-fade-in .shopify-payment-button__button--unbranded {
   width: 25rem;
   background: #263d2d;
   border: 0 solid;
   border-radius: 10px;
   color: white;
+}
+@media screen and (max-width: 749px)  {
+  .wallet-button-fade-in .shopify-payment-button__button--unbranded {
+    width: 17rem;
+    font-size: 15px;
+  }
+}
+.wallet-button-fade-in .shopify-payment-button__button--unbranded:hover {
+  width: 25rem;
+  background-color: #31543b;
+  border: 0 solid;
+  border-radius: 10px;
+  color: black;
 }
 .shopify-payment-button__button--branded {
   z-index: auto;
