@@ -16,6 +16,7 @@
     }
   }
 {%- endstyle -%}
+{% assign widthpercent = cart.total_price | times : 100 | divided_by:50000  %}
 
 <div
   class="gradient color-{{ section.settings.color_scheme }}{% if cart == empty %} is-empty{% endif %}"
@@ -38,6 +39,17 @@
       {%- endif -%}
 
       <div class="cart__blocks">
+        {% comment %} Progress bar {% endcomment %}
+        <div class="progress-bar">
+          <p class="progress-bar--money"> Spend {{ 50000 | minus: cart.total_price | money }} more to get FREE shipping</p>
+          <div class="progress-bar--container" id="progress-bar">
+              <div class="progress-bar--progress">
+                <span class="in-stock-bar" style="width: {{ widthpercent }}%;">
+                </span>
+                <span class="not-in-stock-bar"></span>
+              </div>
+          </div>
+        </div>
         {% for block in section.blocks %}
           {%- case block.type -%}
             {%- when '@app' -%}
