@@ -1572,7 +1572,7 @@ a.product__text {
     text-align: center;
   }
 
-  .right {
+  .variant-offer-right {
     width: 120px;
     background-image: radial-gradient(
       circle at 100% 50%,
@@ -1580,7 +1580,7 @@ a.product__text {
       #fff 26px
     );
   }
-  .right div {
+  .variant-offer-right div {
     font-family: "Libre Barcode 128 Text", cursive;
     font-size: 2rem;
     font-weight: 400;
@@ -1618,7 +1618,7 @@ a.product__text {
     }
   }
 
-.container .button-pincode {
+.pincode-checker__field .button-pincode {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -1626,8 +1626,8 @@ a.product__text {
   -o-border-radius: 10px;
   border: 0 solid ;
   background-color: #263d2d;
-  height: 40px;
-  padding: 5px 20px;
+  height: 45px;
+  padding: 5px 30px;
   color: white;
   font-family: var(--font-body-family);
 }
@@ -1651,7 +1651,8 @@ a.product__text {
 }
 
 .pinInput{
-  height: 40px;
+  width: 50%;
+  height: 45px;
     padding-left: 15px;
     padding-right: 25px ;
     border-radius: 10px;
@@ -1661,9 +1662,15 @@ a.product__text {
     -o-border-radius: 10px;
     border: 1px solid #dbd1d0;
     font-family: var(--font-body-family);
+    margin-right: 10px;
+    color: rgb(var(--color-button));
 }
 .container{
   position: relative;
+}
+.pincode-checker--input-container {
+  width: 100%;
+  display: flex;
 }
 @import url('https://fonts.bunny.net/css?family=barlow:400,500&display=swap');
 .toasts {

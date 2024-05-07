@@ -149,12 +149,11 @@
     width: 200px;
 }
 
-.splide__arrow--prev {
+.products-section .splide__arrow--prev {
   left: -14px;
   top: 30%;
-  transform: rotate(180deg);
 }
-.splide__arrow--next {
+.products-section .splide__arrow--next {
   right: -14px;
   top: 30%;
 }

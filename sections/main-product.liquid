@@ -474,7 +474,7 @@
                       </div>
                     </div>
   
-                    <div class="right">
+                    <div class="variant-offer-right">
                       <div id="variant__id">{{ product.selected_or_first_available_variant.id }}</div>
                     </div>
                   </variant-offer>
@@ -482,29 +482,20 @@
                 </div>  
   
                 <!-- offer section end -->  
-
+                
                 <!-- PINCODE CHECKER START -->
                 {% when 'pincode-checker'  %}
-                  <pincode-checker class="container">
-                    <label class="label" for="pinInput">Enter pincode</label>
-                    <div>
-                      <input type="text" class="pinInput" id="pinInput" placeholder="Enter 6 digit pincode">
-                      <button class="checkPin button-pincode">Check PIN Code</button>
-                    </div>
-                    <p id="result"></p>
-                    <div class="toasts"></div>
-                    <div class="master-toast-notification hide-toast">
-                      <div class="toast-content">
-                        <div class="toast-icon">
-                          <i class="fa-solid"></i>
-                        </div>
-                        <div class="toast-msg"></div>
+                  <pincode-checker>
+                    <div class="pincode-checker">
+                      <label class="label" for="PincodeInput">Enter Pincode</label>
+                      <div class="pincode-checker__field">
+                        <input class="pinInput" id="PincodeInput" type="text" name="pincode-input" placeholder="Enter pincode">
+                        <button type="button" class="checkPin button-pincode" name="pincode-submit">Check</button>
                       </div>
-                      <div class="toast-progress">
-                        <div class="toast-progress-bar"></div>
-                      </div>
+                      
                     </div>
-                  </pincode-checker>
+                    <div class="pincode-message text-body is-hidden" name="pincode-message"></div>
+                </pincode-checker>
                 <!-- PINCODE CHECKER END -->
               
 
@@ -516,6 +507,38 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
+              
+                
+                  {% if product.metafields.custom.bundles.value!=blank %}
+                      <div class="product-bundle-wrapper">
+                        <div class="product-bundle">
+                            <h2 class="product-bundle__heading">{{ section.settings.bundle_heading }}</h2>
+                            <div class="product-bundle-container">
+                                <product-bundle class="product-bundle__grid " data-section-id="{{ section.id }}">
+                                    {% for product in product.metafields.custom.bundles.value %}
+                                        <input class="bundle-checkbox" data-product-id="{{ product.selected_or_first_available_variant.id }}"
+                                        value="{{  product.selected_or_first_available_variant.id }}"
+                                        type="checkbox"
+                                        >
+                                        <div class="product-bundle__grid-item product-bundles">
+                                            {% render 'custom-web-product',
+                                            product: product,
+                                            section_id: section.id
+                                            %}
+                                        </div>
+                                    {% endfor %}
+                                    <div id="bundle__atc"
+                                    class="button custom-atc__hover-button"
+                                    data-product-id="{{ product.id }}"
+                                    data-variant-id="{{ product.selected_variant.id }}"
+                                    data-section-id="{{ section.id }}"
+                                    >Add to cart</div>
+                                </product-bundle>
+                            </div>
+                        </div>
+                      </div>
+                {% endif %}  
+
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">

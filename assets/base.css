@@ -1211,7 +1211,6 @@ button.shopify-payment-button__button--unbranded,
   --shadow-opacity: var(--buttons-shadow-opacity);
   --shadow-visible: var(--buttons-shadow-visible);
   --border-offset: var(--buttons-border-offset); /* reduce radius edge artifacts */
-  --border-opacity: calc(1 - var(--buttons-border-opacity));
   border-radius: var(--buttons-radius-outset);
   position: relative;
 }
@@ -1230,6 +1229,7 @@ button.shopify-payment-button__button--unbranded {
   border: 0 solid;
   border-radius: 10px;
   color: white;
+  --border-offset: none;
 }
 @media screen and (max-width: 749px)  {
   .wallet-button-fade-in .shopify-payment-button__button--unbranded {
@@ -1912,12 +1912,12 @@ input[type='checkbox'] {
 .quantity {
   color: rgba(var(--color-foreground));
   position: relative;
-  width: 11rem;
+  width: 12rem;
   display: flex;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid #dbd1d0;
-  min-height: calc((var(--inputs-border-width)* 2) + 4.5rem);
+  height: 35px;
 }
 
 .quantity:after {
@@ -3541,3 +3541,31 @@ details-disclosure > details {
   }
 }
 
+/* Progress bar styling */
+
+.progress-bar {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%
+}
+.progress-bar--container {
+  width: 100%
+}
+.progress-bar--progress {
+  border: .5px solid #8d5d48;
+  width: 100%;
+}
+.progress-bar--money {
+  font-size: 13px;
+  margin:0;
+  padding: 0;
+  padding-bottom: 5px;
+  letter-spacing: 0;
+}
+.in-stock-bar {
+  display: flex;
+  height: 5px;
+  background-color: #8d5d48;
+}
