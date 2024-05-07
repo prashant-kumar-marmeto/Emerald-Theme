@@ -497,6 +497,8 @@
                     <div class="pincode-message text-body is-hidden" name="pincode-message"></div>
                 </pincode-checker>
                 <!-- PINCODE CHECKER END -->
+                
+                <!-- Custom Add to cart -->
               
 
               {%- when 'buy_buttons' -%}
@@ -538,7 +540,7 @@
                         </div>
                       </div>
                 {% endif %}  
-
+              
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -849,6 +851,13 @@
     </script>
   </div>
 </section>
+
+<script>
+  let quantityInput = document.querySelector('.quantity__input');
+  let quantityDisplay = document.getElementById('quantity_value');
+  
+  quantityDisplay.textContent = quantityInput.value;
+</script>
 
 {% schema %}
 {

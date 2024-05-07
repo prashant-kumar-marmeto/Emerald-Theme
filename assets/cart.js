@@ -122,6 +122,8 @@ class CartItems extends HTMLElement {
         const quantityElement =
           document.getElementById(`Quantity-${line}`) || document.getElementById(`Drawer-quantity-${line}`);
         const items = document.querySelectorAll('.cart-item');
+        
+        
 
         if (parsedState.errors) {
           quantityElement.value = quantityElement.getAttribute('value');

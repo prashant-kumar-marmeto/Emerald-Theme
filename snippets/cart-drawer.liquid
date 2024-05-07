@@ -76,10 +76,10 @@
 
       {% comment %} Progress bar {% endcomment %}
       <div class="progress-bar">
-        <p class="progress-bar--money"> Spend {{ 50000 | minus: cart.total_price | money }} more to get FREE shipping</p>
+        <p class="progress-bar--money"> {% if cart.total_price < 50000 %} Spend {{ 50000 | minus: cart.total_price | money }} more to get FREE shipping{% else %} You are eligibal for FREE shipping {% endif %}</p>
         <div class="progress-bar--container" id="progress-bar">
             <div class="progress-bar--progress">
-              <span class="in-stock-bar" style="width: {{ widthpercent }}%;">
+              <span class="in-stock-bar"  style="width:{% if widthpercent < 100 %}{{ widthpercent }}{% else %}100{% endif %}%;">
               </span>
               <span class="not-in-stock-bar"></span>
             </div>

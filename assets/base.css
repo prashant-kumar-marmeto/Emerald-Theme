@@ -612,6 +612,14 @@ details > * {
 .customer a {
   color: rgba(var(--color-link), var(--alpha-link));
 }
+.underlined-link-custom {
+  text-decoration: none;
+  color: #8d5d48;
+  display: flex;
+}
+.underlined-link-custom:hover {
+  color: #553b3d;
+}
 
 .inline-richtext a,
 .rte.inline-richtext a {
@@ -3569,3 +3577,43 @@ details-disclosure > details {
   height: 5px;
   background-color: #8d5d48;
 }
+
+
+/* Arrow svg */
+
+
+.icon-wrap {
+  margin-left: 0.8rem;
+  white-space: nowrap;
+}
+.custom-static-banner--arrow-container {
+    position: relative;
+    width: 10px;
+    height: 20px;
+    overflow: hidden;
+  }
+  .custom-static-banner--arrow-forward, .custom-static-banner--arrow-behind {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .custom-static-banner--arrow-behind {
+    transform: translateX(-100%);
+    z-index: -1;
+  }
+  @keyframes moveForward {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes moveBackward {
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  .custom-static-banner--arrow-container:hover .custom-static-banner--arrow-forward {
+    animation: moveForward 0.3s ease-in-out forwards;
+  }
+  .custom-static-banner--arrow-container:hover .custom-static-banner--arrow-behind {
+    animation: moveBackward 0.3s ease-in-out forwards;
+  }

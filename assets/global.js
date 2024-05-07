@@ -183,11 +183,11 @@ class QuantityInput extends HTMLElement {
   onButtonClick(event) {
     event.preventDefault();
     const previousValue = this.input.value;
-
+    
     event.target.name === 'plus' ? this.input.stepUp() : this.input.stepDown();
     if (previousValue !== this.input.value) this.input.dispatchEvent(this.changeEvent);
   }
-
+  
   validateQtyRules() {
     const value = parseInt(this.input.value);
     if (this.input.min) {
@@ -1125,8 +1125,14 @@ class VariantSelects extends HTMLElement {
         const couponContainer = document.getElementById('coupon_container')
         const newCouponContainer = html.getElementById("coupon_container")
         if (newCouponContainer && couponContainer) couponContainer.innerHTML = newCouponContainer.innerHTML
+
+        // custom Add to cart button 
         
-      
+        // const oldAddToCArt = document.getElementById('ProductSubmitButton-123434098342')
+        // const newAddToCart = html.getElementById('ProductSubmitButton-123434098342')
+        // if (html.getElementById('ProductSubmitButton-123434098342')) {
+        //   oldAddToCArt.innerHTML = newAddToCart.innerHTML
+        // }
         
         const destination = document.getElementById(`price-${this.dataset.section}`);
         const source = html.getElementById(
@@ -1193,6 +1199,15 @@ class VariantSelects extends HTMLElement {
             variant: this.currentVariant,
           },
         });
+        const cardPriceSource = html.querySelector("#cardPrice");
+        const cardPriceDestination = document.querySelector("#cardPrice");
+
+        if(cardPriceSource && cardPriceDestination){
+          cardPriceDestination.innerHTML = cardPriceSource.innerHTML;
+        } 
+        const quantityInput = document.getElementById('Quantity-cartButton')
+        const quantityValue = document.getElementById('quantity_value')
+        quantityValue.textContent = quantityInput.value
       });
   }
   

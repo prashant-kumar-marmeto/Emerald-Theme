@@ -16,7 +16,7 @@
           "settings": {
           }
         },
-        "buttons": {
+        "buttons_QQCjhf": {
           "type": "buttons",
           "settings": {
           }
@@ -24,7 +24,7 @@
       },
       "block_order": [
         "subtotal",
-        "buttons"
+        "buttons_QQCjhf"
       ],
       "settings": {
         "color_scheme": "scheme-14bb168b-de7c-4f49-baee-847d6157d927",
