@@ -2,13 +2,22 @@
   "sections": {
     "main": {
       "type": "main-account",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_main_account_8VyMV8": {
+      "type": "custom-main-account",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_main_account_8VyMV8"
   ]
 }

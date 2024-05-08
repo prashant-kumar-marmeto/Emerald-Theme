@@ -95,7 +95,9 @@
         </h2>
         {{ form.errors | default_errors }}
       {%- endif -%}
-
+      <label class="customer--login-label" for="CustomerEmail">
+        {{ 'customer.login_page.email' | t }}
+      </label>
       <div class="field">
         <input
           type="email"
@@ -115,7 +117,11 @@
       </div>
 
       {%- if form.password_needed -%}
+        <label class="customer--login-label" for="CustomerPassword">
+          {{ 'customer.login_page.password' | t }}
+        </label>
         <div class="field">
+          
           <input
             type="password"
             value=""
@@ -135,13 +141,20 @@
         <a href="#recover">
           {{ 'customer.login_page.forgot_password' | t }}
         </a>
+        <div class="customer--terms-and-condition">
+          <label class="container">
+           <input type="checkbox" checked="checked">
+           <span class="checkmark"></span>
+          </label>
+          <span class="customer--terms-checkbox">By Clicking , I am confirming that I have read and agree with the <a href="/policies/terms-of-service">Terms and Conditons</a></span>
+        </div>
       {%- endif -%}
 
-      <button>
+      <button class="signin-button">
         {{ 'customer.login_page.sign_in' | t }}
       </button>
 
-      <a href="{{ routes.account_register_url }}">
+      <a class="customer--create-account" href="{{ routes.account_register_url }}">
         {{ 'customer.login_page.create_account' | t }}
       </a>
     {%- endform -%}
