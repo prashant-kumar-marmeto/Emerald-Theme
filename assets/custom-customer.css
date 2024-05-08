@@ -199,12 +199,14 @@
 .customer--account-section .customer .customer--addresses-list {
     list-style: none;
     padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 .customer--account-section .customer ul .customer--address-container {
     border: 1px solid lightgrey;
     padding: 2rem;
-    margin: 2rem 0;
-    width: 60rem;
+    width: 40rem;
+    margin: 1rem;
     border-radius: 2rem;
     -webkit-border-radius: 2rem;
     -moz-border-radius: 2rem;
