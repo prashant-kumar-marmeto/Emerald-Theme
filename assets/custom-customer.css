@@ -1,0 +1,274 @@
+.customer--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.customer--container .customer__title {
+    font-weight: 600;
+}
+.customer--my-account {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.customer--my-account-tab-switch{
+    width: 30%;
+}
+.customer--tabs {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.customer--tab {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 5rem;
+    padding-left: 20px;
+    background-color: lightgrey;
+    box-sizing: border-box;
+}
+.customer--sign-out svg,
+.customer--tab svg {
+    height: 20px;
+    width: 20px;;
+}
+.customer--sign-out svg {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+.customer--sign-out span,
+.customer--tab span {
+    margin-left: 5px;
+}
+.active {
+    background-color: #3f734f;
+    color: white;
+}
+.customer--my-account-tab-switch .customer--tabs .customer--sign-out {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 5rem;
+    padding-left: 20px;
+    background-color: lightgrey;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.customer--account-section {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: auto;
+}
+.customer--account-section > div {
+    display: none;
+}
+.customer--account-section h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+.customer--greeting a {
+    font-size: 2rem;
+    font-family: inherit;
+    font-weight: bold;
+    color: #005BAA;
+    text-decoration: none;
+}
+.customer--details {
+    border: 1px solid lightgray;
+    width: 100%;
+    padding: 1.5rem 0 0;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+.customer--details hr {
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+}
+
+/* test classes */
+
+.form-row {
+    display: flex;
+    margin-bottom: 10px; /* Adjust spacing between rows */
+  }
+  
+  .form-row label {
+    flex-basis: 20%; /* Adjust label width */
+    font-weight: bold;
+    padding-left: 1.5rem;
+  }
+  
+  .form-row input,
+  .form-row textarea {
+    flex-grow: 1; /* Expand input fields to fill remaining space */
+  }
+  .form-row hr {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    width: 5rem;
+}
+.customer--orders .customer--details {
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+.customer--details th,
+.customer--details td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd; /* Add borders to all cells */
+}
+
+
+
+/* Add borders for rows */
+.customer--details tbody tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Add borders for columns */
+.customer--details th:first-child,
+.customer--details td:first-child {
+    border-left: 1px solid #ddd;
+}
+
+.customer--details th:last-child,
+.customer--details td:last-child {
+    border-right: 1px solid #ddd;
+}
+
+/* Add border radius to table corners */
+.customer--details th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.customer--details th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.customer--details td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.customer--details td:last-child {
+    border-bottom-right-radius: 10px;
+}
+.customer--address .customer .add-address-button {
+    background-color: #263d2d;
+    border-radius: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    padding: 0 2rem;
+    -webkit-border-radius: 2.5rem;
+    -moz-border-radius: 2.5rem;
+    -ms-border-radius: 2.5rem;
+    -o-border-radius: 2.5rem;
+}
+
+.add-address-button svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    padding-right: 10px;
+}
+#AddAddress {
+    display: none;
+}
+.customer--account-section .customer .customer--addresses-list {
+    list-style: none;
+    padding-left: 0;
+}
+.customer--account-section .customer ul .customer--address-container {
+    border: 1px solid lightgrey;
+    padding: 2rem;
+    margin: 2rem 0;
+    width: 60rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+ul .customer--address-container .customer--address-edit-button {
+    background: transparent;
+    color: #3f734f;
+    font-weight: bold;
+} 
+.customer--buttons-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+}
+ul .customer--address-container .customer--address-remove-button {
+    background: transparent;
+    color: black;
+    font-weight: 600;
+}  
+ul .customer--address-container .customer--address-remove-button svg {
+    padding-right: 1rem;
+    height: 2rem;
+    width: 2rem;
+} 
+
+/* #address_form_new .customer--add-address-label {
+    padding: 5rem 0 1rem;
+} */
+.customer--wrapper-inputs {
+    display: flex;
+    width: 100%;
+}
+.customer--left-wrapper {
+    margin-right: 2rem;
+    flex-grow: 1;
+}
+.customer--right-wrapper {
+    margin-left: 2rem;
+    flex-grow: 1;
+}
+form .customer--add-address-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.customer--add-address-buttons .customer--save-button {
+    background-color: #263d2d;
+    border-radius: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    padding: 0 10rem;
+    -webkit-border-radius: 2.5rem;
+    -moz-border-radius: 2.5rem;
+    -ms-border-radius: 2.5rem;
+    -o-border-radius: 2.5rem;
+}
+.customer--add-address-buttons .customer--cancel-button {
+    background: transparent;
+    color: black;
+    font-weight: 600;
+}
