@@ -1,5 +1,10 @@
 {
   "sections": {
+    "custom_breadcrumbs_43iE4M": {
+      "type": "Custom-breadcrumbs",
+      "settings": {
+      }
+    },
     "cart-items": {
       "type": "main-cart-items",
       "settings": {
@@ -34,6 +39,7 @@
     }
   },
   "order": [
+    "custom_breadcrumbs_43iE4M",
     "cart-items",
     "cart-footer"
   ]
