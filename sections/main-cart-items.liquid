@@ -28,7 +28,7 @@
 
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 
-<cart-items class="gradient color-{{ section.settings.color_scheme }} isolate{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
+<cart-items data-id="{{ section.id }}" class="gradient color-{{ section.settings.color_scheme }} isolate{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
   <div class="page-width ">
     
       <div class="title-wrapper-with-link">
@@ -519,6 +519,25 @@
       </div>
   </div>
 </cart-items>
+
+<script>
+  fetch(`/cart?section_id=${document.querySelector('[data-id]').dataset.id}`)
+  .then(response => response.text())
+  .then(htmlString => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlString, 'text/html');
+    let newCartFooter = doc.getElementById('main-cart-footer')
+    let oldCartFooter = document.getElementById('main-cart-footer') 
+    console.log(newCartFooter)
+    console.log(oldCartFooter)
+    if (doc && oldCartFooter) oldCartFooter.innerHTML = newCartFooter.innerHTML
+  
+  })
+  .catch(error => {
+    console.error('Error fetching or parsing the HTML:', error);
+  });
+</script>
+ 
 
 {% schema %}
 {
