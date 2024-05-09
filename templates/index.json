@@ -711,7 +711,7 @@
     "custom_liquid_NrDHxh": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<img src=\"{{ 'Shop_nav.avif' | file_img_url }}\">",
+        "custom_liquid": "{{ 'Shop_nav.avif' | file_img_url }}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
