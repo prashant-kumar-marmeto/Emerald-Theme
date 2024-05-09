@@ -260,10 +260,10 @@
                               {%- endif -%}
                             </li>
                           {%- endfor -%}
-                          {% for block in blocks.settings %}
-                            {{ block.megamenu_name }}
+                          {% for block in section.blocks %}
+                            {{ block.settings.megamenu_name }}
                             {% if link.title == block.megamenu_name %}
-                              {% render 'responsive-picture', desktopImage: block.megamenu_image %}
+                              {% render 'responsive-picture', desktopImage: block.settings.megamenu_image %}
                             {% endif %}
                           {% endfor %}
                         </ul>
