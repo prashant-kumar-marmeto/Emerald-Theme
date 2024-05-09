@@ -62,6 +62,18 @@
     },
     "custom_header_jPpNnJ": {
       "type": "custom-header",
+      "blocks": {
+        "image_qQMKKx": {
+          "type": "Image",
+          "settings": {
+            "megamenu_name": "Shop",
+            "megamenu_image": "shopify:\/\/shop_images\/img36_690x690_crop_center_83fc241d-6861-4c99-af7c-c7f35359f10a.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_qQMKKx"
+      ],
       "settings": {
         "logo_position": "top-center",
         "menu": "main-menu",
