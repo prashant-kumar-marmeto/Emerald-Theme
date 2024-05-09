@@ -35,7 +35,6 @@
                   role="list"
                 >
                   {%- for childlink in link.links -%}
-                  
                     <li>
                       <a
                         id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
@@ -66,10 +65,12 @@
                         </ul>
                       {%- endif -%}
                     </li>
+                    {% if link.title == block.settings.megamenu_name %}
+                      {% render 'responsive-picture',
+                        desktopImage: 'https://cdn.shopify.com/s/files/1/0696/6719/3068/files/img36_690x690_crop_center_83fc241d-6861-4c99-af7c-c7f35359f10a.png?v=17145643091'
+                      %}
+                    {% endif %}
                   {%- endfor -%}
-                   {% if link.title == block.settings.megamenu_name %}
-                    {% render 'responsive-picture', desktopImage:block.settings.megamenu_image %}
-                   {% endif %}
                 </ul>
               </div>
             </details>
