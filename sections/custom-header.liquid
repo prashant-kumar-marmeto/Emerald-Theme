@@ -261,8 +261,9 @@
                             </li>
                           {%- endfor -%}
                           {% for block in blocks.settings %}
+                            {{ block.megamenu_name }}
                             {% if link.title == block.megamenu_name %}
-                              {{ block.megamenu_name }}
+                              
                               {% render 'responsive-picture', desktopImage: block.megamenu_image %}
                             {% endif %}
                           {% endfor %}
