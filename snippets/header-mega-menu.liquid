@@ -67,8 +67,8 @@
                       {%- endif -%}
                     </li>
                   {%- endfor -%}
-                   {% if link.title == 'Shop' %}
-                <img src="https://mokshjewellery.com/cdn/shop/files/jodhpur_nav.png?v=2774149031710409038" />
+                   {% if link.title == block.settings.megamenu_name %}
+                    {% render 'responsive-picture', desktopImage:block.settings.megamenu_image %}
                    {% endif %}
                 </ul>
               </div>
