@@ -148,8 +148,9 @@
   .then(htmlString => {
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlString, 'text/html');
-    const oldCartFooter = document.getElementById('main-cart-footer') 
-    console.log(doc)
+    let newCartFooter = doc.getElementById('main-cart-footer')
+    let oldCartFooter = document.getElementById('main-cart-footer') 
+    console.log(newCartFooter)
     console.log(oldCartFooter)
     if (doc && oldCartFooter) oldCartFooter.innerHTML = doc.innerHTML
 
