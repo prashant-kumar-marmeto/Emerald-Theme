@@ -142,6 +142,19 @@
       document.querySelector('#cart').submit();
     });
   });
+
+  fetch(`/cart?section_id=${document.querySelector('[data-id]').dataset.id}`)
+  .then(response => response.text())
+  .then(htmlString => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlString, 'text/html');
+    const oldCartFooter = document.getElementById('main-cart-footer') 
+    if (doc && oldCartFooter) oldCartFooter.innerHTML = doc.innerHTML
+
+  })
+  .catch(error => {
+    console.error('Error fetching or parsing the HTML:', error);
+  });
 </script>
 
 {% schema %}
