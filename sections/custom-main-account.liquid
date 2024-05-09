@@ -59,7 +59,7 @@
             <div class="form-row">
               <label for="address">Address:</label>
               <hr>
-              {{ customer.default_address  }}
+              {{ customer.default_address | format_address  }}
             </div>
           </div>
         </div>
