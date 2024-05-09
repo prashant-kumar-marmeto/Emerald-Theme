@@ -262,7 +262,7 @@
                           {%- endfor -%}
                           {% for block in section.blocks %}
                             {{ block.settings.megamenu_name }}
-                            {% if link.title == block.megamenu_name %}
+                            {% if link.title == block.settings.megamenu_name %}
                               {% render 'responsive-picture', desktopImage: block.settings.megamenu_image %}
                             {% endif %}
                           {% endfor %}
