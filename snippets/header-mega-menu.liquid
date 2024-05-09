@@ -66,14 +66,14 @@
                       {%- endif -%}
                     </li>
                   {%- endfor -%}
+                  {% if link.title == 'Shop' %}
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0696/6719/3068/files/img36_690x690_crop_center_83fc241d-6861-4c99-af7c-c7f35359f10a.png?v=17145643091"
+                      height="200"
+                      width="200"
+                    >
+                  {% endif %}
                 </ul>
-                {% if link.title == 'Shop' %}
-                  <img
-                    src="https://cdn.shopify.com/s/files/1/0696/6719/3068/files/img36_690x690_crop_center_83fc241d-6861-4c99-af7c-c7f35359f10a.png?v=17145643091"
-                    height="200"
-                    width="200"
-                  >
-                {% endif %}
               </div>
             </details>
           </header-menu>
