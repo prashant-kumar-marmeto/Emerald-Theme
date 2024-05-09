@@ -143,7 +143,7 @@
     });
   });
 
-  fetch(`/cart?section_id=${document.querySelector('main-cart-footer')}`)
+  fetch(`/cart?section_id=${document.querySelector('[data-id]').dataset.id}`)
   .then(response => response.text())
   .then(htmlString => {
     const parser = new DOMParser();
@@ -152,7 +152,7 @@
     let oldCartFooter = document.getElementById('main-cart-footer') 
     console.log(newCartFooter)
     console.log(oldCartFooter)
-    if (doc && oldCartFooter) oldCartFooter.innerHTML = newCartFooter.innerHTML
+    if (doc && oldCartFooter) oldCartFooter.innerHTML = doc.innerHTML
 
   })
   .catch(error => {
