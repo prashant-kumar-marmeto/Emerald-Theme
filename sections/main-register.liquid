@@ -50,9 +50,7 @@
       </ul>
     {%- endif -%}
     
-    <label class="customer--login-label" for="RegisterForm-FirstName">
-      {{ 'customer.register.first_name' | t }}
-    </label>
+    
     <label class="customer--add-address-label" for="AddressCountry_{{ form.id }}">{{ 'customer.addresses.country' | t }}</label>
     <div class="select">
       <select name="customer[tags]" id="AccountType" class="input-full" required="">
@@ -62,6 +60,9 @@
         <option value="Other">Other</option>
       </select>
     </div>
+    <label class="customer--login-label" for="RegisterForm-FirstName">
+      {{ 'customer.register.first_name' | t }}
+    </label>
     <div class="field">
       <input
         type="text"
