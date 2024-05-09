@@ -50,7 +50,7 @@
 .customer--tab span {
     margin-left: 5px;
 }
-.active {
+.active-tab {
     background-color: #3f734f;
     color: white;
 }

@@ -20,7 +20,7 @@
     <div class="customer--my-account">
       <div class="customer--my-account-tab-switch">
         <ul class="customer--tabs">
-          <li class="customer--tab active" data-tab="profile">
+          <li class="customer--tab active-tab" data-tab="profile">
             {% render 'profile' %}
             <span>Profile</span>
           </li>
@@ -593,7 +593,7 @@
             </div>
           {%- endpaginate -%}
         </div>
-    </div>
+      </div>
     </div>
   </div>
 </div>
@@ -605,11 +605,11 @@
     
     tabs.forEach(tab => {
         tab.addEventListener('click', function() {
-            const activeTab = document.querySelector('.customer--tab.active');
+            const activeTab = document.querySelector('.customer--tab.active-tab');
             const clickedSection = document.querySelector(`#${this.dataset.tab}`);
             
-            activeTab.classList.remove('active');
-            this.classList.add('active');
+            activeTab.classList.remove('active-tab');
+            this.classList.add('active-tab');
             
             sections.forEach(section => {
                 section.style.display = 'none';
@@ -620,7 +620,7 @@
     });
     
     // Show only the initially selected section
-    const initialTab = document.querySelector('.customer--tab.active');
+    const initialTab = document.querySelector('.customer--tab.active-tab');
     const initialSection = document.querySelector(`#${initialTab.dataset.tab}`);
     initialSection.style.display = 'block';
   });
