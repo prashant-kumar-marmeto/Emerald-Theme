@@ -1430,13 +1430,10 @@ class ProductBundle extends HTMLElement {
       this.sectionId = this.dataset.sectionId
   }
   bundleAddtocart() {
-      console.log(this.querySelectorAll('.bundle-checkbox'));
       this.products = []
       this.querySelectorAll('.bundle-checkbox').forEach((element) => {
           if (element.checked == true) {
-              console.log(element);
               this.products.push(element.value)
-              console.log(this.products);
           }
       })
       const handleClick = () => {
