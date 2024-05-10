@@ -454,52 +454,60 @@
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
-                 
-                <!-- offer section start --> 
-                
-                {% when 'variant-offer' %}
-                <div id="coupon_container">  
-                  {%  if product.selected_or_first_available_variant.metafields.custom.offer_2020 != blank %}
-                  <variant-offer  class="coupon">
-                    <div class="left">
-                      <div id="coupon_code" class="text" data-code="{{ product.selected_or_first_available_variant.metafields.custom.offer_2020 }}">
-                        {{ product.selected_or_first_available_variant.metafields.custom.offer_2020 }}
+
+                <!-- offer section start -->
+
+              {% when 'variant-offer' %}
+                <div id="coupon_container">
+                  {% if product.selected_or_first_available_variant.metafields.custom.offer_2020 != blank %}
+                    <variant-offer class="coupon">
+                      <div class="left">
+                        <div
+                          id="coupon_code"
+                          class="text"
+                          data-code="{{ product.selected_or_first_available_variant.metafields.custom.offer_2020 }}"
+                        >
+                          {{ product.selected_or_first_available_variant.metafields.custom.offer_2020 }}
+                        </div>
                       </div>
-                    </div>
-                    <div class="center">
-                      <div>
-                        <h2 class="offer-code">Get offers</h2>
-                        <h3>Coupon</h3>
-                        <button id="copy-coupon" class="copy">Copy</button>
+                      <div class="center">
+                        <div>
+                          <h2 class="offer-code">Get offers</h2>
+                          <h3>Coupon</h3>
+                          <button id="copy-coupon" class="copy">Copy</button>
+                        </div>
                       </div>
-                    </div>
-  
-                    <div class="variant-offer-right">
-                      <div id="variant__id">{{ product.selected_or_first_available_variant.id }}</div>
-                    </div>
-                  </variant-offer>
+
+                      <div class="variant-offer-right">
+                        <div id="variant__id">{{ product.selected_or_first_available_variant.id }}</div>
+                      </div>
+                    </variant-offer>
                   {% endif %}
-                </div>  
-  
-                <!-- offer section end -->  
-                
+                </div>
+
+                <!-- offer section end -->
+
                 <!-- PINCODE CHECKER START -->
-                {% when 'pincode-checker'  %}
-                  <pincode-checker>
-                    <div class="pincode-checker">
-                      <label class="label" for="PincodeInput">Enter Pincode</label>
-                      <div class="pincode-checker__field">
-                        <input class="pinInput" id="PincodeInput" type="text" name="pincode-input" placeholder="Enter pincode">
-                        <button type="button" class="checkPin button-pincode" name="pincode-submit">Check</button>
-                      </div>
-                      
+              {% when 'pincode-checker' %}
+                <pincode-checker>
+                  <div class="pincode-checker">
+                    <label class="label" for="PincodeInput">Enter Pincode</label>
+                    <div class="pincode-checker__field">
+                      <input
+                        class="pinInput"
+                        id="PincodeInput"
+                        type="text"
+                        name="pincode-input"
+                        placeholder="Enter pincode"
+                      >
+                      <button type="button" class="checkPin button-pincode" name="pincode-submit">Check</button>
                     </div>
-                    <div class="pincode-message text-body is-hidden" name="pincode-message"></div>
+                  </div>
+                  <div class="pincode-message text-body is-hidden" name="pincode-message"></div>
                 </pincode-checker>
                 <!-- PINCODE CHECKER END -->
-                
+
                 <!-- Custom Add to cart -->
-              
 
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
@@ -509,38 +517,41 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
-              
-                
-                  {% if product.metafields.custom.bundles.value!=blank %}
-                      <div class="product-bundle-wrapper">
-                        <div class="product-bundle">
-                            <h2 class="product-bundle__heading">{{ section.settings.bundle_heading }}</h2>
-                            <div class="product-bundle-container">
-                                <product-bundle class="product-bundle__grid " data-section-id="{{ section.id }}">
-                                    {% for product in product.metafields.custom.bundles.value %}
-                                        <input class="bundle-checkbox" data-product-id="{{ product.selected_or_first_available_variant.id }}"
-                                        value="{{  product.selected_or_first_available_variant.id }}"
-                                        type="checkbox"
-                                        >
-                                        <div class="product-bundle__grid-item product-bundles">
-                                            {% render 'custom-web-product',
-                                            product: product,
-                                            section_id: section.id
-                                            %}
-                                        </div>
-                                    {% endfor %}
-                                    <div id="bundle__atc"
-                                    class="button custom-atc__hover-button"
-                                    data-product-id="{{ product.id }}"
-                                    data-variant-id="{{ product.selected_variant.id }}"
-                                    data-section-id="{{ section.id }}"
-                                    >Add to cart</div>
-                                </product-bundle>
+
+                <!-- When Bundle -->
+
+                {% if product.metafields.custom.bundles.value != blank %}
+                  <div class="product-bundle-wrapper">
+                    <div class="product-bundle">
+                      <h2 class="product-bundle__heading">{{ section.settings.bundle_heading }}</h2>
+                      <div class="product-bundle-container">
+                        <product-bundle class="product-bundle__grid " data-section-id="{{ section.id }}">
+                          {% for product in product.metafields.custom.bundles.value %}
+                            <input
+                              class="bundle-checkbox"
+                              data-product-id="{{ product.selected_or_first_available_variant.id }}"
+                              value="{{  product.selected_or_first_available_variant.id }}"
+                              type="checkbox"
+                            >
+                            <div class="product-bundle__grid-item product-bundles">
+                              {% render 'custom-web-product', product: product, section_id: section.id %}
                             </div>
-                        </div>
+                          {% endfor %}
+                          <div
+                            id="bundle__atc"
+                            class="button custom-atc__hover-button"
+                            data-product-id="{{ product.id }}"
+                            data-variant-id="{{ product.selected_variant.id }}"
+                            data-section-id="{{ section.id }}"
+                          >
+                            Add to cart
+                          </div>
+                        </product-bundle>
                       </div>
-                {% endif %}  
-              
+                    </div>
+                  </div>
+                {% endif %}
+
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -855,7 +866,7 @@
 <script>
   let quantityInput = document.querySelector('.quantity__input');
   let quantityDisplay = document.getElementById('quantity_value');
-  
+
   quantityDisplay.textContent = quantityInput.value;
 </script>
 
