@@ -1232,7 +1232,7 @@ button.shopify-payment-button__button--unbranded {
 
 }
 .wallet-button-fade-in .shopify-payment-button__button--unbranded {
-  width: 25rem;
+  width: 100%;
   background: #263d2d;
   border: 0 solid;
   border-radius: 10px;
