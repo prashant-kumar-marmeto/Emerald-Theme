@@ -25,14 +25,9 @@ display: none;}
   position: relative;
 }
 .custom-announcement--splide__arrow--next {
-  position: absolute;
-  right: 0;
-  top: 50%;
 }
 .custom-announcement--splide__arrow--prev {
   transform: rotate(180deg);
-  position: absolute;
-  left: 0;
 }
 
 
