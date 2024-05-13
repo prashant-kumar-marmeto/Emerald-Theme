@@ -33,7 +33,7 @@
         "slide_KpmWRt"
       ],
       "settings": {
-        "auto_play": false,
+        "auto_play": true,
         "show_pagination": false,
         "show_arrows": true,
         "auto_play_duration": 5,
