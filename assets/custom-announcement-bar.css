@@ -18,3 +18,5 @@
 .custom-announcement{
     padding: 5px;
 }
+.custom-announcement .splide__arrows {
+display: none;}
