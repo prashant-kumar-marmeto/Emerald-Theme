@@ -19,7 +19,8 @@
     padding: 5px;
 }
 .custom-announcement .splide__arrows {
-display: none;}
+  display: none;
+}
 
 .custom-announcement--splide__arrows {
   position: relative;
