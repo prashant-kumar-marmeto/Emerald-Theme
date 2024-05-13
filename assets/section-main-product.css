@@ -380,6 +380,7 @@ a.product__text {
 .product-form__buttons {
   max-width: 100%;
   display: flex;
+  gap: 15px;
   justify-content: space-around;
 }
 
