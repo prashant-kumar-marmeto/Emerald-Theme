@@ -27,6 +27,7 @@
 }
 .custom-announcement--splide__arrow--next {
   right: 0;
+  top: 1.3rem;
 }
 .custom-announcement--splide__arrow--prev {
   transform: rotate(180deg);
