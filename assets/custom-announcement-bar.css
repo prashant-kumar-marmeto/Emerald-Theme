@@ -24,3 +24,14 @@ display: none;}
 .custom-announcement--splide__arrows {
   position: relative;
 }
+.custom-announcement--splide__arrow--next {
+  
+}
+.custom-announcement--splide__arrow--prev {
+  transform: rotate(180deg);
+}
+
+
+
+
+
