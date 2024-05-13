@@ -20,3 +20,7 @@
 }
 .custom-announcement .splide__arrows {
 display: none;}
+
+.custom-announcement--splide__arrows {
+  position: relative;
+}
