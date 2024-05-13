@@ -194,6 +194,9 @@
     width: auto;
   flex-grow: 1;
 }
+.shopify-payment-button {
+  flex-grow: 1;
+}
 
 .no-js .product-form__submit.button--secondary {
   --color-button: inherit;
