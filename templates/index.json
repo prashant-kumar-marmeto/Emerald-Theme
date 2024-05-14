@@ -70,11 +70,23 @@
             "collection_name": "Necklaces",
             "collection": "naclaces"
           }
+        },
+        "product_collections_p6cqWf": {
+          "type": "product_collections",
+          "settings": {
+            "imageHeading": "SALE OFF",
+            "imageDescription": "<p>Advertise a promotion or a sale<\/p>",
+            "imageButton": "Shop Sale",
+            "url": "",
+            "collection_name": "Collections Name",
+            "collection": "bracelets"
+          }
         }
       },
       "block_order": [
         "product_collections_faDDPR",
-        "product_collections_tDEUjL"
+        "product_collections_tDEUjL",
+        "product_collections_p6cqWf"
       ],
       "settings": {
         "heading": "NEW ARRIVALS",
