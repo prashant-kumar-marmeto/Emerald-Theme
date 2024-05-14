@@ -22,7 +22,7 @@
       <div class="custom-tab-collections_tabs custom-border-radius">
         {% for block in section.blocks %}
           <span class="custom-tab-collections_collection-name {% if forloop.first %}tab__active{% endif %}">
-            {{- block.settings.collection_name -}}
+            {{- block.settings.collection.title -}}
           </span>
         {% endfor %}
       </div>
