@@ -1,6 +1,280 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{{ 'custom-product-slider-tabs.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .custom-slideshow--{{ section.id }}{
+      padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | divided_by: 2  }}px;
   }
+  /* mobile first approach */
+  @media screen and (min-width: 749px){
+      .custom-slideshow--{{ section.id }}{
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+  }
+{% endstyle %}
+
+<div class="products-section custom-tab-collections page-width custom-slideshow--{{ section.id }}">
+  <div class="custom-tab-collections_header-wrapper">
+    <div class="h1 custom-tab-collections__heading">{{ section.settings.heading }}</div>
+    <div class="custom-tab-collections__para-tab">
+      <div class="custom-tab-collections__para">{{ section.settings.para }}</div>
+      <div class="custom-tab-collections_tabs custom-border-radius">
+        {% for block in section.blocks %}
+          <span class="custom-tab-collections_collection-name {% if forloop.first %}tab__active{% endif %}">
+            {{- block.settings.collection_name -}}
+          </span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% for block in section.blocks %}
+    <div class="tab-slider {% unless forloop.first %}hidden{% endunless %}">
+      <div id="slider" class="container">
+        <div class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide custom-border-radius">
+                <div class="static-product-slider">
+                  <div class="static-image">
+                    <img
+                      src="{{ block.settings.image_select | img_url: 'medium' }}"
+                      height=""
+                      width=""
+                      alt="{{ block.settings.imageHeading }}"
+                    >
+                  </div>
+                  <div class="static-content">
+                    <h2>{{ block.settings.imageHeading }}</h2>
+                    <p>{{ block.settings.imageDescription }}</p>
+                    <a href="">
+                      {{- block.settings.imageButton }}
+                      <span>
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 1L5 5L1 9" stroke="var(--color-accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              {% for product in block.settings.collection.products %}
+                <li class="splide__slide custom-border-radius">
+                  <a href="{{ product.url }}" class="product-link">
+                    <div class="product-slide">
+                      <div class="product-images">
+                        <img
+                          src="{{ product.featured_image.src | img_url: 'medium' }}"
+                          height=""
+                          width=""
+                          alt="{{ product.title }}"
+                          class="first-image"
+                        >
+                        {% if product.images.size > 1 %}
+                          <img
+                            src="{{ product.images[1].src | img_url: 'medium' }}"
+                            height=""
+                            width=""
+                            alt="{{ product.title }}"
+                            class="second-image"
+                          >
+                        {% endif %}
+                      </div>
+                      <div class="quick-view">
+                        <a href="#">Quick View</a>
+                      </div>
+                    </div>
+                    <div class="product-slider-content">
+                      <span>{{ product.type }}</span>
+                      <h3>{{ product.title }}</h3>
+                      <p>{{ product.price | money }}</p>
+                      <div>Available in {{ product.variants.size }} colors</div>
+                    </div>
+                  </a>
+                </li>
+              {% else %}
+                {% for i in (1..4) %}
+                  <li class="splide__slide custom-border-radius">
+                    {{ 'product-' | append: i | placeholder_svg_tag }}
+                  </li>
+                {% endfor %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var splideInstances = [];
+
+    // Initialize Splide instances for each tab slider
+    var sliders = document.querySelectorAll('.tab-slider');
+    sliders.forEach(function (slider) {
+      var splideInstance = new Splide(slider.querySelector('.splide'), {
+        type: 'slide',
+        perPage: 4,
+        perMove: 1,
+        autoplay: false,
+        interval: 3000,
+        gap: 20,
+        pagination: false,
+        breakpoints: {
+          768: {
+            perPage: 2
+          },
+          480: {
+            perPage: 1
+          }
+        }
+      }).mount();
+
+      splideInstances.push(splideInstance);
+    });
+
+    let leftArr = document.querySelector(".splide__arrow--prev");
+    let rightArr = document.querySelector(".splide__arrow--next")
+    leftArr.innerHTML = `
+    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.5 6L1.5 6" stroke="#3b5342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M6 10.5L1.5 6L6 1.5" stroke="#3b5342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    `
+    rightArr.innerHTML = `
+      <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.5 6H12.5" stroke="#3b5342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M8 1.5L12.5 6L8 10.5" stroke="#3b5342" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    `
+
+    // Function to show the correct slider when a tab is clicked
+    function showSlider(index) {
+      sliders.forEach(function (slider, sliderIndex) {
+        if (sliderIndex === index) {
+          slider.classList.remove('hidden');
+          splideInstances[sliderIndex].refresh(); // Refresh Splide instance
+        } else {
+          slider.classList.add('hidden');
+        }
+      });
+    }
+
+    // Add event listeners to the tab names
+    var tabNames = document.querySelectorAll('.custom-tab-collections_collection-name');
+    tabNames.forEach(function (tab, index) {
+      tab.addEventListener('click', function () {
+        tabNames.forEach(function (tab) {
+          tab.classList.remove('tab__active');
+        });
+        this.classList.add('tab__active');
+        showSlider(index);
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+    "name": "Collections with links",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "placeholder": "Heading",
+          "default": "NEW ARRIVALS"
+        },
+        {
+          "type": "text",
+          "id": "para",
+          "label": "Paragraph",
+          "placeholder": "Paragraph",
+          "default": "Beyond mere adornment, these pieces are made to make you feel good."
+        },
+        {
+          "type": "header",
+          "content": "Section padding"
+      },
+      {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "unit": "px",
+          "label": "Padding Top",
+          "default": 0
+      },
+      {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "unit": "px",
+          "label": "Padding Bottom",
+          "default": 0
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Slider",
+        "type": "product_collections",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image_select",
+            "label": "Select Image",
+            "info": "Select a Image"
+        },
+        {
+            "type": "text",
+            "id": "imageHeading",
+            "label": "Image Heading",
+            "default": "SALE OFF"
+        },
+        {
+            "type": "richtext",
+            "id": "imageDescription",
+            "label": "Enter Description",
+            "default": "<p>Advertise a promotion or a sale</p>"
+        },
+        {
+            "type": "text",
+            "id": "imageButton",
+            "label": "Image Button",
+            "default": "Shop Sale"
+        },
+        {
+            "type": "url",
+            "id": "url",
+            "label": "Enter the url"
+        },
+          {
+            "type": "text",
+            "id": "collection_name",
+            "label": "Collection Name",
+            "default": "Collections Name"
+          },
+          {
+              "type": "collection",
+              "id": "collection",
+              "label": "Collection"
+          }
+        ]
+    }
+    ],
+    "presets": [
+        {
+          "name": "Collections with links"
+        }
+      ]
+}
 {% endschema %}
