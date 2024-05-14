@@ -1,17 +1,17 @@
 {{ 'custom-product-slider-tabs.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-    .custom-slideshow--{{ section.id }}{
-        padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
-        padding-bottom: {{ section.settings.padding_bottom | divided_by: 2  }}px;
-    }
-    /* mobile first approach */
-    @media screen and (min-width: 749px){
-        .custom-slideshow--{{ section.id }}{
-            padding-top: {{ section.settings.padding_top }}px;
-            padding-bottom: {{ section.settings.padding_bottom }}px;
-        }
-    }
+  .custom-slideshow--{{ section.id }}{
+      padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | divided_by: 2  }}px;
+  }
+  /* mobile first approach */
+  @media screen and (min-width: 749px){
+      .custom-slideshow--{{ section.id }}{
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+  }
 {% endstyle %}
 
 <div class="products-section custom-tab-collections page-width custom-slideshow--{{ section.id }}">
@@ -21,34 +21,41 @@
       <div class="custom-tab-collections__para">{{ section.settings.para }}</div>
       <div class="custom-tab-collections_tabs custom-border-radius">
         {% for block in section.blocks %}
-            <span class="custom-tab-collections_collection-name {% if forloop.first %}tab__active{% endif %}">{{ block.settings.collection_name }}</span>
+          <span class="custom-tab-collections_collection-name {% if forloop.first %}tab__active{% endif %}">
+            {{- collection.title -}}
+          </span>
         {% endfor %}
       </div>
     </div>
- </div>
+  </div>
 
- {% for block in section.blocks %}
-  <div class="tab-slider {% unless forloop.first %}hidden{% endunless %}">
-    
-    <div id="slider" class="container">
-      <div class="splide">
+  {% for block in section.blocks %}
+    <div class="tab-slider {% unless forloop.first %}hidden{% endunless %}">
+      <div id="slider" class="container">
+        <div class="splide">
           <div class="splide__track">
             <ul class="splide__list">
-
               <li class="splide__slide custom-border-radius">
                 <div class="static-product-slider">
                   <div class="static-image">
-                    <img src="{{ block.settings.image_select | img_url: 'medium' }}" height="" width="" alt="{{ block.settings.imageHeading }}">
+                    <img
+                      src="{{ block.settings.image_select | img_url: 'medium' }}"
+                      height=""
+                      width=""
+                      alt="{{ block.settings.imageHeading }}"
+                    >
                   </div>
                   <div class="static-content">
                     <h2>{{ block.settings.imageHeading }}</h2>
                     <p>{{ block.settings.imageDescription }}</p>
-                    <a href="">{{ block.settings.imageButton }} 
-                    <span>
-                      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1L5 5L1 9" stroke="var(--color-accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <a href="">
+                      {{- block.settings.imageButton }}
+                      <span>
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 1L5 5L1 9" stroke="var(--color-accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
-                    </span> </a>
+                      </span>
+                    </a>
                   </div>
                 </div>
               </li>
@@ -58,15 +65,26 @@
                   <a href="{{ product.url }}" class="product-link">
                     <div class="product-slide">
                       <div class="product-images">
-                        <img src="{{ product.featured_image.src | img_url: 'medium' }}" height="" width="" alt="{{ product.title }}" class="first-image">
+                        <img
+                          src="{{ product.featured_image.src | img_url: 'medium' }}"
+                          height=""
+                          width=""
+                          alt="{{ product.title }}"
+                          class="first-image"
+                        >
                         {% if product.images.size > 1 %}
-                          <img src="{{ product.images[1].src | img_url: 'medium' }}" height="" width="" alt="{{ product.title }}" class="second-image">
+                          <img
+                            src="{{ product.images[1].src | img_url: 'medium' }}"
+                            height=""
+                            width=""
+                            alt="{{ product.title }}"
+                            class="second-image"
+                          >
                         {% endif %}
                       </div>
                       <div class="quick-view">
                         <a href="#">Quick View</a>
                       </div>
-                      
                     </div>
                     <div class="product-slider-content">
                       <span>{{ product.type }}</span>
@@ -75,20 +93,20 @@
                       <div>Available in {{ product.variants.size }} colors</div>
                     </div>
                   </a>
-                  </li>
-             {% else %}
+                </li>
+              {% else %}
                 {% for i in (1..4) %}
-                   <li class="splide__slide custom-border-radius">
-                      {{ 'product-' | append: i | placeholder_svg_tag }}
-                   </li>
+                  <li class="splide__slide custom-border-radius">
+                    {{ 'product-' | append: i | placeholder_svg_tag }}
+                  </li>
                 {% endfor %}
-             {% endfor %}
+              {% endfor %}
             </ul>
           </div>
+        </div>
       </div>
     </div>
-  </div>
- {% endfor %}
+  {% endfor %}
 </div>
 
 <script>
@@ -244,7 +262,7 @@
             "id": "collection_name",
             "label": "Collection Name",
             "default": "Collections Name"
-          },    
+          },
           {
               "type": "collection",
               "id": "collection",
