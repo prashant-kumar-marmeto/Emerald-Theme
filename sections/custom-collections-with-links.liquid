@@ -11,7 +11,21 @@
   }
 {% endstyle %}
 
-<div class="shop-by-concern shop-by-concern--{{ section.id }}"></div>
+<div class="shop-by-concern shop-by-concern--{{ section.id }}">
+  <div class="page-width">
+    <div class="">
+      <carousel-component class="shop-by-concern--collections-list splide">
+        <div class="shop-by-concern--splide--track splide__track">
+          <ul class="shop-by-concern--splide--list splide__list">
+            {% for block in section.blocks %}
+              <li class="shop-by-concern--splide--slide splide__slide"></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </carousel-component>
+    </div>
+  </div>
+</div>
 
 {% schema %}
 {
