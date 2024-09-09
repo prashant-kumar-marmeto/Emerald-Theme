@@ -240,7 +240,7 @@
       },
       "2000394776269087929": {
         "type": "shopify:\/\/apps\/sfx-snow-christmas-effect\/blocks\/app-block\/3f2c0443-facd-4715-9387-dcceca132b78",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "count": 100,
           "count_mobile": 50,
