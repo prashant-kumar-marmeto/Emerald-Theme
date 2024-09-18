@@ -22,7 +22,7 @@
       gtag('js', new Date());
     </script>
     <script>
-      document.querySelector('.popup-button').addEventListener('click', function() {
+      document.querySelector('.marmeto-close-popup').addEventListener('click', function() {
         dataLayer.push({
           'event': 'popupClick',
           'popupType': 'signup',
@@ -30,6 +30,15 @@
         });
       });
     </script>
+    <!-- <script>
+      document.querySelector('.popup-button').addEventListener('click', function() {
+        dataLayer.push({
+          'event': 'popupClick',
+          'popupType': 'signup',
+          'buttonText': 'Get Started'
+        });
+      });
+    </script> -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
