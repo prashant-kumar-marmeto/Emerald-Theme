@@ -11,17 +11,57 @@
   "sections": {
     "16788576269eec43eb": {
       "type": "apps",
+      "blocks": {
+        "byob_build_your_own_bundle_byob_bundle_info_block_VNfBQA": {
+          "type": "shopify://apps/byob-build-your-own-bundle/blocks/byob-bundle-info-block/cbcdb3c1-93e1-4702-8f46-0cad28865e89",
+          "settings": {
+            "show_banner_image": true,
+            "top-layout": "default",
+            "media_size": "full",
+            "image_header_padding": 0,
+            "byob_section_wrapper": true,
+            "align_text": "center",
+            "title_size": "h1",
+            "description_font_size": 15
+          }
+        },
+        "byob_build_your_own_bundle_byob_product_grid_block_PJf9yD": {
+          "type": "shopify://apps/byob-build-your-own-bundle/blocks/byob-product-grid-block/cbcdb3c1-93e1-4702-8f46-0cad28865e89",
+          "settings": {
+            "items_per_row": 4,
+            "items_per_row_mobile": 2,
+            "open_all_tabs": false,
+            "byob_section_wrapper": true,
+            "tab_color": "#d1ecfe",
+            "tab_text_color": "#000",
+            "tick_icon_color": "#008000",
+            "card_background": "#fff",
+            "product_name_color": "#444",
+            "button_color": "#000",
+            "button_text_color": "#fff",
+            "add_a_bounding_box": false,
+            "disable_product_link": true,
+            "enable_quickview": false,
+            "show_product_compare_at_price": false,
+            "show_product_price": true,
+            "show_product_reviews": false,
+            "show_currency_code": false,
+            "show_product_type": false,
+            "show_product_vendor": false,
+            "enable_quantity_input": false
+          }
+        }
+      },
+      "block_order": [
+        "byob_build_your_own_bundle_byob_bundle_info_block_VNfBQA",
+        "byob_build_your_own_bundle_byob_product_grid_block_PJf9yD"
+      ],
       "settings": {
-      }
-    },
-    "byob-empty-state-hint": {
-      "type": "byob-empty-state-hint",
-      "settings": {
+        "include_margins": true
       }
     }
   },
   "order": [
-    "16788576269eec43eb",
-    "byob-empty-state-hint"
+    "16788576269eec43eb"
   ]
 }
