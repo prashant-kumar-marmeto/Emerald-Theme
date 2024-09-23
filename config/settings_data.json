@@ -9,7 +9,7 @@
 */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/logo-2x.png",
+    "logo": "shopify://shop_images/logo-2x.png",
     "logo_width": 150,
     "type_header_font": "itc_stepp_n4",
     "heading_scale": 100,
@@ -107,7 +107,7 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
     "social_facebook_link": "",
     "social_instagram_link": "",
@@ -220,6 +220,20 @@
         ],
         "settings": {
         }
+      },
+      "marmeto-popup": {
+        "type": "marmeto-popup",
+        "settings": {
+          "enable_popup": true,
+          "show_heading": true,
+          "show_button": true,
+          "button_label": "Start Shopping",
+          "button_color": "#684A19",
+          "heading": "Hello There!",
+          "redirection_link": "",
+          "close_statement": "No Thanks, you can continue your shopping.",
+          "background_color": "#FFFFFF"
+        }
       }
     },
     "content_for_index": [
@@ -227,21 +241,28 @@
     ],
     "blocks": {
       "4644077978495408606": {
-        "type": "shopify:\/\/apps\/appstle-memberships\/blocks\/appstle-membership-helper\/76528d70-5fbe-48f8-8e19-590d109aa2b7",
+        "type": "shopify://apps/appstle-memberships/blocks/appstle-membership-helper/76528d70-5fbe-48f8-8e19-590d109aa2b7",
         "disabled": false,
         "settings": {
         }
       },
       "1626193551103621034": {
-        "type": "shopify:\/\/apps\/cod-king\/blocks\/app-embed\/99553eb5-bf07-4ce0-9263-7e5f10cab22c",
+        "type": "shopify://apps/cod-king/blocks/app-embed/99553eb5-bf07-4ce0-9263-7e5f10cab22c",
         "disabled": false,
         "settings": {
         }
       },
       "17183793864293902153": {
-        "type": "shopify:\/\/apps\/rt-christmas-snowfall-effects\/blocks\/app-embed\/0cf10f7c-3937-48ce-9253-6ac6f06bc961",
+        "type": "shopify://apps/rt-christmas-snowfall-effects/blocks/app-embed/0cf10f7c-3937-48ce-9253-6ac6f06bc961",
         "disabled": true,
         "settings": {
+        }
+      },
+      "6833975140860622863": {
+        "type": "shopify://apps/byob-build-your-own-bundle/blocks/byob-update-cart/cbcdb3c1-93e1-4702-8f46-0cad28865e89",
+        "disabled": false,
+        "settings": {
+          "product_option_class_name": "product-option"
         }
       }
     },
@@ -536,7 +557,7 @@
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
