@@ -228,11 +228,11 @@
           "show_heading": true,
           "show_button": true,
           "button_label": "Start Shopping",
-          "button_color": "#684A19",
+          "button_color": "#684a19",
           "heading": "Hello There!",
           "redirection_link": "",
           "close_statement": "No Thanks, you can continue your shopping.",
-          "background_color": "#FFFFFF"
+          "background_color": "#ffffff"
         }
       }
     },
@@ -263,6 +263,12 @@
         "disabled": false,
         "settings": {
           "product_option_class_name": "product-option"
+        }
+      },
+      "5918445685253060206": {
+        "type": "shopify://apps/bundler/blocks/bundler-script-append/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+        "disabled": false,
+        "settings": {
         }
       }
     },
