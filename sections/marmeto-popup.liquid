@@ -6,22 +6,19 @@
   }
   .marmeto-popup__button.button {
     background-color: {{ section.settings.button_color }};
-    padding: 0 60px;
-    line-height: 60px;
   }
 </style>
 {% if section.settings.enable_popup %}
-<marmeto-redirection-popup id="marmeto_popup" data-author="AJ@Marmeto">
+<marmeto-redirection-popup data-author="AJ@Marmeto">
   <div class="marmeto-rp">
     <span class="marmeto-popup__over-lay"></span>
     <div class="marmeto-rp__content">
       <div class="marmeto-close-popup">x</div>
-      
+      {%- if section.settings.show_heading -%}
         <div class="marmeto-rp__heading" data-country-details>
           <h1 class="marmeto-popup__heading">{{ section.settings.heading }}</h1>
         </div>
-      
-      
+      {%- endif -%}
       {% if section.settings.image != blank %}
         <a href="{{ section.settings.redirection_link }}" class="marmeto-rp__link">
           {% render 'responsive-picture', mobileImage: section.settings.image_mobile, desktopImage: section.settings.image %}
@@ -62,7 +59,7 @@
         "type": "checkbox",
         "id": "show_heading",
         "label": "Show heading",
-        "default": true
+        "default": false
       },
       {
         "type": "checkbox",
