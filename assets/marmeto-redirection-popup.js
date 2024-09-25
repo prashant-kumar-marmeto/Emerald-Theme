@@ -60,7 +60,7 @@ class MarmetoRedirectionPopup extends HTMLElement {
       `;
     }
     
-    if (['US', 'CA'].includes(VisitorCountryCode)) {
+    if (['US', 'CA', "IN"].includes(VisitorCountryCode)) {
       this.style.display = "flex";
       document.body.style.overflow = 'hidden';
     }
