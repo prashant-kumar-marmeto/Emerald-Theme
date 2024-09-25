@@ -225,14 +225,16 @@
         "type": "marmeto-popup",
         "settings": {
           "enable_popup": true,
-          "show_heading": true,
+          "show_heading": false,
           "show_button": true,
           "button_label": "Start Shopping",
-          "button_color": "#684a19",
+          "button_color": "#3b5342",
           "heading": "Hello There!",
-          "redirection_link": "",
-          "close_statement": "No Thanks, you can continue your shopping.",
-          "background_color": "#ffffff"
+          "redirection_link": "https://marmeto-force.monday.com/boards/5555345520",
+          "image": "shopify://shop_images/INT_new_website_POP_banner.png",
+          "image_mobile": "shopify://shop_images/INT_new_website_POP_banner.png",
+          "close_statement": "",
+          "background_color": "rgba(0,0,0,0)"
         }
       }
     },
