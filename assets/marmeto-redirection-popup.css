@@ -81,6 +81,7 @@ marmeto-redirection-popup {
 }
 .marmeto-rp__link img {
   width: 600px;
+  height: auto;
 }
 
 @media screen and (max-width: 749px) {
