@@ -41,13 +41,12 @@ marmeto-redirection-popup {
 
 .marmeto-rp__link {
   display: block;
-  margin-bottom: 2rem;
 }
 .marmeto-close-popup {
   font-size: 15px;
   position: absolute;
-  top: 0%;
-  right: 3%;
+  top: 13%;
+  right: 11%;
   cursor: pointer;
   color: #282828;
   opacity: .4;
@@ -60,11 +59,35 @@ marmeto-redirection-popup {
 .marmeto-popup__heading {
   color: #2a431c;
 }
+.marmeto-popup__over-lay {
+  height: 100%;
+  width: 100%;
+  background: #282828;
+  opacity: .4;
+  position: absolute;
+  z-index: 99;
+}
+.marmeto-popup__button.button {
+  padding: 0 20px;
+  line-height: 30px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+}
+.marmeto-rp__link img {
+  width: 600px;
+}
+
 @media screen and (max-width: 749px) {
   .marmeto-close-popup {
     font-size: 20px;
-    top: 0%;
-    right: 4%;
+    top: 7%;
+    right: 9%;
   }
   .marmeto-rp__heading {
       margin-top: 2rem;
@@ -84,15 +107,14 @@ marmeto-redirection-popup {
   .marmeto-rp {
     bottom: 0;
   }
-  .marmeto-rp__link img {
-    height: 450px;
+  .marmeto-popup__button.button {
+    font-size: 8px !important;
+    padding: 0 10px;
+    line-height: 20px;
+    top: 37%;
+  }
+  .marmeto-rp__link img{
+    width: 340px;
   }
 }
-.marmeto-popup__over-lay {
-  height: 100%;
-  width: 100%;
-  background: #282828;
-  opacity: .4;
-  position: absolute;
-  z-index: 99;
-}
+
